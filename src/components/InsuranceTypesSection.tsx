@@ -8,6 +8,37 @@ const insuranceTypes = [
     title: "Life Insurance",
     description: "Term, Whole, and Universal life policies to protect your family's future.",
     tag: "Most Popular",
+    href: "/life-insurance",
+  },
+  {
+    icon: Heart,
+    title: "Health & Dental",
+    description: "Supplement provincial coverage for prescriptions, dental, and vision.",
+    href: "/health-insurance",
+  },
+  {
+    icon: Activity,
+    title: "Critical Illness",
+    description: "Lump-sum payout if diagnosed with a covered condition like cancer or stroke.",
+    href: "/critical-illness-insurance",
+  },
+  {
+    icon: Umbrella,
+    title: "Disability",
+    description: "Replace up to 70% of your income if you can't work due to illness or injury.",
+    href: "/disability-insurance",
+  },
+  {
+    icon: Plane,
+    title: "Travel Insurance",
+    description: "Super Visa, visitor, and trip coverage for travel in and out of Canada.",
+    href: "/travel-insurance",
+  },
+  {
+    icon: Home,
+    title: "Mortgage Protection",
+    description: "Protect your home and family from mortgage debt if the unexpected happens.",
+    href: "/mortgage-insurance",
   },
   {
     icon: Heart,
