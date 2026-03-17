@@ -82,30 +82,33 @@ const InsuranceTypesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {insuranceTypes.map((type, i) => (
-            <Link
+            <motion.div
               key={type.title}
-              to={type.href}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group relative bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-smooth cursor-pointer"
             >
-              {type.tag && (
-                <span className="absolute top-4 right-4 text-xs font-medium bg-primary/10 text-primary px-2.5 py-1 rounded-full">
-                  {type.tag}
-                </span>
-              )}
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <type.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-smooth">
-                {type.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {type.description}
-              </p>
-            </motion.a>
+              <Link
+                to={type.href}
+                className="group relative block bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-smooth cursor-pointer"
+              >
+                {type.tag && (
+                  <span className="absolute top-4 right-4 text-xs font-medium bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                    {type.tag}
+                  </span>
+                )}
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <type.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-smooth">
+                  {type.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {type.description}
+                </p>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
