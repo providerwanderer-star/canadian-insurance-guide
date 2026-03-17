@@ -82,9 +82,9 @@ const InsuranceTypesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {insuranceTypes.map((type, i) => (
-            <motion.a
+            <Link
               key={type.title}
-              href="#"
+              to={type.href}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
