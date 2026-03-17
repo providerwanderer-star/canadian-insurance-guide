@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Shield, Activity, Plane, Home, Umbrella } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const insuranceTypes = [
   {
