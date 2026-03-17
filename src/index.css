@@ -102,6 +102,42 @@
     letter-spacing: -0.03em;
     text-wrap: balance;
   }
+
+  .prose-custom p {
+    @apply text-muted-foreground leading-relaxed mb-4;
+  }
+
+  .prose-custom h2 {
+    @apply text-2xl font-bold text-foreground mt-10 mb-4;
+  }
+
+  .prose-custom h3 {
+    @apply text-lg font-semibold text-foreground mt-6 mb-3;
+  }
+
+  .prose-custom ul, .prose-custom ol {
+    @apply pl-5 space-y-2 mb-4 text-muted-foreground;
+  }
+
+  .prose-custom ul {
+    @apply list-disc;
+  }
+
+  .prose-custom ol {
+    @apply list-decimal;
+  }
+
+  .prose-custom li {
+    @apply text-sm leading-relaxed;
+  }
+
+  .prose-custom blockquote {
+    @apply border-l-4 border-primary/30 pl-4 italic text-muted-foreground my-6;
+  }
+
+  .prose-custom strong {
+    @apply text-foreground font-semibold;
+  }
 }
 
 @layer utilities {
