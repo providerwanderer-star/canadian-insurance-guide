@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const plugins = [react()];
-  
+  const plugins: any[] = [react()];
+
   if (mode === "development") {
     try {
       const { componentTagger } = require("lovable-tagger");
@@ -24,9 +24,10 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins,
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
     },
-  },
-}));
+  };
+});
