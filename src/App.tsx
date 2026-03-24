@@ -75,6 +75,9 @@ const App = () => (
             <Route path="/self-employed" element={<InsuranceForSelfEmployedPage />} />
             <Route path="/young-professionals" element={<InsuranceForYoungProfessionalsPage />} />
             
+            {/* Tools */}
+            <Route path="/coverage-calculator" element={<CoverageCalculator />} />
+            
             {/* Company Pages */}
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactPage />} />
