@@ -38,6 +38,7 @@ import BlogHowMuchLifeInsurance from "./pages/blog/BlogHowMuchLifeInsurance.tsx"
 import BlogBestLifeInsuranceFamilies from "./pages/blog/BlogBestLifeInsuranceFamilies.tsx";
 import BlogCriticalIllnessCoverage from "./pages/blog/BlogCriticalIllnessCoverage.tsx";
 import BlogFuneralCostsCanada from "./pages/blog/BlogFuneralCostsCanada.tsx";
+import CoverageCalculator from "./pages/CoverageCalculator.tsx";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,9 @@ const App = () => (
             <Route path="/families" element={<InsuranceForFamiliesPage />} />
             <Route path="/self-employed" element={<InsuranceForSelfEmployedPage />} />
             <Route path="/young-professionals" element={<InsuranceForYoungProfessionalsPage />} />
+            
+            {/* Tools */}
+            <Route path="/coverage-calculator" element={<CoverageCalculator />} />
             
             {/* Company Pages */}
             <Route path="/about" element={<AboutUsPage />} />

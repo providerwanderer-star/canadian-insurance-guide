@@ -16,9 +16,12 @@ InsuredCan.ca — Canadian insurance education & lead-gen website
 - About Us, Contact pages
 - 3 location pages (London ON, Toronto, Insurance Broker Canada)
 - Blog index + 9 full SEO articles
+- Coverage Calculator page (/coverage-calculator) with DIME method
 - All pages use PillarPageLayout, BlogArticleLayout, or LocationPageLayout
 
 ## Lead Gen Components
 - MultiStepLeadForm (4-step quiz → contact form)
 - StickyCTABar (scroll-triggered)
 - ExitIntentPopup (mouse-leave triggered, session-limited)
+- Coverage Calculator (interactive DIME method, 4-step wizard)
+- Family Protection Guide PDF (12-page downloadable lead magnet in /public/)

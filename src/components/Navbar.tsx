@@ -74,6 +74,9 @@ const Navbar = () => {
             </div>
           ))}
 
+          <Link to="/coverage-calculator" className="text-sm font-medium text-accent hover:text-accent/80 transition-smooth px-3 py-2 rounded-lg hover:bg-secondary">
+            Calculator
+          </Link>
           <Link to="/blog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth px-3 py-2 rounded-lg hover:bg-secondary">
             Blog
           </Link>
