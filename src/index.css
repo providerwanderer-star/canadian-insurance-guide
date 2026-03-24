@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,75 +15,80 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 200 98% 39%;
+    --primary: 216 72% 24%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
+    --secondary: 220 20% 96%;
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 160 84% 39%;
+    --accent: 0 84% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 200 98% 39%;
+    --success: 152 69% 38%;
+    --success-foreground: 0 0% 100%;
 
-    --radius: 0.75rem;
+    --border: 220 20% 91%;
+    --input: 220 20% 91%;
+    --ring: 216 72% 24%;
+
+    --radius: 0.625rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 200 98% 39%;
+    --sidebar-primary: 216 72% 24%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent: 220 20% 96%;
     --sidebar-accent-foreground: 222 47% 11%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 200 98% 39%;
+    --sidebar-ring: 216 72% 24%;
 
     /* Custom tokens */
-    --success: 160 84% 39%;
-    --success-foreground: 0 0% 100%;
-    --surface: 210 40% 98%;
+    --surface: 220 25% 97%;
     --surface-foreground: 222 47% 11%;
+    --primary-light: 216 72% 95%;
+    --accent-light: 0 84% 96%;
   }
 
   .dark {
     --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
+    --foreground: 220 20% 96%;
     --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 220 20% 96%;
     --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 200 98% 45%;
+    --popover-foreground: 220 20% 96%;
+    --primary: 216 72% 40%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 160 84% 39%;
+    --secondary: 220 20% 14%;
+    --secondary-foreground: 220 20% 96%;
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 0 84% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 200 98% 45%;
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 200 98% 45%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 200 98% 45%;
-    --success: 160 84% 39%;
+    --destructive-foreground: 220 20% 96%;
+    --success: 152 69% 38%;
     --success-foreground: 0 0% 100%;
+    --border: 220 20% 17%;
+    --input: 220 20% 17%;
+    --ring: 216 72% 40%;
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 220 20% 96%;
+    --sidebar-primary: 216 72% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 14%;
+    --sidebar-accent-foreground: 220 20% 96%;
+    --sidebar-border: 220 20% 17%;
+    --sidebar-ring: 216 72% 40%;
     --surface: 222 47% 8%;
-    --surface-foreground: 210 40% 98%;
+    --surface-foreground: 220 20% 96%;
+    --primary-light: 216 72% 12%;
+    --accent-light: 0 84% 12%;
   }
 }
 
@@ -94,12 +99,12 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Geist', 'IBM Plex Sans', system-ui, sans-serif;
-    letter-spacing: -0.03em;
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
 
@@ -132,7 +137,7 @@
   }
 
   .prose-custom blockquote {
-    @apply border-l-4 border-primary/30 pl-4 italic text-muted-foreground my-6;
+    @apply border-l-4 border-accent/30 pl-4 italic text-muted-foreground my-6;
   }
 
   .prose-custom strong {
@@ -142,25 +147,29 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Geist', 'IBM Plex Sans', system-ui, sans-serif;
-    letter-spacing: -0.03em;
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 
   .font-mono-data {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
     font-variant-numeric: tabular-nums lining-nums;
   }
 
   .shadow-card {
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
   }
 
   .shadow-card-hover {
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 24px -8px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04);
   }
 
   .shadow-lift {
-    box-shadow: 0 4px 20px -4px rgba(2, 132, 199, 0.25);
+    box-shadow: 0 6px 24px -6px hsl(216 72% 24% / 0.3);
+  }
+
+  .shadow-accent {
+    box-shadow: 0 6px 24px -6px hsl(0 84% 55% / 0.3);
   }
 
   .transition-smooth {
@@ -169,5 +178,13 @@
 
   .max-w-reading {
     max-width: 65ch;
+  }
+
+  .bg-primary-light {
+    background: hsl(var(--primary-light));
+  }
+
+  .bg-accent-light {
+    background: hsl(var(--accent-light));
   }
 }
