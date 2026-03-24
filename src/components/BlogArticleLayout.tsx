@@ -51,20 +51,20 @@ const BlogArticleLayout = ({
       </Helmet>
       <Navbar />
 
-      <section className="bg-surface border-b border-border">
+      <section className="bg-primary">
         <div className="container py-12 md:py-16">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-smooth mb-6">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-smooth mb-6">
             <ArrowLeft className="h-4 w-4" /> Back to Blog
           </Link>
-          <span className="block text-xs font-medium text-primary mb-3">{category}</span>
+          <span className="block text-xs font-bold text-accent mb-3 uppercase tracking-wider">{category}</span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6 max-w-3xl"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6 max-w-3xl font-display"
           >
             {title}
           </motion.h1>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex items-center gap-4 text-sm text-primary-foreground/60">
             <span className="flex items-center gap-1.5"><User className="h-3.5 w-3.5" />{author}</span>
             <span>{date}</span>
             <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" />{readTime}</span>
@@ -81,9 +81,9 @@ const BlogArticleLayout = ({
       {/* Related articles CTA */}
       <section className="bg-surface border-t border-border py-16">
         <div className="container text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-3">Keep learning</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-3 font-display">Keep learning</h2>
           <p className="text-muted-foreground mb-6">Explore more guides written for Canadians.</p>
-          <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-accent font-semibold hover:underline">
             View all articles →
           </Link>
         </div>

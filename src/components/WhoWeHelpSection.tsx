@@ -1,28 +1,29 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const segments = [
   {
     emoji: "🌍",
     title: "I'm new to Canada",
-    description: "Navigate the 3-month OHIP wait, Super Visa requirements, and coverage gaps as a newcomer.",
-    focus: ["Super Visa Insurance", "Health Gap Coverage", "Visitor Coverage"],
-    color: "bg-primary/5 hover:bg-primary/10",
+    description: "Navigate the OHIP waiting period, Super Visa requirements, and coverage gaps as a newcomer.",
+    focus: ["Visitor Coverage", "Health Gap Coverage", "Super Visa"],
+    href: "/newcomers",
   },
   {
     emoji: "👨‍👩‍👧‍👦",
-    title: "I'm starting a family",
-    description: "Secure your family's future with life insurance, RESP protection, and critical illness coverage.",
-    focus: ["Term Life Insurance", "RESP Protection", "Critical Illness"],
-    color: "bg-success/5 hover:bg-success/10",
+    title: "I'm protecting my family",
+    description: "Secure your family's future with life insurance, education savings protection, and critical illness coverage.",
+    focus: ["Term Life", "Critical Illness", "Education Plans"],
+    href: "/families",
   },
   {
     emoji: "💼",
     title: "I'm self-employed",
-    description: "No employer benefits? Build your own safety net with disability and health coverage.",
-    focus: ["Disability Insurance", "Health & Dental", "Income Protection"],
-    color: "bg-primary/5 hover:bg-primary/10",
+    description: "No employer benefits? Build your own safety net with disability, health, and income protection.",
+    focus: ["Disability", "Health & Dental", "Income Protection"],
+    href: "/self-employed",
   },
 ];
 
@@ -31,11 +32,12 @@ const WhoWeHelpSection = () => {
     <section id="who-we-help" className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Who are you?
+          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Who We Help</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display">
+            Find your personalized coverage
           </h2>
           <p className="text-muted-foreground text-lg max-w-reading mx-auto">
-            Your life stage determines your coverage. Find your personalized recommendation.
+            Your life stage determines your coverage needs. Get recommendations tailored to you.
           </p>
         </div>
 
@@ -47,21 +49,22 @@ const WhoWeHelpSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className={`rounded-xl p-8 transition-smooth cursor-pointer ${seg.color} shadow-card hover:shadow-card-hover`}
             >
-              <span className="text-4xl mb-4 block">{seg.emoji}</span>
-              <h3 className="text-xl font-semibold text-foreground mb-3">{seg.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-5">{seg.description}</p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {seg.focus.map((f) => (
-                  <span key={f} className="text-xs font-medium bg-background/80 text-foreground px-3 py-1.5 rounded-full border border-border">
-                    {f}
-                  </span>
-                ))}
-              </div>
-              <Button variant="ghost" size="sm" className="text-primary p-0 h-auto hover:bg-transparent hover:gap-3">
-                See recommendations <ArrowRight className="h-4 w-4" />
-              </Button>
+              <Link to={seg.href} className="group block rounded-xl p-8 transition-smooth bg-card shadow-card hover:shadow-card-hover border border-transparent hover:border-primary/20">
+                <span className="text-4xl mb-5 block">{seg.emoji}</span>
+                <h3 className="text-xl font-bold text-foreground mb-3 font-display group-hover:text-primary transition-smooth">{seg.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5">{seg.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {seg.focus.map((f) => (
+                    <span key={f} className="text-xs font-medium bg-secondary text-foreground px-3 py-1.5 rounded-full">
+                      {f}
+                    </span>
+                  ))}
+                </div>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                  See recommendations <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
             </motion.div>
           ))}
         </div>

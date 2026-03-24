@@ -35,24 +35,24 @@ const PillarPageLayout = ({
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-surface border-b border-border">
+      <section className="bg-primary">
         <div className="container py-16 md:py-20">
-          <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-smooth mb-6">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-smooth mb-6">
             <ArrowLeft className="h-4 w-4" /> Back to Home
           </Link>
           {heroTag && (
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-4 ml-4">
-              <span className="text-xs font-medium text-primary">{heroTag}</span>
+            <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 mb-4 ml-4">
+              <span className="text-xs font-bold text-accent-foreground">{heroTag}</span>
             </div>
           )}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4"
+            className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight mb-4 font-display"
           >
             {title}
           </motion.h1>
-          <p className="text-lg text-muted-foreground max-w-reading leading-relaxed">
+          <p className="text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
             {heroDescription}
           </p>
         </div>

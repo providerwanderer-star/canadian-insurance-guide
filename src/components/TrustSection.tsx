@@ -4,8 +4,8 @@ import { Shield, Award, Users, Star } from "lucide-react";
 const trustItems = [
   { icon: Shield, label: "Licensed in all provinces", detail: "FSRA & AMF regulated" },
   { icon: Award, label: "A+ rated partners", detail: "Sun Life, Manulife, Canada Life" },
-  { icon: Users, label: "10,000+ Canadians helped", detail: "Since 2020" },
-  { icon: Star, label: "4.9/5 average rating", detail: "Based on 2,300+ reviews" },
+  { icon: Users, label: "5,000+ families protected", detail: "Across Canada" },
+  { icon: Star, label: "4.8/5 average rating", detail: "Based on 2,300+ reviews" },
 ];
 
 const testimonials = [
@@ -39,10 +39,10 @@ const TrustSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.08 }}
-              className="text-center p-6"
+              className="text-center p-6 rounded-xl bg-card shadow-card"
             >
               <item.icon className="h-8 w-8 text-primary mx-auto mb-3" />
-              <p className="text-sm font-semibold text-foreground">{item.label}</p>
+              <p className="text-sm font-bold text-foreground">{item.label}</p>
               <p className="text-xs text-muted-foreground mt-1">{item.detail}</p>
             </motion.div>
           ))}
@@ -50,7 +50,8 @@ const TrustSection = () => {
 
         {/* Testimonials */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block">Testimonials</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display">
             What Canadians are saying
           </h2>
         </div>
@@ -63,18 +64,18 @@ const TrustSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-card rounded-xl p-6 shadow-card"
+              className="bg-card rounded-xl p-7 shadow-card border border-border"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-primary text-primary" />
+                  <Star key={j} className="h-4 w-4 fill-accent text-accent" />
                 ))}
               </div>
-              <blockquote className="text-sm text-foreground leading-relaxed mb-5">
+              <blockquote className="text-sm text-foreground leading-relaxed mb-6">
                 "{t.quote}"
               </blockquote>
               <div>
-                <p className="text-sm font-semibold text-foreground">{t.name}</p>
+                <p className="text-sm font-bold text-foreground">{t.name}</p>
                 <p className="text-xs text-muted-foreground">{t.role}</p>
               </div>
             </motion.div>
