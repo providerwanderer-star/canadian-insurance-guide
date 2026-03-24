@@ -7,12 +7,34 @@ import TrustSection from "@/components/TrustSection";
 import FeaturedArticlesSection from "@/components/FeaturedArticlesSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import MultiStepLeadForm from "@/components/MultiStepLeadForm";
+import StickyCTABar from "@/components/StickyCTABar";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+
+      {/* Multi-step Quote Form */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block">Find Your Plan</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display">
+              Get your personalized quote in 60 seconds
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-reading mx-auto">
+              Answer 4 simple questions and we'll match you with the right coverage from 20+ top Canadian insurers.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <MultiStepLeadForm />
+          </div>
+        </div>
+      </section>
+
       <InsuranceTypesSection />
       <WhoWeHelpSection />
       <HowItWorksSection />
@@ -20,6 +42,8 @@ const Index = () => {
       <FeaturedArticlesSection />
       <CTASection />
       <Footer />
+      <StickyCTABar />
+      <ExitIntentPopup />
     </div>
   );
 };

@@ -7,14 +7,18 @@ InsuredCan.ca — Canadian insurance education & lead-gen website
 - Foreground: Deep Slate (#0F172A / HSL 222 47% 11%)
 - Fonts: Poppins (display/headings), Inter (body)
 - Rounded corners: 10px (--radius: 0.625rem)
-- Shadows over borders, clean card style
 - Transitions: 200ms cubic-bezier(0.25, 0.1, 0.25, 1)
-- Red accent used for CTAs, stars, tags, highlights
-- Primary used for trust elements, navigation, info cards
 
 ## Pages Created
-- 6 insurance pillar pages (life, health, critical illness, disability, travel, mortgage)
+- 10 insurance pillar pages (life, health, CI, disability, travel, mortgage, term life, whole life, funeral, retirement)
 - 3 comparison pages (term vs whole, CI vs disability, private vs OHIP)
 - 4 segment pages (newcomers, families, self-employed, young professionals)
-- Blog index + 5 full SEO articles
-- All pages use PillarPageLayout or BlogArticleLayout with react-helmet-async
+- About Us, Contact pages
+- 3 location pages (London ON, Toronto, Insurance Broker Canada)
+- Blog index + 9 full SEO articles
+- All pages use PillarPageLayout, BlogArticleLayout, or LocationPageLayout
+
+## Lead Gen Components
+- MultiStepLeadForm (4-step quiz → contact form)
+- StickyCTABar (scroll-triggered)
+- ExitIntentPopup (mouse-leave triggered, session-limited)
