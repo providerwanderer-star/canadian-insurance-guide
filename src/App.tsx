@@ -38,6 +38,11 @@ import BlogHowMuchLifeInsurance from "./pages/blog/BlogHowMuchLifeInsurance.tsx"
 import BlogBestLifeInsuranceFamilies from "./pages/blog/BlogBestLifeInsuranceFamilies.tsx";
 import BlogCriticalIllnessCoverage from "./pages/blog/BlogCriticalIllnessCoverage.tsx";
 import BlogFuneralCostsCanada from "./pages/blog/BlogFuneralCostsCanada.tsx";
+import BlogSuperVisaInsurance from "./pages/blog/BlogSuperVisaInsurance.tsx";
+import BlogMortgageLifeInsurance from "./pages/blog/BlogMortgageLifeInsurance.tsx";
+import BlogUniversalLifeInsurance from "./pages/blog/BlogUniversalLifeInsurance.tsx";
+import BlogLifeInsuranceSmokers from "./pages/blog/BlogLifeInsuranceSmokers.tsx";
+import BlogRRSPvsTFSAvsLifeInsurance from "./pages/blog/BlogRRSPvsTFSAvsLifeInsurance.tsx";
 import CoverageCalculator from "./pages/CoverageCalculator.tsx";
 
 const queryClient = new QueryClient();
@@ -98,7 +103,12 @@ const App = () => (
             <Route path="/blog/best-life-insurance-families-canada" element={<BlogBestLifeInsuranceFamilies />} />
             <Route path="/blog/critical-illness-insurance-coverage-canada" element={<BlogCriticalIllnessCoverage />} />
             <Route path="/blog/average-funeral-costs-canada" element={<BlogFuneralCostsCanada />} />
-            
+            <Route path="/blog/super-visa-insurance-canada" element={<BlogSuperVisaInsurance />} />
+            <Route path="/blog/mortgage-life-insurance-vs-term-canada" element={<BlogMortgageLifeInsurance />} />
+            <Route path="/blog/universal-life-insurance-canada" element={<BlogUniversalLifeInsurance />} />
+            <Route path="/blog/life-insurance-smokers-canada" element={<BlogLifeInsuranceSmokers />} />
+            <Route path="/blog/rrsp-tfsa-vs-life-insurance-canada" element={<BlogRRSPvsTFSAvsLifeInsurance />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

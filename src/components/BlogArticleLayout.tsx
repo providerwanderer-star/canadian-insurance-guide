@@ -28,17 +28,52 @@ const BlogArticleLayout = ({
   readTime,
   children,
 }: BlogArticleLayoutProps) => {
+  const canonicalUrl = `https://insuredcan.ca/blog/${slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description: metaDescription,
-    author: { "@type": "Person", name: author },
+    url: canonicalUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+    author: {
+      "@type": "Person",
+      name: author,
+      url: "https://insuredcan.ca/about",
+    },
     datePublished: date,
+    dateModified: date,
     publisher: {
       "@type": "Organization",
-      name: "InsuredCan.ca",
+      name: "InsuredCan",
+      url: "https://insuredcan.ca",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://insuredcan.ca/favicon.ico",
+      },
     },
+    image: {
+      "@type": "ImageObject",
+      url: "https://insuredcan.ca/og-image.png",
+      width: 1200,
+      height: 630,
+    },
+    inLanguage: "en-CA",
+    isPartOf: {
+      "@type": "Blog",
+      name: "InsuredCan Insurance Learning Hub",
+      url: "https://insuredcan.ca/blog",
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://insuredcan.ca/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://insuredcan.ca/blog" },
+      { "@type": "ListItem", position: 3, name: title, item: canonicalUrl },
+    ],
   };
 
   return (
@@ -46,8 +81,23 @@ const BlogArticleLayout = ({
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={`https://insuredcan.ca/blog/${slug}`} />
+        <link rel="canonical" href={canonicalUrl} />
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content="https://insuredcan.ca/og-image.png" />
+        <meta property="og:site_name" content="InsuredCan" />
+        <meta property="article:published_time" content={date} />
+        <meta property="article:section" content={category} />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://insuredcan.ca/og-image.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar />
 

@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const insuranceLinks = [
   { label: "Life Insurance", href: "/life-insurance" },
-  { label: "Term Life Insurance", href: "/compare/term-vs-whole-life" },
-  { label: "Whole Life Insurance", href: "/compare/term-vs-whole-life" },
+  { label: "Term Life Insurance", href: "/term-life-insurance" },
+  { label: "Whole Life Insurance", href: "/whole-life-insurance" },
   { label: "Critical Illness", href: "/critical-illness-insurance" },
   { label: "Disability Insurance", href: "/disability-insurance" },
   { label: "Travel Insurance", href: "/travel-insurance" },
@@ -83,10 +83,14 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button variant="ghost" size="sm">Contact</Button>
-          <Button variant="default" size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
-            Get Free Quote
-          </Button>
+          <Link to="/contact">
+            <Button variant="ghost" size="sm">Contact</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="default" size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
+              Get Free Quote
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile toggle */}

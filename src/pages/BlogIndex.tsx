@@ -5,6 +5,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const blogPosts = [
+  { slug: "super-visa-insurance-canada", category: "Newcomers", title: "Super Visa Insurance Canada: The Complete 2026 Guide", description: "Everything you need to know about Super Visa insurance requirements, costs, best providers, and monthly payment options.", date: "April 6, 2026", readTime: "9 min read" },
+  { slug: "mortgage-life-insurance-vs-term-canada", category: "Life Insurance", title: "Mortgage Life Insurance vs. Term Life in Canada: Don't Overpay", description: "Bank mortgage insurance costs 3–4× more than term life and pays the bank, not your family. Here's the smarter choice.", date: "April 6, 2026", readTime: "8 min read" },
+  { slug: "universal-life-insurance-canada", category: "Life Insurance", title: "Universal Life Insurance Canada: Is It Worth It in 2026?", description: "How universal life insurance works, its tax advantages, real costs, and whether it makes sense for high-income Canadians.", date: "April 6, 2026", readTime: "10 min read" },
+  { slug: "rrsp-tfsa-vs-life-insurance-canada", category: "Retirement Planning", title: "RRSP, TFSA, or Life Insurance? Canada's Tax Shelter Showdown (2026)", description: "Which tax shelter is best for Canadians? A clear comparison of RRSP, TFSA, and permanent life insurance with the optimal order of use.", date: "April 6, 2026", readTime: "10 min read" },
+  { slug: "life-insurance-smokers-canada", category: "Life Insurance", title: "Life Insurance for Smokers in Canada: How to Get the Best Rates in 2026", description: "Smokers pay 2–4× more for life insurance. Learn which Canadian insurers are most favorable and how quitting saves you thousands.", date: "April 6, 2026", readTime: "7 min read" },
   { slug: "how-much-life-insurance-canada", category: "Life Insurance", title: "How Much Life Insurance Do You Need in Canada?", description: "Use the 10–15x income rule, factor in debts and dependents, and calculate exactly how much coverage your family needs.", date: "March 15, 2026", readTime: "8 min read" },
   { slug: "best-life-insurance-families-canada", category: "Life Insurance", title: "Best Life Insurance for Families in Canada (2026)", description: "Compare term, whole life, and critical illness coverage options for Canadian families. Find the right protection mix.", date: "March 10, 2026", readTime: "7 min read" },
   { slug: "ohip-waiting-period-newcomers", category: "Newcomers", title: "Moving to Ontario: How to Bridge the 3-Month OHIP Waiting Period", description: "Everything new Ontario residents need to know about getting health coverage during the OHIP waiting period.", date: "March 12, 2026", readTime: "6 min read" },
@@ -21,7 +26,13 @@ const BlogIndex = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Insurance Blog — Canadian Insurance Guides & Education | InsuredCan</title>
-        <meta name="description" content="Plain-language insurance guides written for Canadians. Learn about life, health, critical illness, funeral, and disability insurance." />
+        <meta name="description" content="Plain-language life, health, critical illness, and disability insurance guides written for Canadians. Compare plans, understand costs, and make confident coverage decisions." />
+        <link rel="canonical" href="https://insuredcan.ca/blog" />
+        <meta property="og:title" content="Insurance Blog — Canadian Insurance Guides & Education | InsuredCan" />
+        <meta property="og:description" content="Plain-language insurance guides written for Canadians. Life, health, critical illness, and disability insurance explained simply." />
+        <meta property="og:url" content="https://insuredcan.ca/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://insuredcan.ca/og-image.png" />
       </Helmet>
       <Navbar />
 
