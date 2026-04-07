@@ -31,6 +31,30 @@ const PillarPageLayout = ({
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={`https://insuredcan.ca/${breadcrumb.toLowerCase().replace(/\s+/g, "-")}`} />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="InsuredCan" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={`https://insuredcan.ca/${breadcrumb.toLowerCase().replace(/\s+/g, "-")}`} />
+        <meta property="og:image" content="https://insuredcan.ca/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_CA" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://insuredcan.ca/og-image.png" />
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://insuredcan.ca/" },
+            { "@type": "ListItem", "position": 2, "name": title, "item": `https://insuredcan.ca/${breadcrumb.toLowerCase().replace(/\s+/g, "-")}` }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 

@@ -27,6 +27,10 @@ import AboutUsPage from "./pages/AboutUs.tsx";
 import ContactPage from "./pages/Contact.tsx";
 import LifeInsuranceLondonPage from "./pages/LifeInsuranceLondon.tsx";
 import LifeInsuranceTorontoPage from "./pages/LifeInsuranceToronto.tsx";
+import LifeInsuranceVancouverPage from "./pages/LifeInsuranceVancouver.tsx";
+import LifeInsuranceCalgaryPage from "./pages/LifeInsuranceCalgary.tsx";
+import LifeInsuranceEdmontonPage from "./pages/LifeInsuranceEdmonton.tsx";
+import LifeInsuranceOttawaPage from "./pages/LifeInsuranceOttawa.tsx";
 import InsuranceBrokerCanadaPage from "./pages/InsuranceBrokerCanada.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
 import BlogOHIPWaiting from "./pages/blog/BlogOHIPWaiting.tsx";
@@ -43,6 +47,9 @@ import BlogMortgageLifeInsurance from "./pages/blog/BlogMortgageLifeInsurance.ts
 import BlogUniversalLifeInsurance from "./pages/blog/BlogUniversalLifeInsurance.tsx";
 import BlogLifeInsuranceSmokers from "./pages/blog/BlogLifeInsuranceSmokers.tsx";
 import BlogRRSPvsTFSAvsLifeInsurance from "./pages/blog/BlogRRSPvsTFSAvsLifeInsurance.tsx";
+import BlogNoMedicalLifeInsurance from "./pages/blog/BlogNoMedicalLifeInsurance.tsx";
+import BlogIsLifeInsuranceTaxableCanada from "./pages/blog/BlogIsLifeInsuranceTaxableCanada.tsx";
+import BlogLifeInsuranceSeniorsCanada from "./pages/blog/BlogLifeInsuranceSeniorsCanada.tsx";
 import CoverageCalculator from "./pages/CoverageCalculator.tsx";
 
 const queryClient = new QueryClient();
@@ -90,6 +97,10 @@ const App = () => (
             {/* Location Pages */}
             <Route path="/life-insurance-london-ontario" element={<LifeInsuranceLondonPage />} />
             <Route path="/life-insurance-toronto" element={<LifeInsuranceTorontoPage />} />
+            <Route path="/life-insurance-vancouver" element={<LifeInsuranceVancouverPage />} />
+            <Route path="/life-insurance-calgary" element={<LifeInsuranceCalgaryPage />} />
+            <Route path="/life-insurance-edmonton" element={<LifeInsuranceEdmontonPage />} />
+            <Route path="/life-insurance-ottawa" element={<LifeInsuranceOttawaPage />} />
             <Route path="/insurance-broker-canada" element={<InsuranceBrokerCanadaPage />} />
             
             {/* Blog */}
@@ -108,6 +119,9 @@ const App = () => (
             <Route path="/blog/universal-life-insurance-canada" element={<BlogUniversalLifeInsurance />} />
             <Route path="/blog/life-insurance-smokers-canada" element={<BlogLifeInsuranceSmokers />} />
             <Route path="/blog/rrsp-tfsa-vs-life-insurance-canada" element={<BlogRRSPvsTFSAvsLifeInsurance />} />
+            <Route path="/blog/no-medical-life-insurance-canada" element={<BlogNoMedicalLifeInsurance />} />
+            <Route path="/blog/is-life-insurance-taxable-canada" element={<BlogIsLifeInsuranceTaxableCanada />} />
+            <Route path="/blog/life-insurance-seniors-canada" element={<BlogLifeInsuranceSeniorsCanada />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import InsuranceTypesSection from "@/components/InsuranceTypesSection";
@@ -14,6 +15,24 @@ import ExitIntentPopup from "@/components/ExitIntentPopup";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>InsuredCan — Life & Health Insurance Quotes in Canada | Free Advisor</title>
+        <meta name="description" content="Compare Canada's top life, health, critical illness & disability insurance plans. Free quotes from 20+ insurers. Licensed advisors in Ontario, BC & Alberta. No obligation." />
+        <link rel="canonical" href="https://insuredcan.ca/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="InsuredCan" />
+        <meta property="og:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
+        <meta property="og:description" content="Compare Canada's top life, health, critical illness & disability insurance. Free quotes from 20+ insurers. Licensed advisors. 5,000+ families protected." />
+        <meta property="og:url" content="https://insuredcan.ca/" />
+        <meta property="og:image" content="https://insuredcan.ca/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_CA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
+        <meta name="twitter:description" content="Compare Canada's top life, health & critical illness plans. Free quotes. Licensed advisors." />
+        <meta name="twitter:image" content="https://insuredcan.ca/og-image.png" />
+      </Helmet>
       <Navbar />
       <HeroSection />
 
