@@ -19,10 +19,35 @@ const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", insuranceType: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
-    setFormData({ name: "", email: "", phone: "", insuranceType: "", message: "" });
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/sahil280389@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `InsuredCan Contact: ${formData.insuranceType || "General Inquiry"}`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          insurance_type: formData.insuranceType || "Not specified",
+          message: formData.message,
+        }),
+      });
+      if (res.ok) {
+        toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
+        setFormData({ name: "", email: "", phone: "", insuranceType: "", message: "" });
+      } else {
+        toast({ title: "Something went wrong", description: "Please try again or call us directly.", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Something went wrong", description: "Please try again or call us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,8 +129,8 @@ const Contact = () => {
                     <label className="text-sm font-medium text-foreground mb-1.5 block">Message *</label>
                     <textarea className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="Tell us about your insurance needs..." value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required />
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
-                    <Send className="h-4 w-4" /> Send Message
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
+                    <Send className="h-4 w-4" /> {isSubmitting ? "Sending…" : "Send Message"}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">We'll respond within 24 hours. No spam, ever.</p>
                 </form>

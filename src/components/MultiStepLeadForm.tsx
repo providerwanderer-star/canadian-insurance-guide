@@ -42,10 +42,37 @@ const MultiStepLeadForm = () => {
     setTimeout(() => setCurrentStep((s) => s + 1), 300);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    toast({ title: "Quote request received!", description: "A licensed advisor will contact you within 24 hours." });
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/sahil280389@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: "InsuredCan: New Quote Request",
+          name: contactInfo.name,
+          email: contactInfo.email,
+          phone: contactInfo.phone,
+          age_range: answers.age || "Not provided",
+          family_situation: answers.family || "Not provided",
+          annual_income: answers.income || "Not provided",
+          coverage_goal: answers.goal || "Not provided",
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        toast({ title: "Quote request received!", description: "A licensed advisor will contact you within 24 hours." });
+      } else {
+        toast({ title: "Something went wrong", description: "Please try again.", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Something went wrong", description: "Please try again.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -121,8 +148,8 @@ const MultiStepLeadForm = () => {
               <input className="flex h-12 w-full rounded-lg border border-input bg-background px-4 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="Full name *" value={contactInfo.name} onChange={(e) => setContactInfo({ ...contactInfo, name: e.target.value })} required />
               <input type="email" className="flex h-12 w-full rounded-lg border border-input bg-background px-4 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="Email address *" value={contactInfo.email} onChange={(e) => setContactInfo({ ...contactInfo, email: e.target.value })} required />
               <input type="tel" className="flex h-12 w-full rounded-lg border border-input bg-background px-4 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="Phone number *" value={contactInfo.phone} onChange={(e) => setContactInfo({ ...contactInfo, phone: e.target.value })} required />
-              <Button type="submit" size="xl" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
-                Get My Free Quote <ArrowRight className="h-5 w-5" />
+              <Button type="submit" size="xl" disabled={isSubmitting} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
+                {isSubmitting ? "Submitting…" : "Get My Free Quote"} {!isSubmitting && <ArrowRight className="h-5 w-5" />}
               </Button>
               <p className="text-xs text-muted-foreground text-center">No spam. No obligation. 100% free.</p>
             </form>
