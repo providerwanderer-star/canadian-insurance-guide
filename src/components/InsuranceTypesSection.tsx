@@ -11,6 +11,7 @@ const insuranceTypes = [
     href: "/life-insurance",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
+    gradient: "from-primary/5 to-primary/10",
   },
   {
     icon: Activity,
@@ -19,6 +20,7 @@ const insuranceTypes = [
     href: "/critical-illness-insurance",
     iconBg: "bg-accent/10",
     iconColor: "text-accent",
+    gradient: "from-accent/5 to-accent/10",
   },
   {
     icon: Heart,
@@ -27,6 +29,7 @@ const insuranceTypes = [
     href: "/life-insurance",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
+    gradient: "from-primary/5 to-primary/10",
   },
   {
     icon: Landmark,
@@ -35,6 +38,7 @@ const insuranceTypes = [
     href: "/life-insurance",
     iconBg: "bg-accent/10",
     iconColor: "text-accent",
+    gradient: "from-accent/5 to-accent/10",
   },
 ];
 
@@ -43,45 +47,70 @@ const InsuranceTypesSection = () => {
     <section id="insurance-types" className="py-20 md:py-28 bg-surface">
       <div className="container">
         <div className="text-center mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block">Our Services</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block"
+          >
+            Our Services
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display"
+          >
             Insurance solutions for every Canadian
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-reading mx-auto">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="text-muted-foreground text-lg max-w-reading mx-auto"
+          >
             Comprehensive coverage options designed for your life stage, budget, and goals.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {insuranceTypes.map((type, i) => (
             <motion.div
               key={type.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
             >
               <Link
                 to={type.href}
-                className="group relative block bg-card rounded-xl p-7 shadow-card hover:shadow-card-hover transition-smooth border border-transparent hover:border-primary/20"
+                className="group relative block bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-smooth border border-transparent hover:border-primary/20"
               >
-                {type.tag && (
-                  <span className="absolute top-5 right-5 text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    {type.tag}
+                {/* Gradient top bar */}
+                <div className={`h-1.5 bg-gradient-to-r ${type.gradient}`} />
+
+                <div className="p-7">
+                  {type.tag && (
+                    <span className="absolute top-7 right-5 text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full">
+                      {type.tag}
+                    </span>
+                  )}
+                  <div className={`h-14 w-14 rounded-xl ${type.iconBg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
+                    <type.icon className={`h-7 w-7 ${type.iconColor}`} />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-smooth font-display">
+                    {type.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    {type.description}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                    Learn more <ArrowRight className="h-4 w-4" />
                   </span>
-                )}
-                <div className={`h-12 w-12 rounded-lg ${type.iconBg} flex items-center justify-center mb-5`}>
-                  <type.icon className={`h-6 w-6 ${type.iconColor}`} />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-smooth font-display">
-                  {type.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {type.description}
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
-                  Learn more <ArrowRight className="h-4 w-4" />
-                </span>
               </Link>
             </motion.div>
           ))}
