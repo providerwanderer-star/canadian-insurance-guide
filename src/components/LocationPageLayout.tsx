@@ -61,7 +61,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta name="twitter:image" content={ogImage} />
         <meta name="geo.region" content={`CA-${province}`} />
         <meta name="geo.placename" content={`${city}, ${province}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
