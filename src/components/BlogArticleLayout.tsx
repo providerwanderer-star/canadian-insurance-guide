@@ -15,6 +15,7 @@ interface BlogArticleLayoutProps {
   author: string;
   date: string;
   readTime: string;
+  ogImage?: string;
   children: React.ReactNode;
 }
 
