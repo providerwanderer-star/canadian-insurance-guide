@@ -31,12 +31,16 @@ const CTASection = () => {
             Get a free, no-obligation consultation with a licensed Canadian insurance advisor. Takes less than 60 seconds to start.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent font-bold">
-              Get Free Quote <ArrowRight className="h-5 w-5" />
-            </Button>
-            <Button size="xl" variant="hero-ghost" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-              <Phone className="h-5 w-5" /> Speak to Advisor
-            </Button>
+            <a href="mailto:sahil280389@gmail.com?subject=Free%20Insurance%20Quote%20Request">
+              <Button size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent font-bold">
+                Get Free Quote <ArrowRight className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="mailto:sahil280389@gmail.com?subject=Speak%20to%20Advisor">
+              <Button size="xl" variant="hero-ghost" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                <Phone className="h-5 w-5" /> Speak to Advisor
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>

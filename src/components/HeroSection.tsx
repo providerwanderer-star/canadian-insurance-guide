@@ -31,12 +31,16 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
-              <Button variant="hero" size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
-                Get Free Quote <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button variant="hero-ghost" size="xl">
-                <Phone className="h-5 w-5" /> Speak to Advisor
-              </Button>
+              <a href="mailto:sahil280389@gmail.com?subject=Free%20Insurance%20Quote%20Request">
+                <Button variant="hero" size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
+                  Get Free Quote <ArrowRight className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="mailto:sahil280389@gmail.com?subject=Speak%20to%20Advisor">
+                <Button variant="hero-ghost" size="xl">
+                  <Phone className="h-5 w-5" /> Speak to Advisor
+                </Button>
+              </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">

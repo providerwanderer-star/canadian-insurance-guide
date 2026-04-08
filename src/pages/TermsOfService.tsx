@@ -60,7 +60,7 @@ const TermsOfService = () => (
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-foreground mb-3">7. Contact</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Questions? Email us at <a href="mailto:hello@insuredcan.ca" className="text-primary hover:underline">hello@insuredcan.ca</a>
+          Questions? Email us at <a href="mailto:sahil280389@gmail.com" className="text-primary hover:underline">sahil280389@gmail.com</a>
         </p>
       </section>
     </main>
