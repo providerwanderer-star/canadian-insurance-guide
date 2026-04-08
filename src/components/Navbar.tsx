@@ -35,6 +35,8 @@ const cityLinks = [
   { label: "Life Insurance Calgary", href: "/life-insurance-calgary" },
   { label: "Life Insurance Edmonton", href: "/life-insurance-edmonton" },
   { label: "Life Insurance Ottawa", href: "/life-insurance-ottawa" },
+  { label: "Life Insurance Montreal", href: "/life-insurance-montreal" },
+  { label: "Life Insurance Winnipeg", href: "/life-insurance-winnipeg" },
   { label: "Life Insurance London ON", href: "/life-insurance-london-ontario" },
   { label: "Insurance Broker Canada", href: "/insurance-broker-canada" },
 ];

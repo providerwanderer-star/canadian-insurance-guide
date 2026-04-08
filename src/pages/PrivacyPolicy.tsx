@@ -7,7 +7,7 @@ const PrivacyPolicy = () => (
     <Helmet>
       <title>Privacy Policy | InsuredCan</title>
       <meta name="description" content="InsuredCan's privacy policy. Learn how we collect, use, and protect your personal information." />
-      <link rel="canonical" href="https://insuredcan.ca/privacy-policy" />
+      <link rel="canonical" href="https://www.insuredcan.ca/privacy-policy" />
       <meta name="robots" content="noindex, follow" />
     </Helmet>
     <Navbar />

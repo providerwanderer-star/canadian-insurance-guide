@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import { ContentSection, ContentParagraph, ProsList, InfoCard, ComparisonTable } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, InfoCard, ComparisonTable, FAQSection } from "@/components/ContentElements";
 
 const BlogOHIPWaiting = () => {
   return (
@@ -73,6 +73,14 @@ const BlogOHIPWaiting = () => {
           "Consider supplemental health & dental insurance for after OHIP begins (it doesn't cover dental, vision, or prescriptions for most adults)",
         ]} />
       </ContentSection>
+
+      <FAQSection faqs={[
+        { question: "How long is the OHIP waiting period in Ontario?", answer: "The OHIP waiting period is 3 months (the remainder of the month you arrive plus 2 full months). For example, if you move to Ontario on March 15, your OHIP coverage begins June 1." },
+        { question: "Does the OHIP waiting period apply to children?", answer: "Yes. Children moving to Ontario also face the 3-month OHIP waiting period. You should obtain private health insurance for your children immediately upon arrival in Ontario." },
+        { question: "What health insurance can I get during the OHIP waiting period?", answer: "Several Canadian insurers offer short-term bridge health insurance for the OHIP waiting period. Options include Manulife, Sun Life, and Destination Canada plans. These cover emergency medical care, hospitalization, and some prescriptions during your wait." },
+        { question: "Is the OHIP waiting period waived for refugees or government-sponsored newcomers?", answer: "Yes. Government-assisted refugees and some protected persons may be exempt from the OHIP waiting period. Contact ServiceOntario to confirm your eligibility based on your immigration status." },
+        { question: "Can I visit a doctor without OHIP in Ontario?", answer: "Yes, but you will pay out-of-pocket. A walk-in clinic visit costs $80–$150, an emergency room visit $400–$1,000+, and a hospital stay can cost thousands per day. Private bridge insurance protects you from these costs." },
+      ]} />
     </BlogArticleLayout>
   );
 };

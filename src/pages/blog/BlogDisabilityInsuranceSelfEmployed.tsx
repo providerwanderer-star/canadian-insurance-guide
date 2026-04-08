@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ComparisonTable, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ComparisonTable, InfoCard, FAQSection } from "@/components/ContentElements";
 
 const BlogDisabilityInsuranceSelfEmployed = () => {
   return (
@@ -84,6 +84,14 @@ const BlogDisabilityInsuranceSelfEmployed = () => {
           Individual disability insurance provides higher benefits, uses a more favourable "own occupation" definition, and gives you certainty that you'll be covered when you need it most.
         </ContentParagraph>
       </ContentSection>
+
+      <FAQSection faqs={[
+        { question: "Can self-employed people get disability insurance in Canada?", answer: "Yes. Self-employed Canadians can get individual disability insurance from providers like Manulife, Sun Life, RBC Insurance, and Canada Life. You typically need 1–2 years of self-employment history and filed tax returns to qualify." },
+        { question: "How much disability insurance do I need as a self-employed person?", answer: "Most disability policies cover 60–70% of your pre-disability earned income. Calculate your monthly business and personal expenses to determine your minimum coverage. Self-employed people often need higher coverage since there's no employer plan to supplement." },
+        { question: "How long does disability insurance last?", answer: "Benefit periods typically range from 2 years, 5 years, or to age 65. For comprehensive protection, choose a policy that pays to age 65. Shorter benefit periods are less expensive but leave you exposed to long-term disability." },
+        { question: "What is the elimination period for disability insurance?", answer: "The elimination period (waiting period) is how long you must be disabled before benefits begin. Common options are 30, 60, 90, or 120 days. A 90-day elimination period offers a good balance between cost and coverage." },
+        { question: "Is disability insurance tax-deductible for self-employed Canadians?", answer: "Disability insurance premiums paid personally are generally not tax-deductible. However, if a corporation pays the premiums, the benefit becomes taxable when received. Talk to your accountant about the best structure for your situation." },
+      ]} />
     </BlogArticleLayout>
   );
 };

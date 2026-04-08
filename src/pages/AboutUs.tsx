@@ -25,7 +25,7 @@ const AboutUs = () => {
       <Helmet>
         <title>About InsuredCan — Trusted Insurance Advisors in Canada</title>
         <meta name="description" content="InsuredCan is a team of licensed Canadian insurance advisors committed to education-first, unbiased insurance guidance for families, newcomers, and professionals." />
-        <link rel="canonical" href="https://insuredcan.ca/about" />
+        <link rel="canonical" href="https://www.insuredcan.ca/about" />
       </Helmet>
       <Navbar />
 

@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import { ContentSection, ContentParagraph, ProsList, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, InfoCard, FAQSection } from "@/components/ContentElements";
 
 const BlogLifeInsuranceFamilyToronto = () => {
   return (
@@ -74,6 +74,14 @@ const BlogLifeInsuranceFamilyToronto = () => {
           Don't rely on your employer's group life insurance alone (usually 1–2x salary). Get a personal policy that stays with you regardless of job changes.
         </ContentParagraph>
       </ContentSection>
+
+      <FAQSection faqs={[
+        { question: "How much life insurance does a Toronto family need?", answer: "Toronto families typically need $750,000–$1.5M in coverage due to the city's high housing costs (average home over $1.1M), expensive childcare ($1,500–$2,500/child/month), and high cost of living. A common formula: 10–12x your household income." },
+        { question: "What is the best life insurance for Toronto families?", answer: "A 20-year term life policy from a major insurer (Manulife, Sun Life, Canada Life, RBC) offers the best value for most Toronto families. It covers your mortgage years and your children's dependency period at the most affordable premiums." },
+        { question: "Should both parents get life insurance in Toronto?", answer: "Yes — both parents should have coverage, including stay-at-home parents. The replacement cost of childcare, household management, and other services a stay-at-home parent provides is $30,000–$50,000/year. Losing that income would be devastating." },
+        { question: "How much does life insurance cost for a Toronto family?", answer: "A couple in their mid-30s can get $500,000 each in 20-year term life insurance for approximately $50–$80/month total. For $1M coverage each, expect $80–$130/month combined — less than most families spend on streaming services." },
+        { question: "Can I get life insurance if I have a pre-existing condition in Toronto?", answer: "Yes. Many insurers cover people with managed conditions like diabetes, high blood pressure, or history of cancer. Premiums may be higher or coverage modified. A broker can shop multiple insurers to find the best terms for your health profile." },
+      ]} />
     </BlogArticleLayout>
   );
 };

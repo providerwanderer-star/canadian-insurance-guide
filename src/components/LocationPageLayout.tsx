@@ -36,7 +36,19 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={`https://insuredcan.ca/${slug}`} />
+        {/* canonical/og:url handled globally by SEOHead */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="InsuredCan" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_CA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Navbar />

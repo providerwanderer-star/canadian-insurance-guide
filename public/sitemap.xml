@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://insuredcan.ca/</loc>
+    <loc>https://www.insuredcan.ca/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,61 +14,61 @@
 
   <!-- Core Insurance Pillar Pages -->
   <url>
-    <loc>https://insuredcan.ca/life-insurance</loc>
+    <loc>https://www.insuredcan.ca/life-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/term-life-insurance</loc>
+    <loc>https://www.insuredcan.ca/term-life-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/whole-life-insurance</loc>
+    <loc>https://www.insuredcan.ca/whole-life-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/critical-illness-insurance</loc>
+    <loc>https://www.insuredcan.ca/critical-illness-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/disability-insurance</loc>
+    <loc>https://www.insuredcan.ca/disability-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/health-insurance</loc>
+    <loc>https://www.insuredcan.ca/health-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/travel-insurance</loc>
+    <loc>https://www.insuredcan.ca/travel-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/mortgage-insurance</loc>
+    <loc>https://www.insuredcan.ca/mortgage-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/funeral-insurance</loc>
+    <loc>https://www.insuredcan.ca/funeral-insurance</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/retirement-planning</loc>
+    <loc>https://www.insuredcan.ca/retirement-planning</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -76,19 +76,19 @@
 
   <!-- Comparison Pages -->
   <url>
-    <loc>https://insuredcan.ca/compare/term-vs-whole-life</loc>
+    <loc>https://www.insuredcan.ca/compare/term-vs-whole-life</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/compare/critical-illness-vs-disability</loc>
+    <loc>https://www.insuredcan.ca/compare/critical-illness-vs-disability</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/compare/private-vs-ohip</loc>
+    <loc>https://www.insuredcan.ca/compare/private-vs-ohip</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -96,25 +96,25 @@
 
   <!-- Segment Pages -->
   <url>
-    <loc>https://insuredcan.ca/newcomers</loc>
+    <loc>https://www.insuredcan.ca/newcomers</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/families</loc>
+    <loc>https://www.insuredcan.ca/families</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/self-employed</loc>
+    <loc>https://www.insuredcan.ca/self-employed</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/young-professionals</loc>
+    <loc>https://www.insuredcan.ca/young-professionals</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -122,43 +122,55 @@
 
   <!-- Location Pages (Geo SEO) -->
   <url>
-    <loc>https://insuredcan.ca/life-insurance-toronto</loc>
+    <loc>https://www.insuredcan.ca/life-insurance-toronto</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/life-insurance-vancouver</loc>
+    <loc>https://www.insuredcan.ca/life-insurance-vancouver</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/life-insurance-calgary</loc>
+    <loc>https://www.insuredcan.ca/life-insurance-calgary</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/life-insurance-edmonton</loc>
+    <loc>https://www.insuredcan.ca/life-insurance-edmonton</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/life-insurance-ottawa</loc>
+    <loc>https://www.insuredcan.ca/life-insurance-ottawa</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/life-insurance-london-ontario</loc>
+    <loc>https://www.insuredcan.ca/life-insurance-london-ontario</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/insurance-broker-canada</loc>
+    <loc>https://www.insuredcan.ca/insurance-broker-canada</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.insuredcan.ca/life-insurance-montreal</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.insuredcan.ca/life-insurance-winnipeg</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -166,7 +178,7 @@
 
   <!-- Tools -->
   <url>
-    <loc>https://insuredcan.ca/coverage-calculator</loc>
+    <loc>https://www.insuredcan.ca/coverage-calculator</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -174,13 +186,13 @@
 
   <!-- Company Pages -->
   <url>
-    <loc>https://insuredcan.ca/about</loc>
+    <loc>https://www.insuredcan.ca/about</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/contact</loc>
+    <loc>https://www.insuredcan.ca/contact</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -188,7 +200,7 @@
 
   <!-- Blog Index -->
   <url>
-    <loc>https://insuredcan.ca/blog</loc>
+    <loc>https://www.insuredcan.ca/blog</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -196,103 +208,103 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://insuredcan.ca/blog/no-medical-life-insurance-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/no-medical-life-insurance-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/is-life-insurance-taxable-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/is-life-insurance-taxable-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/life-insurance-seniors-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/life-insurance-seniors-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/how-much-life-insurance-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/how-much-life-insurance-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/best-life-insurance-families-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/best-life-insurance-families-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/ohip-waiting-period-newcomers</loc>
+    <loc>https://www.insuredcan.ca/blog/ohip-waiting-period-newcomers</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/critical-illness-insurance-coverage-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/critical-illness-insurance-coverage-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/term-vs-whole-life-2026</loc>
+    <loc>https://www.insuredcan.ca/blog/term-vs-whole-life-2026</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/average-funeral-costs-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/average-funeral-costs-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/what-ohip-doesnt-cover</loc>
+    <loc>https://www.insuredcan.ca/blog/what-ohip-doesnt-cover</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/life-insurance-family-toronto</loc>
+    <loc>https://www.insuredcan.ca/blog/life-insurance-family-toronto</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/disability-insurance-self-employed</loc>
+    <loc>https://www.insuredcan.ca/blog/disability-insurance-self-employed</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/super-visa-insurance-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/super-visa-insurance-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/mortgage-life-insurance-vs-term-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/mortgage-life-insurance-vs-term-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/universal-life-insurance-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/universal-life-insurance-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/life-insurance-smokers-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/life-insurance-smokers-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://insuredcan.ca/blog/rrsp-tfsa-vs-life-insurance-canada</loc>
+    <loc>https://www.insuredcan.ca/blog/rrsp-tfsa-vs-life-insurance-canada</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

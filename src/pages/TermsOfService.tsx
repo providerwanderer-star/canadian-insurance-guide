@@ -7,7 +7,7 @@ const TermsOfService = () => (
     <Helmet>
       <title>Terms of Service | InsuredCan</title>
       <meta name="description" content="InsuredCan's terms of service. By using our website you agree to these terms." />
-      <link rel="canonical" href="https://insuredcan.ca/terms-of-service" />
+      <link rel="canonical" href="https://www.insuredcan.ca/terms-of-service" />
       <meta name="robots" content="noindex, follow" />
     </Helmet>
     <Navbar />

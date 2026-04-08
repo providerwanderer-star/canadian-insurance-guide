@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import { ContentSection, ContentParagraph, ProsList, ComparisonTable, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, ComparisonTable, InfoCard, FAQSection } from "@/components/ContentElements";
 
 const BlogTermVsWhole = () => {
   return (
@@ -77,6 +77,14 @@ const BlogTermVsWhole = () => {
           Whatever you choose, don't wait. Every year you delay costs you more in premiums.
         </ContentParagraph>
       </ContentSection>
+
+      <FAQSection faqs={[
+        { question: "Is term or whole life insurance better in Canada?", answer: "For most Canadians, term life insurance is better because it provides maximum coverage at the lowest cost during your highest-need years (ages 30–55). Whole life makes sense for permanent needs like estate planning or business succession." },
+        { question: "Can I convert my term life policy to whole life?", answer: "Yes. Most Canadian term life policies include a conversion option that lets you convert to permanent coverage without a new medical exam — typically before age 65 or the end of your term, whichever comes first." },
+        { question: "How much does term vs whole life cost in Canada?", answer: "A healthy 35-year-old can get $500,000 in 20-year term life for $25–$35/month. The equivalent whole life policy would cost $280–$350/month — about 10x more. The difference can be invested separately." },
+        { question: "Does whole life insurance have tax benefits in Canada?", answer: "Yes. The cash value inside a whole life policy grows tax-sheltered. The death benefit passes tax-free to named beneficiaries. Corporations can also use whole life for tax-advantaged wealth transfer via the Capital Dividend Account (CDA)." },
+        { question: "What happens when term life insurance expires?", answer: "When your term ends, coverage stops. You can often renew at a much higher rate (based on your age at renewal), convert to permanent coverage, or simply let it lapse if you no longer need coverage (e.g., mortgage paid off, children grown)." },
+      ]} />
     </BlogArticleLayout>
   );
 };

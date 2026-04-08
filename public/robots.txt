@@ -4,4 +4,4 @@ Allow: /
 Disallow: /privacy-policy
 Disallow: /terms-of-service
 
-Sitemap: https://insuredcan.ca/sitemap.xml
+Sitemap: https://www.insuredcan.ca/sitemap.xml

@@ -238,7 +238,7 @@ const CoverageCalculator = () => {
       <Helmet>
         <title>Free Insurance Coverage Calculator | How Much Life Insurance Do You Need? | InsuredCan</title>
         <meta name="description" content="Calculate exactly how much life insurance coverage your family needs with our free interactive calculator. Get a personalized recommendation in under 2 minutes." />
-        <link rel="canonical" href="https://insuredcan.ca/coverage-calculator" />
+        <link rel="canonical" href="https://www.insuredcan.ca/coverage-calculator" />
       </Helmet>
       <Navbar />
 

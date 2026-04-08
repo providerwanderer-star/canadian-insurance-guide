@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import { ContentSection, ContentParagraph, ProsList, ComparisonTable, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, ComparisonTable, InfoCard, FAQSection } from "@/components/ContentElements";
 
 const BlogWhatOHIPDoesntCover = () => {
   return (
@@ -76,6 +76,14 @@ const BlogWhatOHIPDoesntCover = () => {
           <strong>If you're self-employed</strong>, these premiums may be tax-deductible. If you're incorporated, a Health Spending Account makes them a 100% deductible business expense.
         </ContentParagraph>
       </ContentSection>
+
+      <FAQSection faqs={[
+        { question: "Does OHIP cover dental in Ontario?", answer: "No. OHIP does not cover routine dental care for adults. It only covers some emergency oral surgery performed in a hospital. Private dental insurance or the federal Canadian Dental Care Plan (CDCP) covers routine dental for eligible individuals." },
+        { question: "Does OHIP cover prescription drugs?", answer: "OHIP does not cover most prescription drugs for working-age adults. The Ontario Drug Benefit (ODB) program covers drugs for children under 25, seniors 65+, and social assistance recipients. Everyone else needs private drug coverage." },
+        { question: "Does OHIP cover physiotherapy?", answer: "OHIP covers a limited amount of physiotherapy only for specific situations — such as after a hospital stay, for children, and for seniors. Most adults need private insurance for regular physiotherapy, chiropractic, and massage therapy." },
+        { question: "Does OHIP cover vision care?", answer: "OHIP covers one eye exam every 12 months for children under 20 and adults 65+, plus patients with certain medical conditions. Adults aged 20–64 pay out-of-pocket for eye exams and glasses without private coverage." },
+        { question: "How much does private health insurance cost in Ontario?", answer: "A basic individual private health and dental plan costs $80–$150/month. A comprehensive family plan runs $250–$450/month. This covers prescriptions, dental, vision, physiotherapy, and other services OHIP excludes." },
+      ]} />
     </BlogArticleLayout>
   );
 };

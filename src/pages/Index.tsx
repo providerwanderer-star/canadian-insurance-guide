@@ -18,29 +18,28 @@ const Index = () => {
       <Helmet>
         <title>InsuredCan — Life & Health Insurance Quotes in Canada | Free Advisor</title>
         <meta name="description" content="Compare Canada's top life, health, critical illness & disability insurance plans. Free quotes from 20+ insurers. Licensed advisors in Ontario, BC & Alberta. No obligation." />
-        <link rel="canonical" href="https://insuredcan.ca/" />
+        {/* canonical/og:url handled globally by SEOHead */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
         <meta property="og:description" content="Compare Canada's top life, health, critical illness & disability insurance. Free quotes from 20+ insurers. Licensed advisors. 5,000+ families protected." />
-        <meta property="og:url" content="https://insuredcan.ca/" />
-        <meta property="og:image" content="https://insuredcan.ca/og-image.png" />
+        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_CA" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
         <meta name="twitter:description" content="Compare Canada's top life, health & critical illness plans. Free quotes. Licensed advisors." />
-        <meta name="twitter:image" content="https://insuredcan.ca/og-image.png" />
+        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://insuredcan.ca/#organization",
+              "@id": "https://www.insuredcan.ca/#organization",
               "name": "InsuredCan",
-              "url": "https://insuredcan.ca",
-              "logo": "https://insuredcan.ca/favicon.ico",
+              "url": "https://www.insuredcan.ca",
+              "logo": "https://www.insuredcan.ca/favicon.ico",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-800-555-4678",
@@ -52,9 +51,9 @@ const Index = () => {
             },
             {
               "@type": "InsuranceAgency",
-              "@id": "https://insuredcan.ca/#business",
+              "@id": "https://www.insuredcan.ca/#business",
               "name": "InsuredCan",
-              "url": "https://insuredcan.ca",
+              "url": "https://www.insuredcan.ca",
               "description": "Licensed Canadian insurance brokerage offering life, health, critical illness, and disability insurance across Ontario, BC, Alberta, and more.",
               "address": {
                 "@type": "PostalAddress",
@@ -104,14 +103,14 @@ const Index = () => {
             },
             {
               "@type": "WebSite",
-              "@id": "https://insuredcan.ca/#website",
-              "url": "https://insuredcan.ca",
+              "@id": "https://www.insuredcan.ca/#website",
+              "url": "https://www.insuredcan.ca",
               "name": "InsuredCan",
               "description": "Canada's trusted insurance comparison and advisory platform",
-              "publisher": {"@id": "https://insuredcan.ca/#organization"},
+              "publisher": {"@id": "https://www.insuredcan.ca/#organization"},
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://insuredcan.ca/blog?q={search_term_string}",
+                "target": "https://www.insuredcan.ca/blog?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             }

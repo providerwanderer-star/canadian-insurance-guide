@@ -27,12 +27,12 @@ const BlogIndex = () => {
       <Helmet>
         <title>Insurance Blog — Canadian Insurance Guides & Education | InsuredCan</title>
         <meta name="description" content="Plain-language life, health, critical illness, and disability insurance guides written for Canadians. Compare plans, understand costs, and make confident coverage decisions." />
-        <link rel="canonical" href="https://insuredcan.ca/blog" />
+        <link rel="canonical" href="https://www.insuredcan.ca/blog" />
         <meta property="og:title" content="Insurance Blog — Canadian Insurance Guides & Education | InsuredCan" />
         <meta property="og:description" content="Plain-language insurance guides written for Canadians. Life, health, critical illness, and disability insurance explained simply." />
-        <meta property="og:url" content="https://insuredcan.ca/blog" />
+        <meta property="og:url" content="https://www.insuredcan.ca/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://insuredcan.ca/og-image.png" />
+        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
       </Helmet>
       <Navbar />
 

@@ -55,7 +55,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact InsuredCan — Get Free Insurance Advice in Canada</title>
         <meta name="description" content="Contact InsuredCan for free, no-obligation insurance advice. Speak with a licensed Canadian advisor about life, critical illness, funeral, or retirement coverage." />
-        <link rel="canonical" href="https://insuredcan.ca/contact" />
+        {/* canonical handled globally by SEOHead */}
       </Helmet>
       <Navbar />
 

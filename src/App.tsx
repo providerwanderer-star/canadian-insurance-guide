@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import SEOHead from "./components/SEOHead.tsx";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -31,6 +32,8 @@ import LifeInsuranceVancouverPage from "./pages/LifeInsuranceVancouver.tsx";
 import LifeInsuranceCalgaryPage from "./pages/LifeInsuranceCalgary.tsx";
 import LifeInsuranceEdmontonPage from "./pages/LifeInsuranceEdmonton.tsx";
 import LifeInsuranceOttawaPage from "./pages/LifeInsuranceOttawa.tsx";
+import LifeInsuranceMontrealPage from "./pages/LifeInsuranceMontreal.tsx";
+import LifeInsuranceWinnipegPage from "./pages/LifeInsuranceWinnipeg.tsx";
 import InsuranceBrokerCanadaPage from "./pages/InsuranceBrokerCanada.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
 import BlogOHIPWaiting from "./pages/blog/BlogOHIPWaiting.tsx";
@@ -63,6 +66,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <SEOHead />
           <Routes>
             <Route path="/" element={<Index />} />
             
@@ -106,6 +110,8 @@ const App = () => (
             <Route path="/life-insurance-edmonton" element={<LifeInsuranceEdmontonPage />} />
             <Route path="/life-insurance-ottawa" element={<LifeInsuranceOttawaPage />} />
             <Route path="/insurance-broker-canada" element={<InsuranceBrokerCanadaPage />} />
+            <Route path="/life-insurance-montreal" element={<LifeInsuranceMontrealPage />} />
+            <Route path="/life-insurance-winnipeg" element={<LifeInsuranceWinnipegPage />} />
             
             {/* Blog */}
             <Route path="/blog" element={<BlogIndex />} />
