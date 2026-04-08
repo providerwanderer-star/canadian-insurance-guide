@@ -53,7 +53,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={`Life Insurance in ${city} — InsuredCan`} />
