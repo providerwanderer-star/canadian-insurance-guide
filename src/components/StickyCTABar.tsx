@@ -23,12 +23,16 @@ const StickyCTABar = () => {
           Protect your family today — Get a free quote in 60 seconds
         </p>
         <div className="flex items-center gap-2 ml-auto">
-          <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xs">
-            Get Free Quote <ArrowRight className="h-3.5 w-3.5" />
-          </Button>
-          <Button size="sm" variant="ghost" className="text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 text-xs hidden sm:inline-flex">
-            <Phone className="h-3.5 w-3.5" /> Call Now
-          </Button>
+          <a href="mailto:sahil280389@gmail.com?subject=Free%20Insurance%20Quote%20Request">
+            <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xs">
+              Get Free Quote <ArrowRight className="h-3.5 w-3.5" />
+            </Button>
+          </a>
+          <a href="mailto:sahil280389@gmail.com?subject=Speak%20to%20Advisor">
+            <Button size="sm" variant="ghost" className="text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 text-xs hidden sm:inline-flex">
+              <Phone className="h-3.5 w-3.5" /> Call Now
+            </Button>
+          </a>
           <button onClick={() => setDismissed(true)} className="text-primary-foreground/50 hover:text-primary-foreground p-1">
             <X className="h-4 w-4" />
           </button>
