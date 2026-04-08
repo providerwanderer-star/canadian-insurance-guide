@@ -22,7 +22,7 @@ interface LocationPageProps {
   ogImage?: string;
 }
 
-const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, heroHeadline, heroDescription, localContent, faqs }: LocationPageProps) => {
+const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, heroHeadline, heroDescription, localContent, faqs, ogImage = "https://www.insuredcan.ca/og/og-home.png" }: LocationPageProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
