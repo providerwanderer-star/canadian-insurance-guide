@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /coverage-calculator$
+
+Disallow: /privacy-policy
+Disallow: /terms-of-service
 
 Sitemap: https://insuredcan.ca/sitemap.xml

@@ -10,8 +10,10 @@ const insuranceLinks = [
   { label: "Whole Life Insurance", href: "/whole-life-insurance" },
   { label: "Critical Illness", href: "/critical-illness-insurance" },
   { label: "Disability Insurance", href: "/disability-insurance" },
+  { label: "Health Insurance", href: "/health-insurance" },
   { label: "Travel Insurance", href: "/travel-insurance" },
   { label: "Mortgage Protection", href: "/mortgage-insurance" },
+  { label: "Funeral Insurance", href: "/funeral-insurance" },
 ];
 
 const compareLinks = [
@@ -25,6 +27,16 @@ const segmentLinks = [
   { label: "Growing Families", href: "/families" },
   { label: "Self-Employed", href: "/self-employed" },
   { label: "Young Professionals", href: "/young-professionals" },
+];
+
+const cityLinks = [
+  { label: "Life Insurance Toronto", href: "/life-insurance-toronto" },
+  { label: "Life Insurance Vancouver", href: "/life-insurance-vancouver" },
+  { label: "Life Insurance Calgary", href: "/life-insurance-calgary" },
+  { label: "Life Insurance Edmonton", href: "/life-insurance-edmonton" },
+  { label: "Life Insurance Ottawa", href: "/life-insurance-ottawa" },
+  { label: "Life Insurance London ON", href: "/life-insurance-london-ontario" },
+  { label: "Insurance Broker Canada", href: "/insurance-broker-canada" },
 ];
 
 const Navbar = () => {
@@ -45,6 +57,7 @@ const Navbar = () => {
             { label: "Insurance", key: "insurance", links: insuranceLinks },
             { label: "Who We Help", key: "segments", links: segmentLinks },
             { label: "Compare", key: "compare", links: compareLinks },
+            { label: "Cities", key: "cities", links: cityLinks },
           ].map((dropdown) => (
             <div
               key={dropdown.key}
@@ -130,9 +143,26 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/blog" className="text-sm font-medium text-muted-foreground py-2 px-2 mt-2" onClick={() => setMobileOpen(false)}>
-                Blog
-              </Link>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-2 pt-4 pb-1">Cities</p>
+              {cityLinks.map((link) => (
+                <Link key={link.href} to={link.href} className="text-sm text-muted-foreground py-2 px-2 rounded hover:bg-secondary" onClick={() => setMobileOpen(false)}>
+                  {link.label}
+                </Link>
+              ))}
+              <div className="flex flex-col gap-1 mt-2 pt-2 border-t border-border">
+                <Link to="/coverage-calculator" className="text-sm font-medium text-accent py-2 px-2" onClick={() => setMobileOpen(false)}>
+                  Coverage Calculator
+                </Link>
+                <Link to="/blog" className="text-sm font-medium text-muted-foreground py-2 px-2" onClick={() => setMobileOpen(false)}>
+                  Blog
+                </Link>
+                <Link to="/about" className="text-sm font-medium text-muted-foreground py-2 px-2" onClick={() => setMobileOpen(false)}>
+                  About Us
+                </Link>
+                <Link to="/contact" className="text-sm font-medium text-muted-foreground py-2 px-2" onClick={() => setMobileOpen(false)}>
+                  Contact
+                </Link>
+              </div>
               <Button className="mt-3 bg-accent text-accent-foreground hover:bg-accent/90" size="lg" onClick={() => setMobileOpen(false)}>
                 Get Free Quote
               </Button>

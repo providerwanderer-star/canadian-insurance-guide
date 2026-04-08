@@ -51,6 +51,8 @@ import BlogNoMedicalLifeInsurance from "./pages/blog/BlogNoMedicalLifeInsurance.
 import BlogIsLifeInsuranceTaxableCanada from "./pages/blog/BlogIsLifeInsuranceTaxableCanada.tsx";
 import BlogLifeInsuranceSeniorsCanada from "./pages/blog/BlogLifeInsuranceSeniorsCanada.tsx";
 import CoverageCalculator from "./pages/CoverageCalculator.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import TermsOfService from "./pages/TermsOfService.tsx";
 
 const queryClient = new QueryClient();
 
@@ -93,6 +95,8 @@ const App = () => (
             {/* Company Pages */}
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
             
             {/* Location Pages */}
             <Route path="/life-insurance-london-ontario" element={<LifeInsuranceLondonPage />} />

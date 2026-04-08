@@ -32,6 +32,91 @@ const Index = () => {
         <meta name="twitter:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
         <meta name="twitter:description" content="Compare Canada's top life, health & critical illness plans. Free quotes. Licensed advisors." />
         <meta name="twitter:image" content="https://insuredcan.ca/og-image.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://insuredcan.ca/#organization",
+              "name": "InsuredCan",
+              "url": "https://insuredcan.ca",
+              "logo": "https://insuredcan.ca/favicon.ico",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-800-555-4678",
+                "contactType": "customer service",
+                "areaServed": "CA",
+                "availableLanguage": ["English", "French"]
+              },
+              "sameAs": []
+            },
+            {
+              "@type": "InsuranceAgency",
+              "@id": "https://insuredcan.ca/#business",
+              "name": "InsuredCan",
+              "url": "https://insuredcan.ca",
+              "description": "Licensed Canadian insurance brokerage offering life, health, critical illness, and disability insurance across Ontario, BC, Alberta, and more.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "43.6532",
+                "longitude": "-79.3832"
+              },
+              "telephone": "+1-800-555-4678",
+              "email": "hello@insuredcan.ca",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "14:00"
+                }
+              ],
+              "areaServed": [
+                {"@type": "Province", "name": "Ontario"},
+                {"@type": "Province", "name": "British Columbia"},
+                {"@type": "Province", "name": "Alberta"},
+                {"@type": "Province", "name": "Quebec"},
+                {"@type": "Country", "name": "Canada"}
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Canadian Insurance Products",
+                "itemListElement": [
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Life Insurance"}},
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Critical Illness Insurance"}},
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Disability Insurance"}},
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Health Insurance"}},
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mortgage Insurance"}}
+                ]
+              }
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://insuredcan.ca/#website",
+              "url": "https://insuredcan.ca",
+              "name": "InsuredCan",
+              "description": "Canada's trusted insurance comparison and advisory platform",
+              "publisher": {"@id": "https://insuredcan.ca/#organization"},
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://insuredcan.ca/blog?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
       <HeroSection />
