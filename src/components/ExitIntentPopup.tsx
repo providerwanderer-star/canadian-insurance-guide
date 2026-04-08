@@ -50,7 +50,6 @@ const ExitIntentPopup = () => {
                 Get My Free Quote <ArrowRight className="h-4 w-4" />
               </Button>
             </a>
-            </Button>
             <button onClick={() => setShow(false)} className="text-xs text-muted-foreground hover:text-foreground">
               No thanks, I'll take my chances
             </button>
