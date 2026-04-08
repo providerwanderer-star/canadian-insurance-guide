@@ -28,6 +28,7 @@ const BlogArticleLayout = ({
   author,
   date,
   readTime,
+  ogImage = "https://www.insuredcan.ca/og/og-blog.png",
   children,
 }: BlogArticleLayoutProps) => {
   const canonicalUrl = `https://www.insuredcan.ca/blog/${slug}`;
