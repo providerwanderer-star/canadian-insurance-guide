@@ -8,6 +8,7 @@ const TravelInsurancePage = () => {
       metaTitle="Travel Insurance Canada — Super Visa, Visitor & Trip Coverage | InsuredCan"
       metaDescription="Get travel insurance for Super Visa applications, visiting parents, and trips abroad. Compare costs and coverage for Canadian travellers and visitors to Canada."
       breadcrumb="travel-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-travel.png"
       heroTag="Travel Coverage"
       heroDescription="Whether you're sponsoring parents on a Super Visa, welcoming visitors, or heading abroad, travel insurance protects against emergency medical costs that can reach hundreds of thousands of dollars."
     >

@@ -8,6 +8,7 @@ const RetirementPlanning = () => {
       metaTitle="Retirement Planning Canada — Secure Your Future Income | InsuredCan"
       metaDescription="Plan for a comfortable retirement in Canada. Learn about RRSPs, TFSAs, annuities, and how insurance protects your retirement income and legacy."
       breadcrumb="retirement-planning"
+      ogImage="https://www.insuredcan.ca/og/og-retirement.png"
       heroTag="Secure Your Future"
       heroDescription="Build a tax-efficient retirement strategy with guaranteed income streams, wealth transfer planning, and insurance solutions that protect your legacy for generations."
     >

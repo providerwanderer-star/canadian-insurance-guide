@@ -19,9 +19,10 @@ interface LocationPageProps {
   heroDescription: string;
   localContent: React.ReactNode;
   faqs: { question: string; answer: string }[];
+  ogImage?: string;
 }
 
-const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, heroHeadline, heroDescription, localContent, faqs }: LocationPageProps) => {
+const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, heroHeadline, heroDescription, localContent, faqs, ogImage = "https://www.insuredcan.ca/og/og-home.png" }: LocationPageProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -52,7 +53,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={`Life Insurance in ${city} — InsuredCan`} />
@@ -60,7 +61,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta name="twitter:image" content={ogImage} />
         <meta name="geo.region" content={`CA-${province}`} />
         <meta name="geo.placename" content={`${city}, ${province}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

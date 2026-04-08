@@ -8,6 +8,7 @@ const CriticalIllnessPage = () => {
       metaTitle="Critical Illness Insurance Canada — Coverage, Costs & Benefits | InsuredCan"
       metaDescription="Learn how critical illness insurance works in Canada. Get a tax-free lump sum if diagnosed with cancer, heart attack, or stroke. Compare costs and top providers."
       breadcrumb="critical-illness-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-critical-illness.png"
       heroTag="Income Protection"
       heroDescription="Critical illness insurance pays you a tax-free lump sum if you're diagnosed with a covered condition like cancer, heart attack, or stroke. Use the money however you need—lost income, treatments, childcare, or mortgage payments."
     >

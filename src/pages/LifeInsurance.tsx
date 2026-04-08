@@ -8,6 +8,7 @@ const LifeInsurancePage = () => {
       metaTitle="Life Insurance Canada — Term, Whole & Universal Life | InsuredCan"
       metaDescription="Compare term, whole, and universal life insurance in Canada. Learn costs, tax benefits, and which policy is right for your family. Free advice from licensed advisors."
       breadcrumb="life-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-life-insurance.png"
       heroTag="Most Popular"
       heroDescription="Life insurance is the cornerstone of financial protection for Canadian families. Whether you're a new parent in Toronto or planning your estate in Vancouver, this guide breaks down everything you need to know—without the jargon."
     >

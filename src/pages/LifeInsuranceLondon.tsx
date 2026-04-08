@@ -10,6 +10,7 @@ const LifeInsuranceLondon = () => (
     slug="life-insurance-london-ontario"
     heroHeadline="Life Insurance for London, Ontario Families"
     heroDescription="Whether you're a young family in Byron, a professional in downtown London, or a retiree in Old South—get personalized life insurance coverage from licensed Ontario advisors."
+      ogImage="https://www.insuredcan.ca/og/og-london.png"
     localContent={
       <>
         <ContentSection title="Why London Families Need Life Insurance">

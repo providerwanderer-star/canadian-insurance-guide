@@ -10,6 +10,7 @@ const LifeInsuranceOttawa = () => (
     slug="life-insurance-ottawa"
     heroHeadline="Life Insurance for Ottawa Families & Federal Employees"
     heroDescription="Ottawa is Canada's capital and home to one of the country's largest public service workforces. Whether you work for the federal government or the private sector, protect your family's future with the right life insurance. Compare 20+ insurers free."
+      ogImage="https://www.insuredcan.ca/og/og-ottawa.png"
     localContent={
       <>
         <ContentSection title="Why Ottawa Residents Need Life Insurance">

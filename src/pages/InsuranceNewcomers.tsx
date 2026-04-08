@@ -8,6 +8,7 @@ const InsuranceForNewcomersPage = () => {
       metaTitle="Insurance for Newcomers to Canada — Health, Life & Super Visa | InsuredCan"
       metaDescription="Moving to Canada? Learn what insurance you need as a newcomer — from bridging the OHIP wait to Super Visa coverage. Tailored advice for new immigrants."
       breadcrumb="newcomers"
+      ogImage="https://www.insuredcan.ca/og/og-newcomers.png"
       heroTag="Newcomers"
       heroDescription="Moving to Canada is exciting—but navigating the insurance system can be overwhelming. This guide covers everything newcomers need to know, from the OHIP waiting period to building your first insurance stack."
     >

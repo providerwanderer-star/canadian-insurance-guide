@@ -10,6 +10,7 @@ const LifeInsuranceVancouver = () => (
     slug="life-insurance-vancouver"
     heroHeadline="Life Insurance for Vancouver Families & Professionals"
     heroDescription="Vancouver's world-class lifestyle comes with world-class costs. Protect your family's financial future with affordable life insurance tailored to BC's cost of living. Compare quotes from 20+ top Canadian insurers — free, no obligation."
+      ogImage="https://www.insuredcan.ca/og/og-vancouver.png"
     localContent={
       <>
         <ContentSection title="Why Vancouver Residents Need Life Insurance">

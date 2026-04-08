@@ -9,6 +9,7 @@ const TermLifeInsurance = () => {
       metaTitle="Term Life Insurance Canada — Affordable Coverage for Your Family | InsuredCan"
       metaDescription="Term life insurance offers affordable, temporary coverage for 10–30 years. Learn how it works, costs, and who it's best for in Canada."
       breadcrumb="term-life-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-term-life.png"
       heroTag="Affordable Protection"
       heroDescription="Term life insurance provides straightforward, affordable coverage for a set period. It's the most popular choice for Canadian families looking to protect their income and mortgage."
     >

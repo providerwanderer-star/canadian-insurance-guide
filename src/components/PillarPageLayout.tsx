@@ -12,6 +12,7 @@ interface PillarPageLayoutProps {
   breadcrumb: string;
   heroTag?: string;
   heroDescription: string;
+  ogImage?: string;
   children: React.ReactNode;
 }
 
@@ -22,6 +23,7 @@ const PillarPageLayout = ({
   breadcrumb,
   heroTag,
   heroDescription,
+  ogImage = "https://www.insuredcan.ca/og/og-home.png",
   children,
 }: PillarPageLayoutProps) => {
   const breadcrumbLabel = breadcrumb.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
@@ -36,7 +38,7 @@ const PillarPageLayout = ({
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={`${title} — InsuredCan`} />
@@ -44,7 +46,7 @@ const PillarPageLayout = ({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",

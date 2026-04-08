@@ -8,6 +8,7 @@ const InsuranceForSelfEmployedPage = () => {
       metaTitle="Insurance for Self-Employed Canada — Health, Disability & Tax Tips | InsuredCan"
       metaDescription="Self-employed in Canada? Build your own safety net with health, disability, and life insurance. Learn tax deductions and coverage options for freelancers and contractors."
       breadcrumb="self-employed"
+      ogImage="https://www.insuredcan.ca/og/og-self-employed.png"
       heroTag="Self-Employed"
       heroDescription="No employer benefits? No problem. Self-employed Canadians, freelancers, and independent contractors can build comprehensive coverage—and much of it is tax-deductible."
     >

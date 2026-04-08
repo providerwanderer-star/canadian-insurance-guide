@@ -10,6 +10,7 @@ const LifeInsuranceMontreal = () => (
     slug="life-insurance-montreal"
     heroHeadline="Life Insurance for Montreal Families & Professionals"
     heroDescription="Montreal's unique blend of French and English culture deserves bilingual insurance expertise. Protect your family with affordable life insurance from licensed Quebec advisors. Compare quotes from 20+ top Canadian insurers."
+      ogImage="https://www.insuredcan.ca/og/og-montreal.png"
     faqs={[
       {
         question: "Do I need to speak French to get life insurance in Quebec?",

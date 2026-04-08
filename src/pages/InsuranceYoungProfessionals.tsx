@@ -8,6 +8,7 @@ const InsuranceForYoungProfessionalsPage = () => {
       metaTitle="Insurance for Young Adults Canada — First-Time Buyer Guide | InsuredCan"
       metaDescription="Your 20s and 30s are the best time to lock in insurance rates. Learn what coverage young Canadian professionals need and how to save on premiums."
       breadcrumb="young-professionals"
+      ogImage="https://www.insuredcan.ca/og/og-young-professionals.png"
       heroTag="Young Adults"
       heroDescription="You're healthy, you're earning, and insurance feels like something for 'later.' But your 20s and 30s are when premiums are lowest and coverage is easiest to get. Here's how to be smart about it."
     >

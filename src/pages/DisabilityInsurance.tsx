@@ -8,6 +8,7 @@ const DisabilityInsurancePage = () => {
       metaTitle="Disability Insurance Canada — Income Protection Guide | InsuredCan"
       metaDescription="Disability insurance replaces up to 70% of your income if you can't work. Learn about short-term, long-term, and own-occupation coverage for Canadians."
       breadcrumb="disability-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-disability.png"
       heroTag="Income Protection"
       heroDescription="Your ability to earn income is your greatest financial asset. Disability insurance replaces a portion of your salary if illness or injury prevents you from working—whether for a few months or permanently."
     >
