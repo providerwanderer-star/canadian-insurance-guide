@@ -12,6 +12,7 @@ interface PillarPageLayoutProps {
   breadcrumb: string;
   heroTag?: string;
   heroDescription: string;
+  ogImage?: string;
   children: React.ReactNode;
 }
 
