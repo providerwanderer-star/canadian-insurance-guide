@@ -23,6 +23,7 @@ const PillarPageLayout = ({
   breadcrumb,
   heroTag,
   heroDescription,
+  ogImage = "https://www.insuredcan.ca/og/og-home.png",
   children,
 }: PillarPageLayoutProps) => {
   const breadcrumbLabel = breadcrumb.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
