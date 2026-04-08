@@ -45,9 +45,11 @@ const ExitIntentPopup = () => {
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Get a free, personalized insurance quote in under 60 seconds. No obligation, no spam—just the coverage your family needs.
             </p>
-            <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent mb-3" onClick={() => setShow(false)}>
-              Get My Free Quote <ArrowRight className="h-4 w-4" />
-            </Button>
+            <a href="mailto:sahil280389@gmail.com?subject=Free%20Insurance%20Quote%20Request" className="w-full">
+              <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent mb-3" onClick={() => setShow(false)}>
+                Get My Free Quote <ArrowRight className="h-4 w-4" />
+              </Button>
+            </a>
             <button onClick={() => setShow(false)} className="text-xs text-muted-foreground hover:text-foreground">
               No thanks, I'll take my chances
             </button>

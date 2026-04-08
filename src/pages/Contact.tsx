@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "1-800-555-INSURE", detail: "Mon–Fri, 9am–6pm ET" },
-  { icon: Mail, label: "Email", value: "hello@insuredcan.ca", detail: "We reply within 24 hours" },
+  { icon: Mail, label: "Email", value: "sahil280389@gmail.com", detail: "We reply within 24 hours" },
   { icon: MapPin, label: "Office", value: "Toronto, Ontario", detail: "Serving all of Canada" },
   { icon: Clock, label: "Hours", value: "Mon–Fri 9am–6pm", detail: "Sat 10am–2pm ET" },
 ];
