@@ -15,8 +15,8 @@ const SEOHead = () => {
     <Helmet>
       <link rel="canonical" href={canonical} />
       <meta property="og:url" content={canonical} />
-      <link rel="alternate" hreflang="en-CA" href={canonical} />
-      <link rel="alternate" hreflang="x-default" href={canonical} />
+      <link rel="alternate" hrefLang="en-CA" href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={canonical} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     </Helmet>
   );
