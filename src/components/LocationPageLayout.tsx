@@ -19,6 +19,7 @@ interface LocationPageProps {
   heroDescription: string;
   localContent: React.ReactNode;
   faqs: { question: string; answer: string }[];
+  ogImage?: string;
 }
 
 const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, heroHeadline, heroDescription, localContent, faqs }: LocationPageProps) => {
