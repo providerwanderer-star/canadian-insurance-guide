@@ -1,0 +1,66 @@
+# InsuredCan — Canada's Trusted Insurance Comparison Platform
+
+> InsuredCan is a licensed Canadian insurance brokerage that helps families, newcomers, and self-employed Canadians find affordable life, health, critical illness, disability, travel, and mortgage protection insurance. We compare quotes from 20+ top Canadian insurers and provide free, unbiased advice from licensed advisors.
+
+## About InsuredCan
+- Licensed insurance brokerage operating across Ontario, British Columbia, Alberta, Quebec, and Manitoba
+- Education-first approach with no-obligation free quotes
+- Over 5,000 Canadian families protected
+- Compares plans from 20+ insurers including Sun Life, Manulife, Canada Life, Desjardins, and more
+
+## Insurance Products
+
+### Life Insurance
+- [Life Insurance Guide](https://www.insuredcan.ca/life-insurance): Complete guide to term, whole, and universal life insurance in Canada
+- [Term Life Insurance](https://www.insuredcan.ca/term-life-insurance): Affordable coverage for 10, 20, or 30 year terms
+- [Whole Life Insurance](https://www.insuredcan.ca/whole-life-insurance): Permanent coverage with cash value accumulation
+- [Funeral Insurance](https://www.insuredcan.ca/funeral-insurance): Final expense coverage for Canadians
+
+### Health & Protection
+- [Critical Illness Insurance](https://www.insuredcan.ca/critical-illness-insurance): Lump-sum benefit upon diagnosis of covered conditions
+- [Disability Insurance](https://www.insuredcan.ca/disability-insurance): Income replacement if you can't work due to illness or injury
+- [Health Insurance](https://www.insuredcan.ca/health-insurance): Extended health coverage beyond provincial plans
+- [Travel Insurance](https://www.insuredcan.ca/travel-insurance): Medical and trip protection for Canadian travellers
+
+### Financial Protection
+- [Mortgage Insurance](https://www.insuredcan.ca/mortgage-insurance): Protect your family's home
+- [Retirement Planning](https://www.insuredcan.ca/retirement-planning): Insurance strategies for retirement income
+
+## Comparison Guides
+- [Term vs Whole Life](https://www.insuredcan.ca/compare/term-vs-whole-life): Side-by-side comparison of term and whole life insurance
+- [Critical Illness vs Disability](https://www.insuredcan.ca/compare/critical-illness-vs-disability): Key differences explained
+- [Private vs OHIP](https://www.insuredcan.ca/compare/private-vs-ohip): What provincial health insurance doesn't cover
+
+## Who We Help
+- [Newcomers to Canada](https://www.insuredcan.ca/newcomers): Insurance guidance for new immigrants and PRs
+- [Canadian Families](https://www.insuredcan.ca/families): Protecting your family's financial future
+- [Self-Employed Canadians](https://www.insuredcan.ca/self-employed): Coverage without employer benefits
+- [Young Professionals](https://www.insuredcan.ca/young-professionals): Getting started with insurance early
+
+## Tools
+- [Coverage Calculator](https://www.insuredcan.ca/coverage-calculator): Calculate how much life insurance you need
+
+## Local Services
+- [Toronto](https://www.insuredcan.ca/life-insurance-toronto)
+- [Vancouver](https://www.insuredcan.ca/life-insurance-vancouver)
+- [Calgary](https://www.insuredcan.ca/life-insurance-calgary)
+- [Montreal](https://www.insuredcan.ca/life-insurance-montreal)
+- [Ottawa](https://www.insuredcan.ca/life-insurance-ottawa)
+- [Edmonton](https://www.insuredcan.ca/life-insurance-edmonton)
+- [Winnipeg](https://www.insuredcan.ca/life-insurance-winnipeg)
+- [London, Ontario](https://www.insuredcan.ca/life-insurance-london-ontario)
+
+## Blog & Resources
+- [Blog](https://www.insuredcan.ca/blog): Educational articles on insurance topics
+- [No Medical Life Insurance](https://www.insuredcan.ca/blog/no-medical-life-insurance-canada)
+- [Is Life Insurance Taxable?](https://www.insuredcan.ca/blog/is-life-insurance-taxable-canada)
+- [Life Insurance for Seniors](https://www.insuredcan.ca/blog/life-insurance-seniors-canada)
+- [How Much Life Insurance Do I Need?](https://www.insuredcan.ca/blog/how-much-life-insurance-canada)
+- [OHIP Waiting Period](https://www.insuredcan.ca/blog/ohip-waiting-period-newcomers)
+- [What OHIP Doesn't Cover](https://www.insuredcan.ca/blog/what-ohip-doesnt-cover)
+- [Super Visa Insurance](https://www.insuredcan.ca/blog/super-visa-insurance-canada)
+
+## Contact
+- Website: https://www.insuredcan.ca
+- Contact Page: https://www.insuredcan.ca/contact
+- Email: hello@insuredcan.ca

@@ -1,0 +1,2 @@
+# See https://www.insuredcan.ca/llms.txt for full LLM-readable content
+# See https://www.insuredcan.ca/llms-full.txt for complete knowledge base
