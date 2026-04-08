@@ -83,7 +83,7 @@ const BlogArticleLayout = ({
         <meta property="og:type" content="article" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:alt" content={title} />
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:locale" content="en_CA" />
