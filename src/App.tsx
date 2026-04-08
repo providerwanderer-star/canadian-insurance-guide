@@ -118,6 +118,14 @@ const App = () => (
             <Route path="/insurance-broker-canada" element={<InsuranceBrokerCanadaPage />} />
             <Route path="/life-insurance-montreal" element={<LifeInsuranceMontrealPage />} />
             <Route path="/life-insurance-winnipeg" element={<LifeInsuranceWinnipegPage />} />
+            <Route path="/life-insurance-hamilton" element={<LifeInsuranceHamiltonPage />} />
+            <Route path="/life-insurance-mississauga" element={<LifeInsuranceMississaugaPage />} />
+            <Route path="/life-insurance-brampton" element={<LifeInsuranceBramptonPage />} />
+            <Route path="/life-insurance-surrey" element={<LifeInsuranceSurreyPage />} />
+            <Route path="/life-insurance-markham" element={<LifeInsuranceMarkhamPage />} />
+            
+            {/* Resources */}
+            <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
             
             {/* Blog */}
             <Route path="/blog" element={<BlogIndex />} />
