@@ -4,4 +4,31 @@ Allow: /
 Disallow: /privacy-policy
 Disallow: /terms-of-service
 
+# AI Crawlers Welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
 Sitemap: https://www.insuredcan.ca/sitemap.xml
+
+# LLM-readable content
+# https://www.insuredcan.ca/llms.txt
+# https://www.insuredcan.ca/llms-full.txt
+# https://www.insuredcan.ca/ai.txt

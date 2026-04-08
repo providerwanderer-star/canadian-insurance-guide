@@ -1,10 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
 
 interface PillarPageLayoutProps {
   title: string;
@@ -25,12 +24,14 @@ const PillarPageLayout = ({
   heroDescription,
   children,
 }: PillarPageLayoutProps) => {
+  const breadcrumbLabel = breadcrumb.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  const slug = breadcrumb.toLowerCase().replace(/\s+/g, "-");
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        {/* Open Graph — canonical/og:url handled globally by SEOHead */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:title" content={metaTitle} />
@@ -38,20 +39,33 @@ const PillarPageLayout = ({
         <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${title} — InsuredCan`} />
         <meta property="og:locale" content="en_CA" />
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
-        {/* BreadcrumbList Schema */}
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.insuredcan.ca/" },
-            { "@type": "ListItem", "position": 2, "name": title, "item": `https://insuredcan.ca/${breadcrumb.toLowerCase().replace(/\s+/g, "-")}` }
-          ]
+          "@type": "WebPage",
+          "name": title,
+          "description": metaDescription,
+          "url": `https://www.insuredcan.ca/${slug}`,
+          "isPartOf": { "@type": "WebSite", "url": "https://www.insuredcan.ca" },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".hero-description"]
+          },
+          "mainEntity": {
+            "@type": "Service",
+            "name": title,
+            "provider": {
+              "@type": "InsuranceAgency",
+              "name": "InsuredCan",
+              "url": "https://www.insuredcan.ca"
+            },
+            "areaServed": { "@type": "Country", "name": "Canada" }
+          }
         })}</script>
       </Helmet>
       <Navbar />
@@ -59,11 +73,9 @@ const PillarPageLayout = ({
       {/* Hero */}
       <section className="bg-primary">
         <div className="container py-16 md:py-20">
-          <Link to="/" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-smooth mb-6">
-            <ArrowLeft className="h-4 w-4" /> Back to Home
-          </Link>
+          <BreadcrumbNav items={[{ label: breadcrumbLabel, href: `/${slug}` }]} />
           {heroTag && (
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 mb-4 ml-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 mb-4">
               <span className="text-xs font-bold text-accent-foreground">{heroTag}</span>
             </div>
           )}
@@ -74,7 +86,7 @@ const PillarPageLayout = ({
           >
             {title}
           </motion.h1>
-          <p className="text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
+          <p className="hero-description text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
             {heroDescription}
           </p>
         </div>
