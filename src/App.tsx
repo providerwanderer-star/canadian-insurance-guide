@@ -34,7 +34,13 @@ import LifeInsuranceEdmontonPage from "./pages/LifeInsuranceEdmonton.tsx";
 import LifeInsuranceOttawaPage from "./pages/LifeInsuranceOttawa.tsx";
 import LifeInsuranceMontrealPage from "./pages/LifeInsuranceMontreal.tsx";
 import LifeInsuranceWinnipegPage from "./pages/LifeInsuranceWinnipeg.tsx";
+import LifeInsuranceHamiltonPage from "./pages/LifeInsuranceHamilton.tsx";
+import LifeInsuranceMississaugaPage from "./pages/LifeInsuranceMississauga.tsx";
+import LifeInsuranceBramptonPage from "./pages/LifeInsuranceBrampton.tsx";
+import LifeInsuranceSurreyPage from "./pages/LifeInsuranceSurrey.tsx";
+import LifeInsuranceMarkhamPage from "./pages/LifeInsuranceMarkham.tsx";
 import InsuranceBrokerCanadaPage from "./pages/InsuranceBrokerCanada.tsx";
+import InsuranceGlossaryPage from "./pages/InsuranceGlossary.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
 import BlogOHIPWaiting from "./pages/blog/BlogOHIPWaiting.tsx";
 import BlogTermVsWhole from "./pages/blog/BlogTermVsWhole.tsx";
@@ -112,6 +118,14 @@ const App = () => (
             <Route path="/insurance-broker-canada" element={<InsuranceBrokerCanadaPage />} />
             <Route path="/life-insurance-montreal" element={<LifeInsuranceMontrealPage />} />
             <Route path="/life-insurance-winnipeg" element={<LifeInsuranceWinnipegPage />} />
+            <Route path="/life-insurance-hamilton" element={<LifeInsuranceHamiltonPage />} />
+            <Route path="/life-insurance-mississauga" element={<LifeInsuranceMississaugaPage />} />
+            <Route path="/life-insurance-brampton" element={<LifeInsuranceBramptonPage />} />
+            <Route path="/life-insurance-surrey" element={<LifeInsuranceSurreyPage />} />
+            <Route path="/life-insurance-markham" element={<LifeInsuranceMarkhamPage />} />
+            
+            {/* Resources */}
+            <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
             
             {/* Blog */}
             <Route path="/blog" element={<BlogIndex />} />

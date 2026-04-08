@@ -37,8 +37,9 @@
 - [Self-Employed Canadians](https://www.insuredcan.ca/self-employed): Coverage without employer benefits
 - [Young Professionals](https://www.insuredcan.ca/young-professionals): Getting started with insurance early
 
-## Tools
+## Tools & Resources
 - [Coverage Calculator](https://www.insuredcan.ca/coverage-calculator): Calculate how much life insurance you need
+- [Insurance Glossary](https://www.insuredcan.ca/insurance-glossary): 45+ insurance terms explained in plain language
 
 ## Local Services
 - [Toronto](https://www.insuredcan.ca/life-insurance-toronto)
@@ -48,6 +49,11 @@
 - [Ottawa](https://www.insuredcan.ca/life-insurance-ottawa)
 - [Edmonton](https://www.insuredcan.ca/life-insurance-edmonton)
 - [Winnipeg](https://www.insuredcan.ca/life-insurance-winnipeg)
+- [Hamilton](https://www.insuredcan.ca/life-insurance-hamilton)
+- [Mississauga](https://www.insuredcan.ca/life-insurance-mississauga)
+- [Brampton](https://www.insuredcan.ca/life-insurance-brampton)
+- [Surrey, BC](https://www.insuredcan.ca/life-insurance-surrey)
+- [Markham](https://www.insuredcan.ca/life-insurance-markham)
 - [London, Ontario](https://www.insuredcan.ca/life-insurance-london-ontario)
 
 ## Blog & Resources
