@@ -67,7 +67,7 @@ const Index = () => {
                 "longitude": "-79.3832"
               },
               "telephone": "+1-800-555-4678",
-              "email": "hello@insuredcan.ca",
+              "email": "sahil280389@gmail.com",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
