@@ -9,6 +9,7 @@ const WholeLifeInsurance = () => {
       metaTitle="Whole Life Insurance Canada — Permanent Coverage + Cash Value | InsuredCan"
       metaDescription="Whole life insurance provides lifelong coverage with guaranteed cash value growth. Learn costs, benefits, and who needs it in Canada."
       breadcrumb="whole-life-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-whole-life.png"
       heroTag="Lifetime Protection"
       heroDescription="Whole life insurance provides permanent, lifelong coverage with a guaranteed cash value component. It's ideal for estate planning, wealth transfer, and leaving a legacy."
     >

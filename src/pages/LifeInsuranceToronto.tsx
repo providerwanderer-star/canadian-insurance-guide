@@ -10,6 +10,7 @@ const LifeInsuranceToronto = () => (
     slug="life-insurance-toronto"
     heroHeadline="Life Insurance for Toronto Families & Professionals"
     heroDescription="Canada's largest city demands comprehensive coverage. Protect your family's future with affordable life insurance tailored to Toronto's cost of living. Compare quotes from 20+ top Canadian insurers."
+      ogImage="https://www.insuredcan.ca/og/og-toronto.png"
     localContent={
       <>
         <ContentSection title="Why Toronto Residents Need Life Insurance">

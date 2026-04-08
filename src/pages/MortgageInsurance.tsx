@@ -8,6 +8,7 @@ const MortgageInsurancePage = () => {
       metaTitle="Mortgage Insurance Canada — Bank vs Personal Coverage | InsuredCan"
       metaDescription="Compare bank mortgage insurance vs personal life insurance in Canada. Learn why a term life policy often provides better coverage at a lower cost for homeowners."
       breadcrumb="mortgage-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-mortgage.png"
       heroTag="Home Protection"
       heroDescription="Your mortgage is likely the biggest financial commitment you'll ever make. Mortgage insurance ensures your family can keep the home if something happens to you—but the type you choose matters enormously."
     >

@@ -10,6 +10,7 @@ const LifeInsuranceEdmonton = () => (
     slug="life-insurance-edmonton"
     heroHeadline="Life Insurance for Edmonton Families & Workers"
     heroDescription="Edmonton is Alberta's capital and one of Canada's most affordable major cities — but that doesn't mean your family's financial future should be left to chance. Compare life insurance quotes from 20+ top Canadian insurers, free."
+      ogImage="https://www.insuredcan.ca/og/og-edmonton.png"
     localContent={
       <>
         <ContentSection title="Why Edmonton Residents Need Life Insurance">

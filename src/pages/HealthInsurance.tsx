@@ -8,6 +8,7 @@ const HealthInsurancePage = () => {
       metaTitle="Health & Dental Insurance Canada — Supplement OHIP & Provincial Plans | InsuredCan"
       metaDescription="Discover what provincial healthcare doesn't cover in Canada. Compare private health & dental plans for prescriptions, vision, dental, and paramedical services."
       breadcrumb="health-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-health.png"
       heroTag="Essential Coverage"
       heroDescription="Provincial health plans like OHIP cover hospital and doctor visits—but prescription drugs, dental, vision, and paramedical services are mostly on you. Private health insurance fills those gaps affordably."
     >

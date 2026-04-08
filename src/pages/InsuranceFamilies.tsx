@@ -8,6 +8,7 @@ const InsuranceForFamiliesPage = () => {
       metaTitle="Insurance for Families Canada — Life, Health & Protection Guide | InsuredCan"
       metaDescription="Protect your family with the right insurance coverage. Life, health, critical illness, and RESP protection for Canadian parents and growing families."
       breadcrumb="families"
+      ogImage="https://www.insuredcan.ca/og/og-families.png"
       heroTag="Families"
       heroDescription="Starting or growing a family changes everything—including your insurance needs. Here's how to build a comprehensive protection plan that keeps your family secure without breaking the budget."
     >

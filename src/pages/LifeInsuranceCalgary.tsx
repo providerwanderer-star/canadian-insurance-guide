@@ -10,6 +10,7 @@ const LifeInsuranceCalgary = () => (
     slug="life-insurance-calgary"
     heroHeadline="Life Insurance for Calgary Families & Professionals"
     heroDescription="Calgary's energy-driven economy means incomes can fluctuate. Protect your family's financial security with affordable, reliable life insurance. Compare quotes from 20+ top Canadian insurers — free, no obligation."
+      ogImage="https://www.insuredcan.ca/og/og-calgary.png"
     localContent={
       <>
         <ContentSection title="Why Calgary Families Need Life Insurance">

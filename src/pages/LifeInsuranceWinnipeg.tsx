@@ -10,6 +10,7 @@ const LifeInsuranceWinnipeg = () => (
     slug="life-insurance-winnipeg"
     heroHeadline="Life Insurance for Winnipeg Families"
     heroDescription="Winnipeg families count on reliable income protection. Whether you work in agriculture, manufacturing, or the public sector, the right life insurance ensures your family is protected. Compare quotes from 20+ Canadian insurers."
+      ogImage="https://www.insuredcan.ca/og/og-winnipeg.png"
     faqs={[
       {
         question: "How much life insurance do Winnipeg families need?",
