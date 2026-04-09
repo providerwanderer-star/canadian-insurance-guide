@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const InsuranceForNewcomersPage = () => {
   return (
@@ -12,6 +12,17 @@ const InsuranceForNewcomersPage = () => {
       heroTag="Newcomers"
       heroDescription="Moving to Canada is exciting—but navigating the insurance system can be overwhelming. This guide covers everything newcomers need to know, from the OHIP waiting period to building your first insurance stack."
     >
+      <QuickAnswerBox
+        question="What insurance do newcomers need when arriving in Canada?"
+        answer="Priority #1 is bridge health insurance for the OHIP waiting period (up to 3 months, costs $150–$400). After that, build your coverage: supplemental health & dental, term life insurance if you have dependents, and Super Visa insurance if sponsoring parents/grandparents."
+      />
+      <KeyTakeaways items={[
+        "The OHIP waiting period is up to 3 months — private health insurance is essential",
+        "A single ER visit without coverage can cost $3,000–$10,000+",
+        "Newcomers CAN get life insurance in Canada, even before permanent residency",
+        "Super Visa requires $100,000 minimum emergency medical coverage",
+        "Getting insured early locks in lower premiums based on your current health",
+      ]} />
       <ContentSection title="Your Insurance Timeline as a Newcomer">
         <ContentH3>Day 1–90: Bridge the Provincial Health Gap</ContentH3>
         <ContentParagraph>

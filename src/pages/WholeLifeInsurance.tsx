@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 import { Link } from "react-router-dom";
 
 const WholeLifeInsurance = () => {
@@ -13,6 +13,17 @@ const WholeLifeInsurance = () => {
       heroTag="Lifetime Protection"
       heroDescription="Whole life insurance provides permanent, lifelong coverage with a guaranteed cash value component. It's ideal for estate planning, wealth transfer, and leaving a legacy."
     >
+      <QuickAnswerBox
+        question="What is whole life insurance and how much does it cost?"
+        answer="Whole life insurance provides permanent, lifelong coverage with a cash value that grows tax-deferred. A healthy 30-year-old pays $250–$350/month for $500,000 of coverage — 5–10x more than term life, but it never expires and builds wealth."
+      />
+      <KeyTakeaways items={[
+        "Whole life provides permanent coverage that never expires",
+        "Cash value grows tax-deferred and can be borrowed against",
+        "Participating policies pay dividends (Sun Life, Equitable Life)",
+        "5–10x more expensive than term life for the same death benefit",
+        "Best for estate planning, wealth transfer, and permanent needs",
+      ]} />
       <ContentSection title="What Is Whole Life Insurance?">
         <ContentParagraph>
           Whole life insurance is a type of permanent life insurance that covers you for your entire life, as long as premiums are paid. Unlike term insurance, it includes a cash value component that grows on a tax-deferred basis, giving you both protection and a savings element.

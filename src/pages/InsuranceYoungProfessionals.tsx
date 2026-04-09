@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentParagraph, ProsList, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const InsuranceForYoungProfessionalsPage = () => {
   return (
@@ -12,6 +12,17 @@ const InsuranceForYoungProfessionalsPage = () => {
       heroTag="Young Adults"
       heroDescription="You're healthy, you're earning, and insurance feels like something for 'later.' But your 20s and 30s are when premiums are lowest and coverage is easiest to get. Here's how to be smart about it."
     >
+      <QuickAnswerBox
+        question="Do young professionals in Canada need life insurance?"
+        answer="Yes — especially if you have a mortgage, partner, or plan to start a family. A healthy 25-year-old can lock in $500K of term coverage for ~$20/month. Waiting until 35 doubles that cost. Getting insured young is the smartest financial move you can make."
+      />
+      <KeyTakeaways items={[
+        "A 25-year-old pays ~50% less than a 35-year-old for the same term life policy",
+        "Locking in rates young guarantees your insurability regardless of future health changes",
+        "Even without dependents, life insurance covers co-signed debts and funeral costs",
+        "Disability insurance is the #1 most overlooked coverage for young professionals",
+        "Start with term life + disability; add critical illness as income grows",
+      ]} />
       <ContentSection title="Why Start Now?">
         <ContentParagraph>
           Every year you wait, premiums go up. A 25-year-old pays roughly <strong>50% less</strong> than a 35-year-old for the same term life policy. Lock in rates while you're young and healthy—you'll thank yourself in 20 years.

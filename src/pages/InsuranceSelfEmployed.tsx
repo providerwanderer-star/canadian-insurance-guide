@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentParagraph, ProsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const InsuranceForSelfEmployedPage = () => {
   return (
@@ -12,6 +12,17 @@ const InsuranceForSelfEmployedPage = () => {
       heroTag="Self-Employed"
       heroDescription="No employer benefits? No problem. Self-employed Canadians, freelancers, and independent contractors can build comprehensive coverage—and much of it is tax-deductible."
     >
+      <QuickAnswerBox
+        question="What insurance do self-employed Canadians need?"
+        answer="Self-employed Canadians should prioritize: disability insurance (replaces income if you can't work), health & dental coverage, life insurance if you have dependents, and critical illness insurance. Many premiums are tax-deductible as business expenses."
+      />
+      <KeyTakeaways items={[
+        "1 in 3 working Canadians will be disabled for 90+ days before age 65",
+        "Self-employed have no employer sick leave or group disability coverage",
+        "Health & dental premiums are tax-deductible for self-employed individuals",
+        "Individual disability insurance replaces 60–70% of your pre-disability income",
+        "A comprehensive self-employed insurance stack costs $400–$700/month",
+      ]} />
       <ContentSection title="Why Insurance Is Critical for the Self-Employed">
         <ContentParagraph>
           When you're self-employed, there's no employer to provide sick leave, health benefits, or disability coverage. If you can't work, your income stops immediately. If you get sick, you pay for everything out of pocket.
