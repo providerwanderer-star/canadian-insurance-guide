@@ -9,7 +9,7 @@ const BlogInsuranceMistakesCanadians = () => (
     metaDescription="Avoid these 10 costly insurance mistakes that Canadians make. From buying bank mortgage insurance to under-insuring, learn how to protect your family properly."
     slug="top-insurance-mistakes-canadians"
     category="Insurance Tips"
-    publishDate="April 9, 2026"
+    author="InsuredCan Advisory Team" date="April 9, 2026"
     readTime="11 min read"
   >
     <QuickAnswerBox

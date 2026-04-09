@@ -9,7 +9,7 @@ const BlogCheapestLifeInsurance = () => (
     metaDescription="Find the cheapest life insurance in Canada. Compare rates from $12/mo across 20+ insurers. 7 strategies to lower your premium without sacrificing coverage."
     slug="cheapest-life-insurance-canada-2026"
     category="Life Insurance"
-    publishDate="April 9, 2026"
+    author="InsuredCan Advisory Team" date="April 9, 2026"
     readTime="10 min read"
   >
     <QuickAnswerBox

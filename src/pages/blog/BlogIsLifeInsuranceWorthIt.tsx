@@ -9,7 +9,7 @@ const BlogIsLifeInsuranceWorthIt = () => (
     metaDescription="Is life insurance worth it? We analyze the real costs, benefits, and scenarios where Canadians need (or don't need) life insurance. Honest, expert advice."
     slug="is-life-insurance-worth-it-canada"
     category="Life Insurance"
-    publishDate="April 9, 2026"
+    author="InsuredCan Advisory Team" date="April 9, 2026"
     readTime="11 min read"
   >
     <QuickAnswerBox

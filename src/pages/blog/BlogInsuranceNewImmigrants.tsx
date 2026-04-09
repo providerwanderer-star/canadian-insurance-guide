@@ -9,7 +9,7 @@ const BlogInsuranceNewImmigrants = () => (
     metaDescription="Moving to Canada? Learn what insurance you need as a new immigrant — health bridge coverage, life insurance, Super Visa requirements, and more. Expert newcomer advice."
     slug="insurance-new-immigrants-canada"
     category="Newcomers"
-    publishDate="April 9, 2026"
+    author="InsuredCan Advisory Team" date="April 9, 2026"
     readTime="13 min read"
   >
     <QuickAnswerBox

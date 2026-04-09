@@ -9,7 +9,7 @@ const BlogHowToChooseInsuranceOntario = () => (
     metaDescription="Learn how to choose the right life insurance in Ontario. 7 steps covering coverage amount, type, provider comparison, and common pitfalls. Expert Ontario advice."
     slug="how-to-choose-insurance-ontario"
     category="Life Insurance"
-    publishDate="April 9, 2026"
+    author="InsuredCan Advisory Team" date="April 9, 2026"
     readTime="12 min read"
   >
     <QuickAnswerBox

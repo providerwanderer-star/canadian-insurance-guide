@@ -9,7 +9,7 @@ const BlogBestLifeInsuranceOntario = () => (
     metaDescription="Compare the best life insurance companies in Ontario for 2026. See rates, features, and expert rankings for Sun Life, Manulife, Canada Life & more. Updated April 2026."
     slug="best-life-insurance-ontario-2026"
     category="Life Insurance"
-    publishDate="April 9, 2026"
+    author="InsuredCan Advisory Team" date="April 9, 2026"
     readTime="12 min read"
   >
     <QuickAnswerBox
