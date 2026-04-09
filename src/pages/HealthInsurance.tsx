@@ -12,6 +12,16 @@ const HealthInsurancePage = () => {
       heroTag="Essential Coverage"
       heroDescription="Provincial health plans like OHIP cover hospital and doctor visits—but prescription drugs, dental, vision, and paramedical services are mostly on you. Private health insurance fills those gaps affordably."
     >
+      <QuickAnswerBox
+        question="Does OHIP cover dental, drugs, and vision?"
+        answer="No. Provincial health plans like OHIP cover hospital stays and doctor visits, but NOT prescription drugs (ages 25–64), dental care, vision, physiotherapy, or mental health counselling. You need private health insurance for these services."
+      />
+      <KeyTakeaways items={[
+        "Provincial health plans have significant gaps — drugs, dental, vision, and therapy are NOT covered",
+        "Individual health plans start from $80–$120/month for basic drug and dental coverage",
+        "Self-employed Canadians can deduct health insurance premiums on their taxes",
+        "Newcomers face a 3-month waiting period before provincial coverage begins",
+      ]} />
       <ContentSection title="What Does Provincial Healthcare Actually Cover?">
         <ContentParagraph>
           Each Canadian province has its own health plan (OHIP in Ontario, MSP in BC, RAMQ in Québec). While medically necessary hospital and physician services are covered, many essential health expenses are not.
