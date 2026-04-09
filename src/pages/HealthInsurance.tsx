@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const HealthInsurancePage = () => {
   return (
@@ -12,6 +12,16 @@ const HealthInsurancePage = () => {
       heroTag="Essential Coverage"
       heroDescription="Provincial health plans like OHIP cover hospital and doctor visits—but prescription drugs, dental, vision, and paramedical services are mostly on you. Private health insurance fills those gaps affordably."
     >
+      <QuickAnswerBox
+        question="Does OHIP cover dental, drugs, and vision?"
+        answer="No. Provincial health plans like OHIP cover hospital stays and doctor visits, but NOT prescription drugs (ages 25–64), dental care, vision, physiotherapy, or mental health counselling. You need private health insurance for these services."
+      />
+      <KeyTakeaways items={[
+        "Provincial health plans have significant gaps — drugs, dental, vision, and therapy are NOT covered",
+        "Individual health plans start from $80–$120/month for basic drug and dental coverage",
+        "Self-employed Canadians can deduct health insurance premiums on their taxes",
+        "Newcomers face a 3-month waiting period before provincial coverage begins",
+      ]} />
       <ContentSection title="What Does Provincial Healthcare Actually Cover?">
         <ContentParagraph>
           Each Canadian province has its own health plan (OHIP in Ontario, MSP in BC, RAMQ in Québec). While medically necessary hospital and physician services are covered, many essential health expenses are not.
@@ -94,6 +104,8 @@ const HealthInsurancePage = () => {
         { question: "Is OHIP enough for most Ontarians?", answer: "OHIP covers hospital and doctor visits, but most adults pay out-of-pocket for prescriptions (after age 25), all dental work, vision care, and services like physiotherapy and mental health counselling. A supplemental plan can save thousands per year." },
         { question: "What about the Ontario Drug Benefit (ODB)?", answer: "ODB covers Ontarians 65+, those on social assistance, and residents of long-term care homes. The OHIP+ program covers those 24 and under. Everyone else between 25–64 needs private coverage or pays out of pocket." },
         { question: "Can I get health insurance with a pre-existing condition?", answer: "Yes, but the pre-existing condition may have a waiting period (often 12–24 months) before coverage begins for related claims. Some plans offer immediate coverage at higher premiums." },
+        { question: "How much does private health insurance cost in Canada?", answer: "Individual plans start at $80–$120/month for basic drug and dental coverage. Enhanced plans with vision and paramedical services run $120–$180/month. Family plans range from $200–$650/month depending on coverage level." },
+        { question: "What is a Health Spending Account (HSA)?", answer: "An HSA is a tax-free allowance for eligible medical expenses. Self-employed Canadians with a corporation can set up an HSA to make health expenses a fully deductible business cost — covering dental, prescriptions, vision, massage, and more." },
       ]} />
     </PillarPageLayout>
   );

@@ -53,20 +53,33 @@ const PillarPageLayout = ({
           "name": title,
           "description": metaDescription,
           "url": `https://www.insuredcan.ca/${slug}`,
-          "isPartOf": { "@type": "WebSite", "url": "https://www.insuredcan.ca" },
+          "dateModified": "2026-04-09",
+          "inLanguage": "en-CA",
+          "isPartOf": { "@type": "WebSite", "url": "https://www.insuredcan.ca", "name": "InsuredCan" },
           "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".hero-description"]
+            "cssSelector": ["h1", ".hero-description", ".quick-answer"]
           },
           "mainEntity": {
             "@type": "Service",
             "name": title,
+            "description": metaDescription,
             "provider": {
               "@type": "InsuranceAgency",
               "name": "InsuredCan",
-              "url": "https://www.insuredcan.ca"
+              "url": "https://www.insuredcan.ca",
+              "telephone": "+1-800-555-4678",
+              "email": "sahil280389@gmail.com"
             },
-            "areaServed": { "@type": "Country", "name": "Canada" }
+            "areaServed": { "@type": "Country", "name": "Canada" },
+            "serviceType": "Insurance Brokerage"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.insuredcan.ca" },
+              { "@type": "ListItem", "position": 2, "name": breadcrumbLabel, "item": `https://www.insuredcan.ca/${slug}` }
+            ]
           }
         })}</script>
       </Helmet>

@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Helmet } from "react-helmet-async";
 
 interface ContentSectionProps {
   title: string;
@@ -106,16 +108,22 @@ export const FAQSection = ({ faqs }: { faqs: FAQItem[] }) => {
       viewport={{ once: true }}
       className="mb-12"
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
       <h2 className="text-2xl font-bold text-foreground mb-6 font-display">Frequently Asked Questions</h2>
-      <div className="space-y-4">
-        {faqs.map((faq) => (
-          <div key={faq.question} className="bg-card rounded-xl p-6 shadow-card border border-border">
-            <h3 className="text-sm font-bold text-foreground mb-2">{faq.question}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-          </div>
+      <Accordion type="single" collapsible className="space-y-3">
+        {faqs.map((faq, i) => (
+          <AccordionItem key={faq.question} value={`faq-${i}`} className="bg-card rounded-xl shadow-card border border-border px-6 data-[state=open]:border-primary/20">
+            <AccordionTrigger className="text-sm font-bold text-foreground hover:no-underline py-5">
+              {faq.question}
+            </AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
+              {faq.answer}
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
     </motion.section>
   );
 };
@@ -124,5 +132,29 @@ export const InfoCard = ({ title, children }: { title: string; children: React.R
   <div className="bg-primary/5 border border-primary/15 rounded-xl p-6 mb-6">
     <h4 className="text-sm font-bold text-primary mb-2">{title}</h4>
     <div className="text-sm text-muted-foreground leading-relaxed">{children}</div>
+  </div>
+);
+
+/** Quick Answer box — targets Google featured snippets and AI answer engines */
+export const QuickAnswerBox = ({ question, answer }: { question: string; answer: string }) => (
+  <div className="bg-accent/5 border-l-4 border-accent rounded-r-xl p-6 mb-8" itemScope itemType="https://schema.org/Answer">
+    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">Quick Answer</p>
+    <p className="text-sm font-semibold text-foreground mb-2" itemProp="name">{question}</p>
+    <p className="text-sm text-muted-foreground leading-relaxed" itemProp="text">{answer}</p>
+  </div>
+);
+
+/** Key Takeaways box — structured summary for AI crawlers */
+export const KeyTakeaways = ({ items }: { items: string[] }) => (
+  <div className="bg-success/5 border border-success/20 rounded-xl p-6 mb-8">
+    <p className="text-xs font-bold text-success uppercase tracking-wider mb-3">Key Takeaways</p>
+    <ul className="space-y-2">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+          <Check className="h-4 w-4 text-success mt-0.5 shrink-0" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
   </div>
 );

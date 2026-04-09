@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 import { Link } from "react-router-dom";
 
 const TermLifeInsurance = () => {
@@ -13,6 +13,17 @@ const TermLifeInsurance = () => {
       heroTag="Affordable Protection"
       heroDescription="Term life insurance provides straightforward, affordable coverage for a set period. It's the most popular choice for Canadian families looking to protect their income and mortgage."
     >
+      <QuickAnswerBox
+        question="How much does term life insurance cost in Canada?"
+        answer="A healthy 30-year-old non-smoker can get $500,000 of 20-year term life insurance for $22–$28/month. Term life is the most affordable type of life insurance — 5 to 15 times cheaper than whole life for the same death benefit."
+      />
+      <KeyTakeaways items={[
+        "Term life is the most affordable life insurance option in Canada",
+        "Coverage periods: 10, 20, or 30 years with level premiums",
+        "Most policies include a conversion privilege to permanent insurance",
+        "Death benefit is received tax-free by your beneficiaries",
+        "Ideal for families needing mortgage and income protection",
+      ]} />
       <ContentSection title="What Is Term Life Insurance?">
         <ContentParagraph>
           Term life insurance is a type of life insurance that provides coverage for a specific period—typically 10, 20, or 30 years. If you pass away during the term, your beneficiaries receive a tax-free death benefit. If the term expires and you're still alive, coverage ends unless you renew.

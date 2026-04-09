@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const LifeInsurancePage = () => {
   return (
@@ -12,6 +12,17 @@ const LifeInsurancePage = () => {
       heroTag="Most Popular"
       heroDescription="Life insurance is the cornerstone of financial protection for Canadian families. Whether you're a new parent in Toronto or planning your estate in Vancouver, this guide breaks down everything you need to know—without the jargon."
     >
+      <QuickAnswerBox
+        question="How much does life insurance cost in Canada?"
+        answer="A healthy 30-year-old non-smoker can get $500,000 of 20-year term life insurance for $25–$35/month. Whole life insurance costs 8–10x more but provides permanent coverage with cash value."
+      />
+      <KeyTakeaways items={[
+        "Life insurance death benefits are tax-free in Canada under the Income Tax Act",
+        "Term life is 5–15x cheaper than whole life for the same coverage amount",
+        "Most Canadians should carry 10–15x their annual income in coverage",
+        "Getting insured younger locks in significantly lower premiums for life",
+        "A licensed broker can compare quotes from 20+ insurers at no cost to you",
+      ]} />
       <ContentSection title="What is Life Insurance?">
         <ContentParagraph>
           Life insurance is a contract between you and an insurance company. You pay regular premiums, and in return, the insurer pays a <strong>tax-free death benefit</strong> to your beneficiaries when you pass away. In Canada, this benefit is received income-tax-free under the Income Tax Act, making it one of the most powerful estate planning tools available.
@@ -86,9 +97,12 @@ const LifeInsurancePage = () => {
 
       <FAQSection faqs={[
         { question: "Is life insurance tax-free in Canada?", answer: "Yes. The death benefit paid to beneficiaries is received income-tax-free under the Canadian Income Tax Act. However, if the policy has a cash surrender value and is disposed of during your lifetime, there may be tax implications on any gains." },
-        { question: "How much life insurance do I need?", answer: "A common guideline is 10–15 times your annual income, but the right amount depends on your debts, number of dependents, lifestyle, and existing assets. Our advisors can help you calculate your specific needs." },
+        { question: "How much life insurance do I need?", answer: "A common guideline is 10–15 times your annual income, but the right amount depends on your debts, number of dependents, lifestyle, and existing assets. Use the DIME method: Debt + Income replacement + Mortgage + Education costs." },
         { question: "Can I get life insurance as a newcomer to Canada?", answer: "Yes. Most Canadian insurers will issue policies to permanent residents and work permit holders. Some may have residency requirements of 1–2 years. Temporary residents may have limited options." },
         { question: "What's the difference between life insurance and mortgage insurance from my bank?", answer: "Bank mortgage insurance only covers your mortgage balance and decreases over time while premiums stay the same. A personal term life policy gives you a level death benefit, is portable, and is often cheaper. Your beneficiaries choose how to use the payout." },
+        { question: "What are the best life insurance companies in Canada?", answer: "Top Canadian life insurance companies include Sun Life, Manulife, Canada Life, Desjardins, Industrial Alliance, and Equitable Life. A licensed broker like InsuredCan can compare quotes from 20+ insurers to find the best rate for your profile." },
+        { question: "Can I get life insurance without a medical exam in Canada?", answer: "Yes. No-medical and simplified issue policies are available from most Canadian insurers. Coverage amounts are typically lower (up to $500,000) and premiums slightly higher, but approval is faster — often within 24–48 hours." },
+        { question: "Is life insurance mandatory in Canada?", answer: "No. Life insurance is not legally required in Canada. However, it's considered essential if you have dependents, a mortgage, or business obligations that would financially impact others if you passed away." },
       ]} />
     </PillarPageLayout>
   );

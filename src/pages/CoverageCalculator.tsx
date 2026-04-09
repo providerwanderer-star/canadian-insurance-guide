@@ -239,6 +239,26 @@ const CoverageCalculator = () => {
         <title>Free Insurance Coverage Calculator | How Much Life Insurance Do You Need? | InsuredCan</title>
         <meta name="description" content="Calculate exactly how much life insurance coverage your family needs with our free interactive calculator. Get a personalized recommendation in under 2 minutes." />
         <link rel="canonical" href="https://www.insuredcan.ca/coverage-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Free Insurance Coverage Calculator | InsuredCan" />
+        <meta property="og:description" content="Calculate how much life insurance your family needs using the DIME method. Free, instant results." />
+        <meta property="og:image" content="https://www.insuredcan.ca/og/og-calculator.png" />
+        <meta property="og:locale" content="en_CA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "How to Calculate Your Life Insurance Coverage Needs (DIME Method)",
+          "description": "Use the DIME method to calculate exactly how much life insurance your Canadian family needs in 4 simple steps.",
+          "totalTime": "PT2M",
+          "tool": { "@type": "HowToTool", "name": "InsuredCan Coverage Calculator" },
+          "step": [
+            { "@type": "HowToStep", "name": "Enter Your Income", "text": "Input your annual pre-tax income and your spouse/partner's income to establish the income replacement baseline.", "position": 1 },
+            { "@type": "HowToStep", "name": "Add Your Debts", "text": "Enter your mortgage balance and other outstanding debts (car loans, credit cards, lines of credit).", "position": 2 },
+            { "@type": "HowToStep", "name": "Family Details", "text": "Specify the number of children and age of youngest child to calculate education funding needs.", "position": 3 },
+            { "@type": "HowToStep", "name": "Choose Coverage Goal", "text": "Select your desired income replacement period: 10 years, until retirement, or 20 years for maximum protection.", "position": 4 }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 

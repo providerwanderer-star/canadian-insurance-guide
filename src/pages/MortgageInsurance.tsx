@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const MortgageInsurancePage = () => {
   return (
@@ -12,6 +12,10 @@ const MortgageInsurancePage = () => {
       heroTag="Home Protection"
       heroDescription="Your mortgage is likely the biggest financial commitment you'll ever make. Mortgage insurance ensures your family can keep the home if something happens to you—but the type you choose matters enormously."
     >
+      <QuickAnswerBox
+        question="Should I get mortgage insurance from my bank or buy my own?"
+        answer="A personal term life insurance policy is almost always better than bank mortgage insurance. It's cheaper, provides a level death benefit (not decreasing), is portable between lenders, and your family controls how the payout is used."
+      />
       <ContentSection title="Bank Mortgage Insurance vs. Personal Life Insurance">
         <ContentParagraph>
           When you get a mortgage, your bank will offer creditor insurance. It seems convenient, but there's a better alternative that most Canadians don't know about: a personal term life insurance policy.
@@ -77,6 +81,8 @@ const MortgageInsurancePage = () => {
         { question: "Is mortgage insurance mandatory in Canada?", answer: "Mortgage creditor insurance from your bank is NOT mandatory, despite what some bank representatives may imply. CMHC mortgage default insurance (for down payments under 20%) is different and IS required, but it protects the lender, not you." },
         { question: "Can I cancel my bank's mortgage insurance and get my own?", answer: "Yes. You can cancel bank mortgage insurance at any time. We recommend getting a personal term life policy in place first, then cancelling the bank coverage. Never leave a gap in protection." },
         { question: "Should I get mortgage insurance or life insurance?", answer: "A personal term life insurance policy is almost always the better choice. It's cheaper, provides level coverage, and your beneficiaries control the money. The only advantage of bank insurance is convenience — you check a box. But that convenience comes at a significant cost." },
+        { question: "How much mortgage insurance do I need?", answer: "Match your coverage to your outstanding mortgage balance. If you owe $500,000, a $500,000 term life policy provides equivalent protection at a fraction of the cost of bank mortgage insurance — plus your coverage doesn't decrease as you pay down the mortgage." },
+        { question: "What happens to bank mortgage insurance when I renew or switch lenders?", answer: "Bank mortgage insurance is NOT portable. When you switch lenders or renew, you may need to requalify for coverage — and if your health has changed, you might not qualify. Personal term life insurance follows YOU, not the lender." },
       ]} />
     </PillarPageLayout>
   );
