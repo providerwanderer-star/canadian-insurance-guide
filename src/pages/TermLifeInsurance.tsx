@@ -6,7 +6,7 @@ const TermLifeInsurance = () => {
   return (
     <PillarPageLayout
       title="Term Life Insurance in Canada"
-      metaTitle="Term Life Insurance Canada — Affordable Coverage for Your Family | InsuredCan"
+      metaTitle="Term Life Insurance Canada (2026): From $22/mo — Compare & Save | InsuredCan"
       metaDescription="Term life insurance offers affordable, temporary coverage for 10–30 years. Learn how it works, costs, and who it's best for in Canada."
       breadcrumb="term-life-insurance"
       ogImage="https://www.insuredcan.ca/og/og-term-life.png"

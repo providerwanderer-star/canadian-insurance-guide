@@ -5,7 +5,7 @@ const HealthInsurancePage = () => {
   return (
     <PillarPageLayout
       title="Health & Dental Insurance in Canada: Filling the Gaps"
-      metaTitle="Health & Dental Insurance Canada — Supplement OHIP & Provincial Plans | InsuredCan"
+      metaTitle="Health & Dental Insurance Canada (2026): Fill OHIP Gaps & Save | InsuredCan"
       metaDescription="Discover what provincial healthcare doesn't cover in Canada. Compare private health & dental plans for prescriptions, vision, dental, and paramedical services."
       breadcrumb="health-insurance"
       ogImage="https://www.insuredcan.ca/og/og-health.png"

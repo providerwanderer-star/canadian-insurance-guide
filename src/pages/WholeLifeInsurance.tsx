@@ -6,7 +6,7 @@ const WholeLifeInsurance = () => {
   return (
     <PillarPageLayout
       title="Whole Life Insurance in Canada"
-      metaTitle="Whole Life Insurance Canada — Permanent Coverage + Cash Value | InsuredCan"
+      metaTitle="Whole Life Insurance Canada (2026): Lifetime Coverage + Cash Value | InsuredCan"
       metaDescription="Whole life insurance provides lifelong coverage with guaranteed cash value growth. Learn costs, benefits, and who needs it in Canada."
       breadcrumb="whole-life-insurance"
       ogImage="https://www.insuredcan.ca/og/og-whole-life.png"

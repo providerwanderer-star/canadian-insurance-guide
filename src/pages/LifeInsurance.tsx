@@ -5,7 +5,7 @@ const LifeInsurancePage = () => {
   return (
     <PillarPageLayout
       title="Life Insurance in Canada: Your Complete Guide"
-      metaTitle="Life Insurance Canada — Term, Whole & Universal Life | InsuredCan"
+      metaTitle="Life Insurance Canada (2026): Compare 20+ Plans & Save | InsuredCan"
       metaDescription="Compare term, whole, and universal life insurance in Canada. Learn costs, tax benefits, and which policy is right for your family. Free advice from licensed advisors."
       breadcrumb="life-insurance"
       ogImage="https://www.insuredcan.ca/og/og-life-insurance.png"

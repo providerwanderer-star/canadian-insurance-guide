@@ -5,7 +5,7 @@ const DisabilityInsurancePage = () => {
   return (
     <PillarPageLayout
       title="Disability Insurance in Canada: Protect Your Income"
-      metaTitle="Disability Insurance Canada — Income Protection Guide | InsuredCan"
+      metaTitle="Disability Insurance Canada (2026): Protect 70% of Your Income | InsuredCan"
       metaDescription="Disability insurance replaces up to 70% of your income if you can't work. Learn about short-term, long-term, and own-occupation coverage for Canadians."
       breadcrumb="disability-insurance"
       ogImage="https://www.insuredcan.ca/og/og-disability.png"
