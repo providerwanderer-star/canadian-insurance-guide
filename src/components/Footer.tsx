@@ -35,6 +35,10 @@ const footerLinks = {
     { label: "Ottawa", href: "/life-insurance-ottawa" },
     { label: "London, ON", href: "/life-insurance-london-ontario" },
     { label: "Markham", href: "/life-insurance-markham" },
+    { label: "Kitchener-Waterloo", href: "/life-insurance-kitchener-waterloo" },
+    { label: "Windsor", href: "/life-insurance-windsor" },
+    { label: "Oshawa", href: "/life-insurance-oshawa" },
+    { label: "Barrie", href: "/life-insurance-barrie" },
   ],
   "Other Cities": [
     { label: "Vancouver", href: "/life-insurance-vancouver" },
