@@ -112,6 +112,8 @@ const PillarPageLayout = ({
       <article className="container py-12 md:py-16">
         <div className="max-w-4xl">
           {children}
+          <AuthorBox />
+          <Disclaimer />
         </div>
       </article>
 
