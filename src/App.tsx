@@ -63,6 +63,12 @@ import BlogRRSPvsTFSAvsLifeInsurance from "./pages/blog/BlogRRSPvsTFSAvsLifeInsu
 import BlogNoMedicalLifeInsurance from "./pages/blog/BlogNoMedicalLifeInsurance.tsx";
 import BlogIsLifeInsuranceTaxableCanada from "./pages/blog/BlogIsLifeInsuranceTaxableCanada.tsx";
 import BlogLifeInsuranceSeniorsCanada from "./pages/blog/BlogLifeInsuranceSeniorsCanada.tsx";
+import BlogBestLifeInsuranceOntario from "./pages/blog/BlogBestLifeInsuranceOntario.tsx";
+import BlogCheapestLifeInsurance from "./pages/blog/BlogCheapestLifeInsurance.tsx";
+import BlogIsLifeInsuranceWorthIt from "./pages/blog/BlogIsLifeInsuranceWorthIt.tsx";
+import BlogInsuranceMistakesCanadians from "./pages/blog/BlogInsuranceMistakesCanadians.tsx";
+import BlogHowToChooseInsuranceOntario from "./pages/blog/BlogHowToChooseInsuranceOntario.tsx";
+import BlogInsuranceNewImmigrants from "./pages/blog/BlogInsuranceNewImmigrants.tsx";
 import CoverageCalculator from "./pages/CoverageCalculator.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
@@ -162,6 +168,12 @@ const App = () => (
             <Route path="/blog/no-medical-life-insurance-canada" element={<BlogNoMedicalLifeInsurance />} />
             <Route path="/blog/is-life-insurance-taxable-canada" element={<BlogIsLifeInsuranceTaxableCanada />} />
             <Route path="/blog/life-insurance-seniors-canada" element={<BlogLifeInsuranceSeniorsCanada />} />
+            <Route path="/blog/best-life-insurance-ontario-2026" element={<BlogBestLifeInsuranceOntario />} />
+            <Route path="/blog/cheapest-life-insurance-canada-2026" element={<BlogCheapestLifeInsurance />} />
+            <Route path="/blog/is-life-insurance-worth-it-canada" element={<BlogIsLifeInsuranceWorthIt />} />
+            <Route path="/blog/top-insurance-mistakes-canadians" element={<BlogInsuranceMistakesCanadians />} />
+            <Route path="/blog/how-to-choose-insurance-ontario" element={<BlogHowToChooseInsuranceOntario />} />
+            <Route path="/blog/insurance-new-immigrants-canada" element={<BlogInsuranceNewImmigrants />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
