@@ -158,3 +158,47 @@ export const KeyTakeaways = ({ items }: { items: string[] }) => (
     </ul>
   </div>
 );
+
+/** Inline CTA — placed every 2 content sections for conversion */
+export const InlineCTA = ({ text = "Get Free Quote", href = "/contact" }: { text?: string; href?: string }) => (
+  <div className="flex flex-col sm:flex-row gap-3 my-10 py-6 px-6 bg-primary/5 border border-primary/15 rounded-xl items-center justify-between">
+    <div>
+      <p className="text-sm font-bold text-foreground mb-1">Ready to protect your family?</p>
+      <p className="text-xs text-muted-foreground">Compare quotes from 20+ top Canadian insurers. Free, no-obligation.</p>
+    </div>
+    <a href={href} className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold text-sm px-6 py-3 rounded-lg hover:bg-accent/90 transition-smooth shrink-0">
+      {text} <Check className="h-4 w-4" />
+    </a>
+  </div>
+);
+
+/** E-E-A-T Author Box — establishes expertise and trust */
+export const AuthorBox = () => (
+  <div className="bg-card border border-border rounded-xl p-6 my-10" itemScope itemType="https://schema.org/Person">
+    <div className="flex items-start gap-4">
+      <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+        <span className="text-lg font-bold text-primary">IC</span>
+      </div>
+      <div>
+        <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1">Reviewed by</p>
+        <p className="text-sm font-bold text-foreground" itemProp="name">InsuredCan Advisory Team</p>
+        <p className="text-xs text-muted-foreground mt-1" itemProp="description">
+          Licensed insurance professionals regulated by FSRA (Ontario), with 15+ years of combined experience advising Canadian families on life, health, critical illness, and disability coverage.
+        </p>
+        <p className="text-xs text-muted-foreground mt-2">
+          <span className="font-semibold">Last updated:</span> April 2026 · <span className="font-semibold">Fact-checked:</span> All rates verified against current insurer rate sheets
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
+/** Disclaimer for YMYL compliance */
+export const Disclaimer = () => (
+  <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-4 mt-10 border border-border">
+    <p className="font-semibold mb-1">Disclaimer</p>
+    <p>
+      The information on this page is for educational purposes only and does not constitute financial or insurance advice. Rates shown are estimates based on publicly available data from Canadian insurers as of 2026 and may vary based on individual circumstances. Always consult a licensed insurance advisor before making coverage decisions. InsuredCan is a licensed insurance brokerage operating under FSRA (Financial Services Regulatory Authority of Ontario).
+    </p>
+  </div>
+);
