@@ -43,6 +43,11 @@ import LifeInsuranceKitchenerWaterlooPage from "./pages/LifeInsuranceKitchenerWa
 import LifeInsuranceWindsorPage from "./pages/LifeInsuranceWindsor.tsx";
 import LifeInsuranceOshawaPage from "./pages/LifeInsuranceOshawa.tsx";
 import LifeInsuranceBarriePage from "./pages/LifeInsuranceBarrie.tsx";
+import LifeInsuranceNiagaraFallsPage from "./pages/LifeInsuranceNiagaraFalls.tsx";
+import LifeInsuranceStCatharinesPage from "./pages/LifeInsuranceStCatharines.tsx";
+import LifeInsuranceGuelphPage from "./pages/LifeInsuranceGuelph.tsx";
+import LifeInsuranceKingstonPage from "./pages/LifeInsuranceKingston.tsx";
+import LifeInsuranceThunderBayPage from "./pages/LifeInsuranceThunderBay.tsx";
 import InsuranceBrokerCanadaPage from "./pages/InsuranceBrokerCanada.tsx";
 import InsuranceGlossaryPage from "./pages/InsuranceGlossary.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
@@ -145,6 +150,11 @@ const App = () => (
             <Route path="/life-insurance-windsor" element={<LifeInsuranceWindsorPage />} />
             <Route path="/life-insurance-oshawa" element={<LifeInsuranceOshawaPage />} />
             <Route path="/life-insurance-barrie" element={<LifeInsuranceBarriePage />} />
+            <Route path="/life-insurance-niagara-falls" element={<LifeInsuranceNiagaraFallsPage />} />
+            <Route path="/life-insurance-st-catharines" element={<LifeInsuranceStCatharinesPage />} />
+            <Route path="/life-insurance-guelph" element={<LifeInsuranceGuelphPage />} />
+            <Route path="/life-insurance-kingston" element={<LifeInsuranceKingstonPage />} />
+            <Route path="/life-insurance-thunder-bay" element={<LifeInsuranceThunderBayPage />} />
             
             {/* Resources */}
             <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
