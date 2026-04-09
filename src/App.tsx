@@ -90,6 +90,10 @@ const App = () => (
             <Route path="/term-life-insurance" element={<TermLifeInsurancePage />} />
             <Route path="/whole-life-insurance" element={<WholeLifeInsurancePage />} />
             <Route path="/funeral-insurance" element={<FuneralInsurancePage />} />
+            <Route path="/life-insurance-ontario" element={<LifeInsuranceOntarioPage />} />
+            <Route path="/cost-life-insurance-ontario" element={<CostLifeInsuranceOntarioPage />} />
+            <Route path="/critical-illness-insurance-ontario" element={<CriticalIllnessOntarioPage />} />
+            <Route path="/life-insurance-pr-holders" element={<LifeInsurancePRHoldersPage />} />
             <Route path="/retirement-planning" element={<RetirementPlanningPage />} />
             
             {/* Comparison Pages */}
