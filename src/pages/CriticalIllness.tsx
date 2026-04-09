@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const CriticalIllnessPage = () => {
   return (
@@ -12,6 +12,16 @@ const CriticalIllnessPage = () => {
       heroTag="Income Protection"
       heroDescription="Critical illness insurance pays you a tax-free lump sum if you're diagnosed with a covered condition like cancer, heart attack, or stroke. Use the money however you need—lost income, treatments, childcare, or mortgage payments."
     >
+      <QuickAnswerBox
+        question="What does critical illness insurance cover in Canada?"
+        answer="Critical illness insurance covers 25–26 serious conditions including cancer (65% of claims), heart attack (15%), and stroke (8%). Upon diagnosis, you receive a tax-free lump-sum payout — typically $50,000 to $2,000,000 — that you can use for anything."
+      />
+      <KeyTakeaways items={[
+        "1 in 2 Canadians will develop cancer in their lifetime",
+        "Critical illness pays a one-time tax-free lump sum upon diagnosis",
+        "Return of Premium (ROP) option means you get money back if you never claim",
+        "Coverage complements — not replaces — disability insurance",
+      ]} />
       <ContentSection title="What Does Critical Illness Insurance Cover?">
         <ContentParagraph>
           Most Canadian critical illness policies cover between <strong>25 to 26 conditions</strong>. The most common claims are for cancer, heart attack, and stroke—which together account for over 80% of all critical illness claims in Canada.
