@@ -62,6 +62,10 @@ import BlogLifeInsuranceSeniorsCanada from "./pages/blog/BlogLifeInsuranceSenior
 import CoverageCalculator from "./pages/CoverageCalculator.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
+import LifeInsuranceOntarioPage from "./pages/LifeInsuranceOntario.tsx";
+import CostLifeInsuranceOntarioPage from "./pages/CostLifeInsuranceOntario.tsx";
+import CriticalIllnessOntarioPage from "./pages/CriticalIllnessOntario.tsx";
+import LifeInsurancePRHoldersPage from "./pages/LifeInsurancePRHolders.tsx";
 
 const queryClient = new QueryClient();
 
