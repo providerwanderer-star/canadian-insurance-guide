@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import TrustBar from "@/components/TrustBar";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { AuthorBox, Disclaimer } from "@/components/ContentElements";
 import { motion } from "framer-motion";
@@ -70,7 +72,15 @@ const PillarPageLayout = ({
               "name": "InsuredCan",
               "url": "https://www.insuredcan.ca",
               "telephone": "+1-800-555-4678",
-              "email": "sahil280389@gmail.com"
+              "email": "sahil280389@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "100 King Street West, Suite 5700",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "postalCode": "M5X 1C7",
+                "addressCountry": "CA"
+              }
             },
             "areaServed": { "@type": "Country", "name": "Canada" },
             "serviceType": "Insurance Brokerage"
@@ -108,6 +118,9 @@ const PillarPageLayout = ({
         </div>
       </section>
 
+      {/* Trust Bar */}
+      <TrustBar />
+
       {/* Content */}
       <article className="container py-12 md:py-16">
         <div className="max-w-4xl">
@@ -117,6 +130,7 @@ const PillarPageLayout = ({
         </div>
       </article>
 
+      <TestimonialsSection />
       <CTASection />
       <Footer />
     </div>

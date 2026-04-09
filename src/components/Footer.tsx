@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import { Shield, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const footerLinks = {
@@ -39,6 +39,11 @@ const footerLinks = {
     { label: "Windsor", href: "/life-insurance-windsor" },
     { label: "Oshawa", href: "/life-insurance-oshawa" },
     { label: "Barrie", href: "/life-insurance-barrie" },
+    { label: "Niagara Falls", href: "/life-insurance-niagara-falls" },
+    { label: "St. Catharines", href: "/life-insurance-st-catharines" },
+    { label: "Guelph", href: "/life-insurance-guelph" },
+    { label: "Kingston", href: "/life-insurance-kingston" },
+    { label: "Thunder Bay", href: "/life-insurance-thunder-bay" },
   ],
   "Other Cities": [
     { label: "Vancouver", href: "/life-insurance-vancouver" },
@@ -78,8 +83,12 @@ const Footer = () => {
             <p className="text-sm text-background/60 leading-relaxed mb-4">
               Making insurance simple for Canadians. Education-first, always unbiased.
             </p>
+            <div className="flex items-start gap-2 text-xs text-background/50 mb-3">
+              <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0" />
+              <span>100 King Street West, Suite 5700<br />Toronto, ON M5X 1C7</span>
+            </div>
             <p className="text-xs text-background/40">
-              Licensed in Ontario, BC, Alberta, Quebec & more.
+              Licensed by FSRA (Ontario) · Serving ON, BC, AB, QC & more.
             </p>
           </div>
 
@@ -103,7 +112,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-background/40">
-            © {new Date().getFullYear()} InsuredCan.ca — All rights reserved.
+            © {new Date().getFullYear()} InsuredCan.ca — All rights reserved. FSRA Licensed Insurance Brokerage.
           </p>
           <p className="text-xs text-background/40 max-w-md text-center md:text-right">
             InsuredCan provides educational content only. Always consult a licensed insurance advisor before making coverage decisions.
