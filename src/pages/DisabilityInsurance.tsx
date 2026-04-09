@@ -91,6 +91,8 @@ const DisabilityInsurancePage = () => {
         { question: "Is disability insurance tax-deductible in Canada?", answer: "If you pay the premiums personally (not through your employer), the benefits you receive are tax-free. If your employer pays the premiums, the benefits are taxable income. This is why many advisors recommend paying your own LTD premiums." },
         { question: "What's the difference between EI Sickness and disability insurance?", answer: "EI Sickness provides up to 26 weeks of benefits at a maximum of ~$668/week. It's a fraction of most people's income. Private disability insurance offers higher benefit amounts and can pay for years, not just months." },
         { question: "Can I get disability insurance if I work from home?", answer: "Yes. Remote workers are eligible for disability insurance. Your occupation classification and income determine your rates and coverage limits, regardless of where you work." },
+        { question: "What is own-occupation disability insurance?", answer: "Own-occupation means you're considered disabled if you can't perform the duties of YOUR specific job — even if you could work in another role. This is the most protective definition and is recommended for professionals and high-income earners." },
+        { question: "How long is the elimination period for disability insurance?", answer: "Common elimination periods are 30, 60, 90, or 120 days. The longer the waiting period, the lower your premium. Most Canadians choose 90 days as a balance between cost and protection." },
       ]} />
     </PillarPageLayout>
   );
