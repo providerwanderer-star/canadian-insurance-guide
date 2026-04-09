@@ -1,5 +1,6 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways, InlineCTA } from "@/components/ContentElements";
+import { Link } from "react-router-dom";
 
 const FuneralInsurance = () => {
   return (
@@ -10,97 +11,89 @@ const FuneralInsurance = () => {
       breadcrumb="funeral-insurance"
       ogImage="https://www.insuredcan.ca/og/og-funeral.png"
       heroTag="Final Expense Coverage"
-      heroDescription="Funeral and final expense insurance ensures your family isn't left with the financial burden of funeral costs, debts, and end-of-life expenses. Affordable plans with guaranteed acceptance."
+      heroDescription="Nobody wants to think about it. But here's the truth: the average Canadian funeral costs $8,000–$15,000, and that bill arrives within days. Without funeral insurance, your children will be choosing between grieving and fundraising. Don't make them do both."
     >
       <QuickAnswerBox
         question="How much does funeral insurance cost in Canada?"
-        answer="Funeral insurance in Canada costs $30–$80/month for $10,000–$25,000 in coverage. Guaranteed acceptance policies (no health questions) cost more but ensure anyone aged 40–85 can qualify. The average Canadian funeral costs $8,000–$15,000."
+        answer="Funeral insurance in Canada costs $30–$80/month for $10,000–$25,000 in coverage. Guaranteed acceptance policies (no health questions) are available for ages 40–85. The average Canadian funeral costs $8,000–$15,000 for a traditional burial, or $3,000–$7,000 for cremation."
       />
       <KeyTakeaways items={[
-        "Average funeral cost in Canada is $8,000–$15,000 for a traditional burial",
+        "Average funeral cost in Canada: $8,000–$15,000 for burial, $3,000–$7,000 for cremation",
         "Guaranteed acceptance — no medical exam or health questions required",
         "Permanent coverage with fixed premiums that never increase",
-        "Benefits are paid quickly (usually within days) to cover immediate expenses",
-        "Cremation is more affordable ($3,000–$7,000) but still a significant cost",
+        "Benefits paid quickly (usually within 5–10 business days) for immediate expenses",
+        "Not a replacement for life insurance — designed specifically for end-of-life costs",
       ]} />
-      <ContentSection title="What Is Funeral Insurance?">
+
+      {/* UNIQUE: Detailed cost breakdown that no other page has */}
+      <ContentSection title="The True Cost of Dying in Ontario: A Line-by-Line Breakdown">
         <ContentParagraph>
-          Funeral insurance (also called final expense insurance or burial insurance) is a small whole life insurance policy designed specifically to cover the costs associated with death—funeral services, burial or cremation, outstanding debts, and other end-of-life expenses.
+          Most families are shocked by funeral costs because they've never seen the actual bill. Here's what a typical Ontario funeral home charges in 2026:
         </ContentParagraph>
+        <ComparisonTable
+          headers={["Line Item", "Basic Burial", "Mid-Range Burial", "Premium Burial"]}
+          rows={[
+            ["Funeral home services (coordination, staff)", "$1,800", "$2,800", "$4,500"],
+            ["Casket", "$1,200", "$3,500", "$8,000+"],
+            ["Embalming & body preparation", "$400", "$800", "$1,200"],
+            ["Burial plot (Ontario cemetery)", "$1,500", "$3,000", "$6,000+"],
+            ["Grave opening & closing", "$800", "$1,200", "$1,500"],
+            ["Headstone / monument", "$800", "$2,000", "$5,000+"],
+            ["Flowers, ceremony, music", "$300", "$800", "$2,000"],
+            ["Death certificates (10 copies)", "$100", "$150", "$200"],
+            ["Obituary (newspaper + online)", "$200", "$500", "$1,000"],
+            ["Reception / catering", "$500", "$1,500", "$3,000"],
+            ["Total", "$7,600", "$16,250", "$32,400+"],
+          ]}
+        />
         <ContentParagraph>
-          Coverage typically ranges from $5,000 to $50,000, with simplified or guaranteed acceptance underwriting, making it accessible even for older Canadians or those with health conditions.
+          <strong>Cremation alternative:</strong> A direct cremation in Ontario starts at $1,500–$2,000. With a memorial service, the total is typically $3,000–$7,000. Even the cheapest option requires thousands in immediate cash that many families don't have readily available.
         </ContentParagraph>
       </ContentSection>
 
-      <ContentSection title="Average Funeral Costs in Canada">
+      <InlineCTA text="Get Guaranteed Approval — Free Quote" href="mailto:sahil280389@gmail.com?subject=Funeral%20Insurance%20Quote" />
+
+      <ContentSection title="What Is Funeral Insurance?">
         <ContentParagraph>
-          Many Canadians are shocked by how much funerals actually cost. Here's a realistic breakdown:
+          Funeral insurance (also called final expense insurance or burial insurance) is a small <Link to="/whole-life-insurance" className="text-primary font-semibold hover:underline">whole life insurance</Link> policy designed specifically to cover the costs associated with death — funeral services, burial or cremation, outstanding debts, and other end-of-life expenses.
         </ContentParagraph>
+        <ContentParagraph>
+          Coverage typically ranges from $5,000 to $50,000, with simplified or guaranteed acceptance underwriting, making it accessible even for older Canadians or those with health conditions who can't qualify for traditional <Link to="/life-insurance" className="text-primary font-semibold hover:underline">life insurance</Link>.
+        </ContentParagraph>
+      </ContentSection>
+
+      <ContentSection title="Who Should Get Funeral Insurance? A Practical Guide">
         <ComparisonTable
-          headers={["Expense", "Average Cost"]}
+          headers={["Situation", "Best Option", "Why"]}
           rows={[
-            ["Funeral home services", "$2,000–$4,000"],
-            ["Casket", "$1,500–$5,000"],
-            ["Burial plot", "$1,500–$5,000"],
-            ["Headstone/marker", "$1,000–$3,000"],
-            ["Embalming & preparation", "$500–$1,500"],
-            ["Flowers & ceremony", "$500–$2,000"],
-            ["Death certificates", "$50–$200"],
-            ["Total (Traditional Burial)", "$8,000–$15,000+"],
-            ["Total (Cremation)", "$3,000–$7,000"],
+            ["Healthy senior, 50–65", "Simplified issue ($25K)", "Lower premiums, full coverage from day 1"],
+            ["Senior with health conditions, 60–85", "Guaranteed acceptance ($15K–$25K)", "No health questions, guaranteed approval"],
+            ["Someone with existing life insurance", "May not need it", "Check if existing policy covers final expenses"],
+            ["Low-income individual", "Guaranteed acceptance ($10K)", "Ensures family isn't burdened with costs"],
+            ["Parent wanting to pre-plan", "Simplified issue + pre-arrangements", "Locks in pricing + specific funeral wishes"],
+            ["Senior with no savings", "Guaranteed acceptance ($15K)", "Prevents family from going into debt"],
           ]}
         />
-        <InfoCard title="The Real Impact">
-          Without funeral insurance, your family may need to cover $8,000–$15,000 in immediate expenses at one of the most difficult times in their lives. Many families go into debt or drain savings to cover these costs.
-        </InfoCard>
       </ContentSection>
 
       <ContentSection title="Types of Funeral Insurance in Canada">
         <ContentH3>Simplified Issue</ContentH3>
         <ContentParagraph>
-          Requires answering a few health questions but no medical exam. Coverage begins immediately. Lower premiums than guaranteed issue.
+          Requires answering a few health questions but no medical exam. Coverage begins immediately. Lower premiums than guaranteed issue. Best for relatively healthy applicants who want the lowest cost.
         </ContentParagraph>
         <ContentH3>Guaranteed Acceptance</ContentH3>
         <ContentParagraph>
-          No health questions or medical exams required. Anyone aged 40–85 can qualify. Usually includes a 2-year waiting period for natural death (accidental death covered immediately). Higher premiums due to the guaranteed acceptance.
+          No health questions or medical exams required. Anyone aged 40–85 can qualify. Usually includes a 2-year waiting period for natural death (accidental death covered immediately). Higher premiums due to the guaranteed acceptance, but invaluable for those who can't qualify elsewhere.
         </ContentParagraph>
         <ContentH3>Pre-Need Funeral Insurance</ContentH3>
         <ContentParagraph>
-          Purchased directly through a funeral home to lock in today's prices for specific funeral arrangements. The policy is assigned directly to the funeral provider.
+          Purchased directly through a funeral home to lock in today's prices for specific funeral arrangements. The policy is assigned directly to the funeral provider. Less flexible than a standard funeral insurance policy.
         </ContentParagraph>
       </ContentSection>
 
-      <ContentSection title="Who Should Get Funeral Insurance?">
-        <ProsList items={[
-          "Seniors who want to cover their final expenses",
-          "Anyone who doesn't want to burden their family financially",
-          "People with health conditions who can't qualify for traditional life insurance",
-          "Those without existing life insurance or sufficient savings",
-          "Parents who want to ensure their funeral is pre-planned and paid for",
-          "Low-income individuals who need affordable permanent coverage",
-        ]} />
-      </ContentSection>
+      <InlineCTA text="Compare Funeral Insurance Plans" href="mailto:sahil280389@gmail.com?subject=Compare%20Funeral%20Insurance" />
 
-      <ContentSection title="Pros and Cons">
-        <ContentH3>Advantages</ContentH3>
-        <ProsList items={[
-          "Easy to qualify—no medical exam required",
-          "Permanent coverage that never expires",
-          "Fixed premiums that never increase",
-          "Small, affordable monthly payments ($30–$80/month)",
-          "Fast payout to beneficiaries (usually within days)",
-          "Cash value accumulation in some policies",
-        ]} />
-        <ContentH3>Disadvantages</ContentH3>
-        <ConsList items={[
-          "Lower coverage amounts ($5K–$50K)",
-          "Higher cost per $1,000 of coverage compared to term life",
-          "Guaranteed issue policies have a 2-year waiting period",
-          "Not a replacement for comprehensive life insurance",
-        ]} />
-      </ContentSection>
-
-      <ContentSection title="How Much Does Funeral Insurance Cost?">
+      <ContentSection title="How Much Does Funeral Insurance Cost? (2026 Rates)">
         <ComparisonTable
           headers={["Age", "$10K Coverage", "$15K Coverage", "$25K Coverage"]}
           rows={[
@@ -112,14 +105,65 @@ const FuneralInsurance = () => {
             ["75", "$85–$130/mo", "$125–$190/mo", "$210–$310/mo"],
           ]}
         />
+        <ContentParagraph>
+          For younger Canadians (under 50), a small <Link to="/term-life-insurance" className="text-primary font-semibold hover:underline">term life policy</Link> may be cheaper and provide more coverage. Funeral insurance becomes the better option for seniors who want permanent, guaranteed coverage with no health barriers.
+        </ContentParagraph>
       </ContentSection>
 
+      <ContentSection title="How to Get the Best Funeral Insurance Rate">
+        <ProsList items={[
+          "Apply as soon as you're considering it — every year increases premiums significantly at ages 60+",
+          "Try simplified issue first — if you qualify, you'll pay 20–30% less than guaranteed acceptance",
+          "Choose $15,000–$25,000 coverage — enough for a dignified funeral without overpaying",
+          "Compare plans from multiple insurers through an independent broker like InsuredCan",
+          "If you have minor health issues, don't assume you won't qualify — simplified issue is more lenient than you think",
+          "Consider pre-arranging your funeral — it gives your family clear instructions AND locks in today's prices",
+        ]} />
+      </ContentSection>
+
+      <ContentSection title="Common Mistakes to Avoid">
+        <ContentH3>Mistake #1: Assuming your children will handle costs</ContentH3>
+        <ContentParagraph>
+          Many adult children live paycheck to paycheck. Asking them to come up with $10,000–$15,000 in a matter of days puts enormous financial and emotional stress on an already devastating situation.
+        </ContentParagraph>
+        <ContentH3>Mistake #2: Thinking CPP death benefit is enough</ContentH3>
+        <ContentParagraph>
+          The CPP death benefit is a one-time payment of <strong>$2,500</strong> — it hasn't increased in decades. That covers about 15% of a basic funeral. It's not even close to sufficient.
+        </ContentParagraph>
+        <ContentH3>Mistake #3: Not understanding the 2-year waiting period</ContentH3>
+        <ContentParagraph>
+          Guaranteed acceptance policies typically don't pay the full death benefit if you die from natural causes in the first 2 years. You'd receive a return of premiums plus interest instead. Accidental death is covered from day one. If health permits, simplified issue avoids this waiting period entirely.
+        </ContentParagraph>
+      </ContentSection>
+
+      <ContentSection title="Pros and Cons">
+        <ContentH3>Advantages</ContentH3>
+        <ProsList items={[
+          "Easy to qualify — no medical exam, guaranteed acceptance available",
+          "Permanent coverage that never expires",
+          "Fixed premiums that never increase",
+          "Small, affordable monthly payments ($30–$80/month)",
+          "Fast payout to beneficiaries (usually within 5–10 business days)",
+          "Cash value accumulation in most policies",
+        ]} />
+        <ContentH3>Disadvantages</ContentH3>
+        <ConsList items={[
+          "Lower coverage amounts ($5K–$50K)",
+          "Higher cost per $1,000 of coverage compared to term life",
+          "Guaranteed issue policies have a 2-year waiting period for natural death",
+          "Not a replacement for comprehensive life insurance",
+        ]} />
+      </ContentSection>
+
+      <InlineCTA text="Get Your Free Funeral Insurance Quote" href="mailto:sahil280389@gmail.com?subject=Funeral%20Insurance%20Quote" />
+
       <FAQSection faqs={[
-        { question: "What's the difference between funeral insurance and life insurance?", answer: "Funeral insurance is a type of whole life insurance with smaller coverage amounts ($5K–$50K) specifically designed for end-of-life expenses. Traditional life insurance offers larger coverage for income replacement and mortgage protection." },
-        { question: "Can I get funeral insurance with pre-existing conditions?", answer: "Yes. Guaranteed acceptance policies require no health questions. Simplified issue policies ask a few health questions but are still more lenient than traditional life insurance." },
-        { question: "Is there a waiting period for funeral insurance?", answer: "Guaranteed acceptance policies typically have a 2-year waiting period for natural death. During this period, if death occurs from natural causes, beneficiaries receive a return of premiums plus interest. Accidental death is covered from day one." },
-        { question: "How quickly is the funeral insurance benefit paid out?", answer: "Most insurers pay the death benefit within 5–10 business days of receiving the claim and required documents." },
-        { question: "Should I pre-pay my funeral instead of buying insurance?", answer: "Both are valid options. Insurance gives your family flexibility in choosing services, while pre-paid plans lock in today's prices but limit choices. Many advisors recommend insurance for its flexibility." },
+        { question: "What's the difference between funeral insurance and life insurance?", answer: "Funeral insurance is a type of whole life insurance with smaller coverage amounts ($5K–$50K) specifically designed for end-of-life expenses. Traditional life insurance offers larger coverage for income replacement and mortgage protection. If you're under 50, a standard term life policy may cover both needs more cost-effectively." },
+        { question: "Can I get funeral insurance with pre-existing conditions?", answer: "Yes. Guaranteed acceptance policies require no health questions — anyone aged 40–85 qualifies automatically. Simplified issue policies ask a few health questions but are still more lenient than traditional life insurance." },
+        { question: "Is there a waiting period for funeral insurance?", answer: "Guaranteed acceptance policies typically have a 2-year waiting period for natural death. During this period, if death occurs from natural causes, beneficiaries receive a return of premiums plus interest (typically 10%). Accidental death is covered fully from day one." },
+        { question: "How quickly is the funeral insurance benefit paid out?", answer: "Most insurers pay the death benefit within 5–10 business days of receiving the claim and required documents. This speed is critical for covering immediate funeral costs." },
+        { question: "Should I pre-pay my funeral instead of buying insurance?", answer: "Both are valid options. Insurance gives your family flexibility in choosing services and providers, while pre-paid plans lock in today's prices but limit choices to that specific funeral home. Many advisors recommend insurance for its flexibility — your family can shop around." },
+        { question: "How much is the CPP death benefit in 2026?", answer: "The CPP death benefit is a one-time lump sum of $2,500. It hasn't increased in decades and covers only a fraction of funeral costs. It's automatically available to the estate of anyone who contributed to CPP, but it's nowhere near sufficient on its own." },
       ]} />
     </PillarPageLayout>
   );
