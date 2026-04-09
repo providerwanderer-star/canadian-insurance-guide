@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const InsuranceForFamiliesPage = () => {
   return (
@@ -12,6 +12,17 @@ const InsuranceForFamiliesPage = () => {
       heroTag="Families"
       heroDescription="Starting or growing a family changes everything—including your insurance needs. Here's how to build a comprehensive protection plan that keeps your family secure without breaking the budget."
     >
+      <QuickAnswerBox
+        question="What insurance does a Canadian family need?"
+        answer="A typical Canadian family of 4 should carry: term life insurance ($500K–$1M on each parent, ~$50–$100/mo total), supplemental health & dental (~$300–$450/mo), critical illness on the primary earner (~$70–$100/mo), and disability insurance (~$80–$140/mo)."
+      />
+      <KeyTakeaways items={[
+        "Both parents should have life insurance — not just the primary earner",
+        "A family of 4 in Ontario needs $500–$800/month total for comprehensive coverage",
+        "Term life is the most affordable way to protect your family's financial future",
+        "Children's critical illness insurance costs as little as $15–$25/month",
+        "Review and update coverage at every major life event (baby, home purchase, promotion)",
+      ]} />
       <ContentSection title="The Family Insurance Stack">
         <InfoCard title="📋 Recommended Coverage for a Family of 4 in Ontario">
           <strong>1. Term Life Insurance</strong> — $500K–$1M on each parent ($50–$100/mo total)<br />

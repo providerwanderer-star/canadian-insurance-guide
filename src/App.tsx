@@ -62,6 +62,10 @@ import BlogLifeInsuranceSeniorsCanada from "./pages/blog/BlogLifeInsuranceSenior
 import CoverageCalculator from "./pages/CoverageCalculator.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
+import LifeInsuranceOntarioPage from "./pages/LifeInsuranceOntario.tsx";
+import CostLifeInsuranceOntarioPage from "./pages/CostLifeInsuranceOntario.tsx";
+import CriticalIllnessOntarioPage from "./pages/CriticalIllnessOntario.tsx";
+import LifeInsurancePRHoldersPage from "./pages/LifeInsurancePRHolders.tsx";
 
 const queryClient = new QueryClient();
 
@@ -86,6 +90,10 @@ const App = () => (
             <Route path="/term-life-insurance" element={<TermLifeInsurancePage />} />
             <Route path="/whole-life-insurance" element={<WholeLifeInsurancePage />} />
             <Route path="/funeral-insurance" element={<FuneralInsurancePage />} />
+            <Route path="/life-insurance-ontario" element={<LifeInsuranceOntarioPage />} />
+            <Route path="/cost-life-insurance-ontario" element={<CostLifeInsuranceOntarioPage />} />
+            <Route path="/critical-illness-insurance-ontario" element={<CriticalIllnessOntarioPage />} />
+            <Route path="/life-insurance-pr-holders" element={<LifeInsurancePRHoldersPage />} />
             <Route path="/retirement-planning" element={<RetirementPlanningPage />} />
             
             {/* Comparison Pages */}

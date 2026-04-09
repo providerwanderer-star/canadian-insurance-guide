@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const FuneralInsurance = () => {
   return (
@@ -12,6 +12,17 @@ const FuneralInsurance = () => {
       heroTag="Final Expense Coverage"
       heroDescription="Funeral and final expense insurance ensures your family isn't left with the financial burden of funeral costs, debts, and end-of-life expenses. Affordable plans with guaranteed acceptance."
     >
+      <QuickAnswerBox
+        question="How much does funeral insurance cost in Canada?"
+        answer="Funeral insurance in Canada costs $30–$80/month for $10,000–$25,000 in coverage. Guaranteed acceptance policies (no health questions) cost more but ensure anyone aged 40–85 can qualify. The average Canadian funeral costs $8,000–$15,000."
+      />
+      <KeyTakeaways items={[
+        "Average funeral cost in Canada is $8,000–$15,000 for a traditional burial",
+        "Guaranteed acceptance — no medical exam or health questions required",
+        "Permanent coverage with fixed premiums that never increase",
+        "Benefits are paid quickly (usually within days) to cover immediate expenses",
+        "Cremation is more affordable ($3,000–$7,000) but still a significant cost",
+      ]} />
       <ContentSection title="What Is Funeral Insurance?">
         <ContentParagraph>
           Funeral insurance (also called final expense insurance or burial insurance) is a small whole life insurance policy designed specifically to cover the costs associated with death—funeral services, burial or cremation, outstanding debts, and other end-of-life expenses.

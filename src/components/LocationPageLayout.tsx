@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { MapPin, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { FAQSection } from "@/components/ContentElements";
+import { FAQSection, AuthorBox, Disclaimer } from "@/components/ContentElements";
 
 interface LocationPageProps {
   city: string;
@@ -105,6 +105,8 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
       <section className="container pb-12 md:pb-16">
         <div className="max-w-4xl">
           <FAQSection faqs={faqs} />
+          <AuthorBox />
+          <Disclaimer />
         </div>
       </section>
 
