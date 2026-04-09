@@ -132,6 +132,10 @@ const LifeInsuranceOntario = () => {
             { city: "Ottawa", href: "/life-insurance-ottawa" },
             { city: "London", href: "/life-insurance-london-ontario" },
             { city: "Markham", href: "/life-insurance-markham" },
+            { city: "Kitchener-Waterloo", href: "/life-insurance-kitchener-waterloo" },
+            { city: "Windsor", href: "/life-insurance-windsor" },
+            { city: "Oshawa", href: "/life-insurance-oshawa" },
+            { city: "Barrie", href: "/life-insurance-barrie" },
           ].map((c) => (
             <Link key={c.city} to={c.href} className="bg-card rounded-lg p-4 shadow-card hover:shadow-card-hover transition-smooth text-center border border-transparent hover:border-primary/20">
               <p className="text-sm font-bold text-foreground">{c.city}</p>

@@ -5,8 +5,8 @@ const CriticalIllnessPage = () => {
   return (
     <PillarPageLayout
       title="Critical Illness Insurance in Canada"
-      metaTitle="Critical Illness Insurance Canada (2026): Coverage, Costs & Top Plans | InsuredCan"
-      metaDescription="Learn how critical illness insurance works in Canada. Get a tax-free lump sum if diagnosed with cancer, heart attack, or stroke. Compare costs and top providers."
+      metaTitle="Critical Illness Insurance Canada 2026 | Tax-Free Lump Sum | InsuredCan"
+      metaDescription="Diagnosed with cancer, heart attack, or stroke? Critical illness insurance pays a tax-free lump sum — no restrictions on use. Compare 20+ plans free. Licensed Ontario advisors."
       breadcrumb="critical-illness-insurance"
       ogImage="https://www.insuredcan.ca/og/og-critical-illness.png"
       heroTag="Income Protection"

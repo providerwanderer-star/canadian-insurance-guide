@@ -6,8 +6,8 @@ const TermLifeInsurance = () => {
   return (
     <PillarPageLayout
       title="Term Life Insurance in Canada"
-      metaTitle="Term Life Insurance Canada (2026): From $22/mo — Compare & Save | InsuredCan"
-      metaDescription="Term life insurance offers affordable, temporary coverage for 10–30 years. Learn how it works, costs, and who it's best for in Canada."
+      metaTitle="Term Life Insurance Canada 2026 | Cheapest Rates From $22/mo | InsuredCan"
+      metaDescription="Canada's most affordable life insurance. Compare 10, 20 & 30-year term policies from 20+ insurers. From $22/month for healthy Canadians. Free quote, no obligation."
       breadcrumb="term-life-insurance"
       ogImage="https://www.insuredcan.ca/og/og-term-life.png"
       heroTag="Affordable Protection"
