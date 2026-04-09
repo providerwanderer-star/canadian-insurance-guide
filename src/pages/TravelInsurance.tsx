@@ -5,7 +5,7 @@ const TravelInsurancePage = () => {
   return (
     <PillarPageLayout
       title="Travel Insurance in Canada: Super Visa, Visitors & Trips"
-      metaTitle="Travel Insurance Canada — Super Visa, Visitor & Trip Coverage | InsuredCan"
+      metaTitle="Travel Insurance Canada (2026): Super Visa, Visitor & Trip Plans | InsuredCan"
       metaDescription="Get travel insurance for Super Visa applications, visiting parents, and trips abroad. Compare costs and coverage for Canadian travellers and visitors to Canada."
       breadcrumb="travel-insurance"
       ogImage="https://www.insuredcan.ca/og/og-travel.png"

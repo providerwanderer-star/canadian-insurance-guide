@@ -5,7 +5,7 @@ const RetirementPlanning = () => {
   return (
     <PillarPageLayout
       title="Retirement Planning & Insurance in Canada"
-      metaTitle="Retirement Planning Canada — Secure Your Future Income | InsuredCan"
+      metaTitle="Retirement Planning Canada (2026): RRSP, TFSA & Insurance Guide | InsuredCan"
       metaDescription="Plan for a comfortable retirement in Canada. Learn about RRSPs, TFSAs, annuities, and how insurance protects your retirement income and legacy."
       breadcrumb="retirement-planning"
       ogImage="https://www.insuredcan.ca/og/og-retirement.png"

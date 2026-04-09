@@ -5,7 +5,7 @@ const FuneralInsurance = () => {
   return (
     <PillarPageLayout
       title="Funeral & Final Expense Insurance in Canada"
-      metaTitle="Funeral Insurance Canada — Cover Final Expenses ($8K–$15K) | InsuredCan"
+      metaTitle="Funeral Insurance Canada (2026): Cover $8K–$15K Final Expenses | InsuredCan"
       metaDescription="Funeral insurance covers burial, cremation, and final expenses so your family isn't financially burdened. Learn about costs and coverage options in Canada."
       breadcrumb="funeral-insurance"
       ogImage="https://www.insuredcan.ca/og/og-funeral.png"

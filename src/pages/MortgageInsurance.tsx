@@ -5,7 +5,7 @@ const MortgageInsurancePage = () => {
   return (
     <PillarPageLayout
       title="Mortgage Insurance in Canada: Protect Your Home"
-      metaTitle="Mortgage Insurance Canada — Bank vs Personal Coverage | InsuredCan"
+      metaTitle="Mortgage Insurance Canada (2026): Save $140/mo vs Bank Plans | InsuredCan"
       metaDescription="Compare bank mortgage insurance vs personal life insurance in Canada. Learn why a term life policy often provides better coverage at a lower cost for homeowners."
       breadcrumb="mortgage-insurance"
       ogImage="https://www.insuredcan.ca/og/og-mortgage.png"
