@@ -12,6 +12,16 @@ const DisabilityInsurancePage = () => {
       heroTag="Income Protection"
       heroDescription="Your ability to earn income is your greatest financial asset. Disability insurance replaces a portion of your salary if illness or injury prevents you from working—whether for a few months or permanently."
     >
+      <QuickAnswerBox
+        question="How much does disability insurance pay in Canada?"
+        answer="Disability insurance replaces 60–85% of your pre-disability gross income, paid monthly. Benefits are tax-free if you pay premiums with after-tax dollars. Coverage can last until age 65 for long-term policies."
+      />
+      <KeyTakeaways items={[
+        "1 in 3 Canadians will experience a disability lasting 90+ days before age 65",
+        "EI Sickness only pays ~$668/week for a maximum of 26 weeks",
+        "Own-occupation policies are the gold standard — you're covered if you can't do YOUR job",
+        "Paying premiums personally means tax-free benefits when you claim",
+      ]} />
       <ContentSection title="Why Disability Insurance Matters">
         <ContentParagraph>
           Statistically, a 30-year-old Canadian worker has a <strong>1 in 3 chance</strong> of being disabled for 90 days or more before age 65. Yet most Canadians have no private disability coverage beyond what CPP Disability might provide.

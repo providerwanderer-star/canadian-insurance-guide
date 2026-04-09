@@ -12,6 +12,10 @@ const TravelInsurancePage = () => {
       heroTag="Travel Coverage"
       heroDescription="Whether you're sponsoring parents on a Super Visa, welcoming visitors, or heading abroad, travel insurance protects against emergency medical costs that can reach hundreds of thousands of dollars."
     >
+      <QuickAnswerBox
+        question="Do I need travel insurance in Canada?"
+        answer="Yes. OHIP eliminated out-of-country coverage in 2020, and coverage between provinces is limited. A single medical emergency abroad can cost $100,000+. Travel insurance starts as low as $2–$5/day for Canadian travellers."
+      />
       <ContentSection title="Types of Travel Insurance">
         <ContentH3>Super Visa Insurance</ContentH3>
         <ContentParagraph>

@@ -12,6 +12,10 @@ const MortgageInsurancePage = () => {
       heroTag="Home Protection"
       heroDescription="Your mortgage is likely the biggest financial commitment you'll ever make. Mortgage insurance ensures your family can keep the home if something happens to you—but the type you choose matters enormously."
     >
+      <QuickAnswerBox
+        question="Should I get mortgage insurance from my bank or buy my own?"
+        answer="A personal term life insurance policy is almost always better than bank mortgage insurance. It's cheaper, provides a level death benefit (not decreasing), is portable between lenders, and your family controls how the payout is used."
+      />
       <ContentSection title="Bank Mortgage Insurance vs. Personal Life Insurance">
         <ContentParagraph>
           When you get a mortgage, your bank will offer creditor insurance. It seems convenient, but there's a better alternative that most Canadians don't know about: a personal term life insurance policy.
