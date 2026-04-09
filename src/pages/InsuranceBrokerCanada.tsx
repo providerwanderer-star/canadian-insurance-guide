@@ -5,7 +5,7 @@ const InsuranceBrokerCanada = () => (
   <LocationPageLayout
     city="Canada"
     province="All Provinces"
-    metaTitle="Insurance Broker Canada — Compare Quotes from 20+ Insurers | InsuredCan"
+    metaTitle="Insurance Broker Canada (2026): Compare 20+ Insurers & Save | InsuredCan"
     metaDescription="Find a licensed insurance broker in Canada. Compare life, critical illness, and health insurance quotes from top Canadian insurers. Free consultation."
     slug="insurance-broker-canada"
     heroHeadline="Your Trusted Insurance Broker Across Canada"
