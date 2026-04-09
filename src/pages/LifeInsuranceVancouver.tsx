@@ -1,90 +1,115 @@
 import LocationPageLayout from "@/components/LocationPageLayout";
 import { ContentSection, ContentParagraph, ProsList, InfoCard, ComparisonTable } from "@/components/ContentElements";
+import { Link } from "react-router-dom";
 
 const LifeInsuranceVancouver = () => (
   <LocationPageLayout
     city="Vancouver"
     province="British Columbia"
-    metaTitle="Life Insurance Vancouver BC — Compare Quotes from 20+ Insurers | InsuredCan"
-    metaDescription="Find the best life insurance rates in Vancouver, BC. Compare term & whole life quotes from licensed BC advisors. Free consultation for Vancouver families and professionals."
+    metaTitle="Life Insurance Vancouver (2026): Compare Plans & Save Up to 40% | InsuredCan"
+    metaDescription="Compare the best life insurance in Vancouver, BC. Get instant quotes from 20+ insurers, expert advice from licensed BC advisors, and save on premiums today."
     slug="life-insurance-vancouver"
-    heroHeadline="Life Insurance for Vancouver Families & Professionals"
-    heroDescription="Vancouver's world-class lifestyle comes with world-class costs. Protect your family's financial future with affordable life insurance tailored to BC's cost of living. Compare quotes from 20+ top Canadian insurers — free, no obligation."
-      ogImage="https://www.insuredcan.ca/og/og-vancouver.png"
+    heroHeadline="Life Insurance for Vancouver Families & Professionals (2026)"
+    heroDescription="Vancouver ranks as Canada's most expensive city, with average household incomes of $85,000–$110,000 struggling against $1.3M+ home prices. A single lost income can mean losing your home. Compare life insurance from 20+ top Canadian insurers — free, no obligation."
+    ogImage="https://www.insuredcan.ca/og/og-vancouver.png"
     localContent={
       <>
-        <ContentSection title="Why Vancouver Residents Need Life Insurance">
+        <ContentSection title="Why Vancouver Families Can't Afford to Go Uninsured">
           <ContentParagraph>
-            With average home prices exceeding $1.3 million and one of Canada's highest costs of living, Vancouver families face unique financial risks. A single lost income can devastate a family's ability to maintain their mortgage, lifestyle, and children's education.
+            Vancouver's median household income sits around $85,000, yet the average detached home exceeds <strong>$1.9 million</strong> and even condos average $770,000 (2025 data). This extreme affordability gap means most families carry mortgages of $500K–$1.5M — making life insurance not a luxury, but a necessity.
           </ContentParagraph>
           <ContentParagraph>
-            Whether you're a tech professional in Yaletown, a healthcare worker in Burnaby, or raising a family in Surrey, the right life insurance policy ensures your loved ones are protected against the unexpected. InsuredCan's licensed BC advisors compare 20+ top insurers to find your best rate.
+            Consider a typical scenario: a dual-income couple in East Vancouver earning a combined $140,000 with a $900,000 mortgage. If one partner passes away, the surviving spouse faces $4,200/month in mortgage payments alone — roughly 70% of a single income. A $1M <Link to="/term-life-insurance" className="text-primary underline font-semibold">term life insurance</Link> policy costing just $35–$58/month prevents financial catastrophe.
           </ContentParagraph>
         </ContentSection>
 
-        <ContentSection title="Life Insurance Costs in Vancouver">
+        <ContentSection title="What Life Insurance Actually Costs in Vancouver (2026)">
           <ComparisonTable
-            headers={["Profile", "$500K Term (20yr)", "$1M Term (20yr)"]}
+            headers={["Profile", "$500K Term (20yr)", "$1M Term (20yr)", "$500K Whole Life"]}
             rows={[
-              ["30-year-old, non-smoker", "$22–$28/mo", "$35–$45/mo"],
-              ["35-year-old, non-smoker", "$26–$36/mo", "$44–$58/mo"],
-              ["40-year-old, non-smoker", "$36–$50/mo", "$60–$82/mo"],
-              ["45-year-old, non-smoker", "$58–$78/mo", "$95–$128/mo"],
+              ["30-year-old, non-smoker", "$22–$28/mo", "$35–$45/mo", "$185–$240/mo"],
+              ["35-year-old, non-smoker", "$26–$36/mo", "$44–$58/mo", "$220–$310/mo"],
+              ["40-year-old, non-smoker", "$36–$50/mo", "$60–$82/mo", "$310–$430/mo"],
+              ["45-year-old, non-smoker", "$58–$78/mo", "$95–$128/mo", "$420–$580/mo"],
+              ["50-year-old, non-smoker", "$88–$115/mo", "$155–$210/mo", "$560–$780/mo"],
             ]}
           />
           <ContentParagraph>
-            Given Vancouver's high property values, many families opt for $1M+ coverage to fully protect their mortgage and ensure their dependants can maintain their standard of living.
+            BC has no provincial premium tax on life insurance, unlike Ontario's 2% tax. This means Vancouver residents pay slightly less in total costs than Toronto residents for identical coverage. Given Metro Vancouver's property values, most financial advisors recommend <strong>$1M+ in coverage</strong> to adequately protect a mortgage and replace 10 years of income.
           </ContentParagraph>
         </ContentSection>
 
-        <ContentSection title="Insurance Options for Vancouver Residents">
+        <InfoCard title="🏠 Vancouver Housing Reality Check">
+          The average Vancouver homeowner has a $650,000+ mortgage balance. Bank mortgage insurance only covers the declining loan balance and pays the lender — not your family. A personal <Link to="/term-life-insurance" className="text-primary underline font-semibold">term life policy</Link> provides level coverage, is fully portable between lenders, and puts the full payout directly in your beneficiary's hands. For a 35-year-old, it's often 15–30% cheaper than bank mortgage insurance too.
+        </InfoCard>
+
+        <ContentSection title="Insurance Options Ranked for Vancouver Residents">
           <ProsList items={[
-            "Term Life Insurance — Protect your mortgage and family income for 10–30 years at the lowest possible cost",
-            "Whole Life Insurance — Permanent coverage with tax-sheltered cash value growth for BC families",
-            "Critical Illness Insurance — Tax-free lump sum if diagnosed with cancer, heart attack, or stroke",
-            "Disability Insurance — Replace 60–85% of your income if you cannot work due to illness or injury",
-            "Mortgage Protection Insurance — Protect your Vancouver home investment specifically",
-            "Super Visa Insurance — Required coverage for parents and grandparents visiting from abroad",
+            "Term Life Insurance — Best value for mortgage protection; 20-year term covers your amortization period at $26–$58/month for $500K",
+            "Whole Life Insurance — Permanent coverage with tax-sheltered cash value; ideal for estate planning in BC's high-asset market",
+            "Critical Illness Insurance — Tax-free lump sum ($50K–$500K) for cancer, heart attack, or stroke; covers treatment gaps not paid by MSP",
+            "Disability Insurance — Replaces 60–85% of income; essential for self-employed tech workers and contractors in Vancouver",
+            "Super Visa Insurance — Required coverage for parents/grandparents visiting from abroad; popular among Vancouver's immigrant families",
+            "Health & Dental Insurance — Fills MSP gaps including prescription drugs ($2,000–$5,000/year average out-of-pocket), dental, and paramedical services",
           ]} />
         </ContentSection>
 
-        <InfoCard title="🏠 Vancouver-Specific Consideration">
-          With Vancouver's average detached home exceeding $1.3 million, bank mortgage insurance is often inadequate. A personal term life policy provides level coverage, travels with you between lenders, and puts the payout directly in your family's hands — not the bank's.
-        </InfoCard>
-
-        <ContentSection title="Serving All Vancouver & Lower Mainland Areas">
+        <ContentSection title="Vancouver's Key Industries & Insurance Needs">
           <ContentParagraph>
-            InsuredCan serves families across Greater Vancouver including Burnaby, Surrey, Richmond, Coquitlam, Delta, Langley, Abbotsford, North Vancouver, West Vancouver, and the Tri-Cities. Our licensed BC advisors provide convenient virtual and phone consultations across the province.
+            <strong>Tech sector (Amazon, Microsoft, SAP):</strong> Vancouver's tech workers earn $90,000–$180,000+ but often as contractors without group benefits. Personal <Link to="/disability-insurance" className="text-primary underline font-semibold">disability insurance</Link> and <Link to="/life-insurance" className="text-primary underline font-semibold">life insurance</Link> are critical since employer coverage ends with your contract.
+          </ContentParagraph>
+          <ContentParagraph>
+            <strong>Film & entertainment industry:</strong> Vancouver is "Hollywood North" — but IATSE and ACFC members often have gaps between productions. Personal insurance provides continuous coverage regardless of shooting schedules.
+          </ContentParagraph>
+          <ContentParagraph>
+            <strong>Healthcare workers:</strong> BC's healthcare system employs thousands across Vancouver Coastal Health. While group benefits exist, they typically cover only 1–2x salary — far below the 10–12x recommended by financial planners.
+          </ContentParagraph>
+          <ContentParagraph>
+            <strong>Real estate professionals:</strong> Self-employed realtors and mortgage brokers need personal coverage since no employer provides benefits. With Vancouver's commission-based income, <Link to="/insurance-self-employed" className="text-primary underline font-semibold">self-employed insurance</Link> is essential.
           </ContentParagraph>
         </ContentSection>
 
-        <ContentSection title="BC-Specific Insurance Regulations">
+        <InfoCard title="🌊 BC-Specific: What MSP Doesn't Cover">
+          BC's Medical Services Plan covers hospital and doctor visits, but <strong>not</strong> prescription drugs ($2,000–$5,000/year average), dental ($1,500–$3,000/year), vision, physiotherapy, or mental health counseling. A supplemental <Link to="/health-insurance" className="text-primary underline font-semibold">health insurance</Link> plan fills these gaps for $80–$200/month per family. Learn more about <Link to="/compare/private-vs-ohip" className="text-primary underline font-semibold">private vs. public health coverage</Link>.
+        </InfoCard>
+
+        <ContentSection title="Serving All Metro Vancouver & Lower Mainland">
           <ContentParagraph>
-            In British Columbia, insurance advisors are regulated by the BC Financial Services Authority (BCFSA). InsuredCan's advisors hold valid BC life and health insurance licences, ensuring you receive advice from fully qualified, regulated professionals. BC residents also benefit from provincial health coverage through MSP, but private health insurance fills critical gaps including dental, vision, prescription drugs, and paramedical services.
+            InsuredCan serves families across Greater Vancouver including <strong>Burnaby</strong> (avg. home: $1.1M), <strong>Richmond</strong> ($1.2M), <strong>Coquitlam</strong> ($950K), <strong>North Vancouver</strong> ($1.5M), <strong>West Vancouver</strong> ($2.8M), <strong>Delta</strong> ($1M), <strong>Langley</strong> ($850K), <strong>Abbotsford</strong> ($680K), and the <strong>Tri-Cities</strong>. Our licensed BC advisors provide virtual consultations across the entire province — no in-person meeting required.
+          </ContentParagraph>
+        </ContentSection>
+
+        <ContentSection title="BC Insurance Regulations You Should Know">
+          <ContentParagraph>
+            In British Columbia, insurance advisors are regulated by the <strong>BC Financial Services Authority (BCFSA)</strong>. InsuredCan's advisors hold valid BC life and health insurance licences. Key BC-specific rules: beneficiary designations follow the Wills, Estates and Succession Act; insurance proceeds are generally creditor-protected; and BC residents can name irrevocable beneficiaries for extra asset protection.
           </ContentParagraph>
         </ContentSection>
       </>
     }
     faqs={[
       {
-        question: "How much does life insurance cost in Vancouver, BC?",
-        answer: "Life insurance rates in Vancouver are the same as anywhere in Canada — premiums are set nationally by insurers. A healthy 35-year-old non-smoker can expect to pay $26–$36/month for $500,000 of 20-year term coverage. Factors like age, health, smoking status, and coverage amount affect your rate. Our advisors compare 20+ insurers to find your lowest rate."
+        question: "How much does life insurance cost in Vancouver in 2026?",
+        answer: "A healthy 35-year-old non-smoker pays $26–$36/month for $500K of 20-year term coverage. BC has no provincial premium tax, so Vancouver residents pay slightly less than Ontario residents for identical policies. Compare 20+ insurers free with InsuredCan."
+      },
+      {
+        question: "How much life insurance do I need in Vancouver?",
+        answer: "Given Metro Vancouver's $1.3M+ average home prices, most families need $1M–$2M in coverage. Calculate 10–12x your annual income plus your outstanding mortgage balance. InsuredCan offers a free needs analysis."
       },
       {
         question: "Do I need a BC-licensed insurance advisor?",
-        answer: "Yes. In British Columbia, life insurance advisors must hold a valid licence from the BC Financial Services Authority (BCFSA). InsuredCan's advisors are fully licensed to advise BC residents on life, health, critical illness, and disability insurance."
+        answer: "Yes. BC law requires life insurance advisors to hold a valid licence from the BC Financial Services Authority (BCFSA). All InsuredCan advisors serving Vancouver clients are fully BCFSA-licensed."
       },
       {
-        question: "What's the best life insurance for Vancouver homeowners?",
-        answer: "For most Vancouver homeowners, term life insurance is the best value. A 20 or 25-year term policy aligned with your mortgage amortization period provides affordable, level coverage. Unlike bank mortgage insurance, a personal term policy is portable, pays your beneficiaries directly, and often provides more coverage for less cost."
+        question: "Is bank mortgage insurance worth it in Vancouver?",
+        answer: "Usually not. Bank mortgage insurance costs more, only covers the declining loan balance, and pays the bank — not your family. A personal term life policy is portable, provides level coverage, and typically saves 15–30% versus bank mortgage insurance."
       },
       {
         question: "Can newcomers to BC get life insurance?",
-        answer: "Yes. Most Canadian insurers issue policies to permanent residents and workers with valid permits. Some may require 12 months of residency. If you're in BC's HIBC waiting period, critical illness or private health insurance can provide important bridge coverage."
+        answer: "Yes. Most Canadian insurers issue policies to permanent residents and work permit holders. Some require 12 months of Canadian residency. During BC's MSP waiting period, critical illness or private health insurance provides important bridge coverage."
       },
       {
-        question: "Does MSP cover everything I need in BC?",
-        answer: "No. BC's Medical Services Plan (MSP) covers essential medical services but excludes dental care, prescription drugs, vision care, physiotherapy, chiropractic, massage, and private hospital rooms. A supplemental health insurance plan fills these critical gaps."
+        question: "What does MSP not cover in British Columbia?",
+        answer: "BC's MSP excludes dental care, prescription drugs, vision, physiotherapy, chiropractic, massage therapy, and private hospital rooms. A supplemental health insurance plan fills these gaps for $80–$200/month per family."
       }
     ]}
   />
