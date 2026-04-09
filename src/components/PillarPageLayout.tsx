@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
+import { AuthorBox, Disclaimer } from "@/components/ContentElements";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
