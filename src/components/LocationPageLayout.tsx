@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import TrustBar from "@/components/TrustBar";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { MapPin, CheckCircle, Star, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FAQSection, AuthorBox, Disclaimer } from "@/components/ContentElements";
@@ -82,21 +84,17 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
             <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight mb-4 font-display">{heroHeadline}</h1>
             <p className="hero-description text-lg text-primary-foreground/80 leading-relaxed mb-8">{heroDescription}</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
-                Get Free Quote in {city} <ArrowRight className="h-5 w-5" />
-              </Button>
+              <a href="mailto:sahil280389@gmail.com?subject=Free%20Quote%20Request%20-%20{city}">
+                <Button size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
+                  Get Free Quote in {city} <ArrowRight className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="bg-surface border-b border-border py-6">
-        <div className="container flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
-          <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-success" /> Licensed in {province}</span>
-          <span className="flex items-center gap-2"><Star className="h-4 w-4 text-accent" /> 4.8★ Rating</span>
-          <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-success" /> Free Consultation</span>
-        </div>
-      </section>
+      <TrustBar />
 
       <article className="container py-12 md:py-16">
         <div className="max-w-4xl">{localContent}</div>
@@ -128,6 +126,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
         </div>
       </section>
 
+      <TestimonialsSection />
       <CTASection />
       <Footer />
     </div>
