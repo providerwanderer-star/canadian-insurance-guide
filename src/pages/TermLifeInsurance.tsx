@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 import { Link } from "react-router-dom";
 
 const TermLifeInsurance = () => {

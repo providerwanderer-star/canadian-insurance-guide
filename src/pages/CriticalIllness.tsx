@@ -84,6 +84,8 @@ const CriticalIllnessPage = () => {
         { question: "What's the difference between critical illness and disability insurance?", answer: "Critical illness pays a one-time lump sum upon diagnosis of a covered condition. Disability insurance provides monthly income replacement if you can't work due to any illness or injury. They complement each other—critical illness for the immediate financial shock, disability for ongoing income loss." },
         { question: "Is critical illness insurance worth it in Canada?", answer: "1 in 2 Canadians will develop cancer in their lifetime. If you're the primary earner and don't have 6+ months of savings, critical illness insurance provides a crucial financial safety net. The return of premium option also means you get your money back if you stay healthy." },
         { question: "Can I get critical illness insurance if I've had cancer?", answer: "Generally no—cancer is a standard exclusion if you've been previously diagnosed. However, some simplified-issue products may offer limited coverage after a cancer-free waiting period of 5–10 years." },
+        { question: "How much critical illness insurance do I need?", answer: "A common recommendation is 1–2 years of after-tax income. Most Canadians choose $50,000–$100,000. Consider your monthly expenses, mortgage payments, potential treatment costs, and how long you might be unable to work." },
+        { question: "What is the survival period for critical illness insurance?", answer: "Most policies require you to survive 30 days after diagnosis before the benefit is paid. This is a standard industry requirement across all Canadian critical illness insurers." },
       ]} />
     </PillarPageLayout>
   );

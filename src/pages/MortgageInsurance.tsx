@@ -1,5 +1,5 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const MortgageInsurancePage = () => {
   return (
