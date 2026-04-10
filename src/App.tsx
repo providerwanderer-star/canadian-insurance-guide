@@ -91,6 +91,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <SEOHead />
           <Routes>
             <Route path="/" element={<Index />} />
