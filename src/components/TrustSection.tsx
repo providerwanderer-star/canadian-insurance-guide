@@ -134,7 +134,7 @@ const TrustSection = () => {
             className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display"
           >
             What Canadians are saying
-          </motion.h2>
+          </m.h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
