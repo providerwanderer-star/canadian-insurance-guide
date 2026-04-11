@@ -4,31 +4,120 @@ Allow: /
 Disallow: /privacy-policy
 Disallow: /terms-of-service
 
-# AI Crawlers Welcome
-User-agent: GPTBot
-Allow: /
+# ===========================
+# AI Search & Browse Crawlers
+# (Index content for real-time AI answers)
+# ===========================
 
-User-agent: Google-Extended
+# OpenAI
+User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Claude-Web
+User-agent: OAI-SearchBot
 Allow: /
 
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Microsoft / Bing AI
 User-agent: Bingbot
 Allow: /
 
+User-agent: BingPreview
+Allow: /
+
+# Anthropic / Claude
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Anthropic-AI
+# Meta AI
+User-agent: FacebookBot
 Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Apple Intelligence / Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Brave Search AI
+User-agent: Brave-Search
+Allow: /
+
+# Amazon Alexa / AI
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Allow: /
+
+# DeepSeek AI
+User-agent: Bytespider
+Allow: /
+
+# Mistral AI
+User-agent: MistralBot
+Allow: /
+
+# AI2 / Semantic Scholar
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Ai2Bot-Dolma
+Allow: /
+
+# Diffbot (knowledge graph)
+User-agent: Diffbot
+Allow: /
+
+# Timely / Scrapy-based AI bots
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# ===========================
+# Sitemaps & AI Content Files
+# ===========================
 
 Sitemap: https://www.insuredcan.ca/sitemap.xml
 
-# LLM-readable content
-# https://www.insuredcan.ca/llms.txt
-# https://www.insuredcan.ca/llms-full.txt
-# https://www.insuredcan.ca/ai.txt
+# LLM-readable content files
+# Summary:        https://www.insuredcan.ca/llms.txt
+# Full knowledge:  https://www.insuredcan.ca/llms-full.txt
+# AI policy:       https://www.insuredcan.ca/ai.txt
+# AI plugin:       https://www.insuredcan.ca/.well-known/ai-plugin.json
