@@ -5,7 +5,7 @@ import TrustBar from "@/components/TrustBar";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { AuthorBox, Disclaimer } from "@/components/ContentElements";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
 interface PillarPageLayoutProps {
@@ -105,13 +105,13 @@ const PillarPageLayout = ({
               <span className="text-xs font-bold text-accent-foreground">{heroTag}</span>
             </div>
           )}
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight mb-4 font-display"
           >
             {title}
-          </motion.h1>
+          </m.h1>
           <p className="hero-description text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
             {heroDescription}
           </p>

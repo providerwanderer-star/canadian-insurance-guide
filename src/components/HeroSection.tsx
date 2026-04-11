@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroFamily from "@/assets/hero-family.jpg";
@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="container relative py-16 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
@@ -60,10 +60,10 @@ const HeroSection = () => {
                 Free Consultation
               </span>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Hero Image */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -84,7 +84,7 @@ const HeroSection = () => {
                 <p className="text-xs text-muted-foreground">Partner Insurers</p>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

@@ -2,17 +2,16 @@ import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { LazyMotion, domAnimation } from "framer-motion";
 import SEOHead from "./components/SEOHead.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-
-// Only eagerly load the homepage for fastest initial paint
 import Index from "./pages/Index.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
-// Lazy load everything else
-const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+// Lazy-loaded pages — each becomes its own chunk in production
 const LifeInsurancePage = lazy(() => import("./pages/LifeInsurance.tsx"));
 const HealthInsurancePage = lazy(() => import("./pages/HealthInsurance.tsx"));
 const CriticalIllnessPage = lazy(() => import("./pages/CriticalIllness.tsx"));
@@ -57,13 +56,6 @@ const LifeInsuranceThunderBayPage = lazy(() => import("./pages/LifeInsuranceThun
 const InsuranceBrokerCanadaPage = lazy(() => import("./pages/InsuranceBrokerCanada.tsx"));
 const InsuranceGlossaryPage = lazy(() => import("./pages/InsuranceGlossary.tsx"));
 const InsuranceFAQPage = lazy(() => import("./pages/InsuranceFAQ.tsx"));
-const LifeInsuranceOntarioPage = lazy(() => import("./pages/LifeInsuranceOntario.tsx"));
-const CostLifeInsuranceOntarioPage = lazy(() => import("./pages/CostLifeInsuranceOntario.tsx"));
-const CriticalIllnessOntarioPage = lazy(() => import("./pages/CriticalIllnessOntario.tsx"));
-const LifeInsurancePRHoldersPage = lazy(() => import("./pages/LifeInsurancePRHolders.tsx"));
-const CoverageCalculator = lazy(() => import("./pages/CoverageCalculator.tsx"));
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
-const TermsOfService = lazy(() => import("./pages/TermsOfService.tsx"));
 const BlogIndex = lazy(() => import("./pages/BlogIndex.tsx"));
 const BlogOHIPWaiting = lazy(() => import("./pages/blog/BlogOHIPWaiting.tsx"));
 const BlogTermVsWhole = lazy(() => import("./pages/blog/BlogTermVsWhole.tsx"));
@@ -88,6 +80,13 @@ const BlogIsLifeInsuranceWorthIt = lazy(() => import("./pages/blog/BlogIsLifeIns
 const BlogInsuranceMistakesCanadians = lazy(() => import("./pages/blog/BlogInsuranceMistakesCanadians.tsx"));
 const BlogHowToChooseInsuranceOntario = lazy(() => import("./pages/blog/BlogHowToChooseInsuranceOntario.tsx"));
 const BlogInsuranceNewImmigrants = lazy(() => import("./pages/blog/BlogInsuranceNewImmigrants.tsx"));
+const CoverageCalculator = lazy(() => import("./pages/CoverageCalculator.tsx"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService.tsx"));
+const LifeInsuranceOntarioPage = lazy(() => import("./pages/LifeInsuranceOntario.tsx"));
+const CostLifeInsuranceOntarioPage = lazy(() => import("./pages/CostLifeInsuranceOntario.tsx"));
+const CriticalIllnessOntarioPage = lazy(() => import("./pages/CriticalIllnessOntario.tsx"));
+const LifeInsurancePRHoldersPage = lazy(() => import("./pages/LifeInsurancePRHolders.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -104,110 +103,112 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <SEOHead />
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              
-              {/* Insurance Pillar Pages */}
-              <Route path="/life-insurance" element={<LifeInsurancePage />} />
-              <Route path="/health-insurance" element={<HealthInsurancePage />} />
-              <Route path="/critical-illness-insurance" element={<CriticalIllnessPage />} />
-              <Route path="/disability-insurance" element={<DisabilityInsurancePage />} />
-              <Route path="/travel-insurance" element={<TravelInsurancePage />} />
-              <Route path="/mortgage-insurance" element={<MortgageInsurancePage />} />
-              <Route path="/term-life-insurance" element={<TermLifeInsurancePage />} />
-              <Route path="/whole-life-insurance" element={<WholeLifeInsurancePage />} />
-              <Route path="/funeral-insurance" element={<FuneralInsurancePage />} />
-              <Route path="/life-insurance-ontario" element={<LifeInsuranceOntarioPage />} />
-              <Route path="/cost-life-insurance-ontario" element={<CostLifeInsuranceOntarioPage />} />
-              <Route path="/critical-illness-insurance-ontario" element={<CriticalIllnessOntarioPage />} />
-              <Route path="/life-insurance-pr-holders" element={<LifeInsurancePRHoldersPage />} />
-              <Route path="/retirement-planning" element={<RetirementPlanningPage />} />
-              
-              {/* Comparison Pages */}
-              <Route path="/compare/term-vs-whole-life" element={<TermVsWholePage />} />
-              <Route path="/compare/critical-illness-vs-disability" element={<CriticalVsDisabilityPage />} />
-              <Route path="/compare/private-vs-ohip" element={<PrivateVsOHIPPage />} />
-              
-              {/* Segment Pages */}
-              <Route path="/newcomers" element={<InsuranceForNewcomersPage />} />
-              <Route path="/families" element={<InsuranceForFamiliesPage />} />
-              <Route path="/self-employed" element={<InsuranceForSelfEmployedPage />} />
-              <Route path="/young-professionals" element={<InsuranceForYoungProfessionalsPage />} />
-              
-              {/* Tools */}
-              <Route path="/coverage-calculator" element={<CoverageCalculator />} />
-              
-              {/* Company Pages */}
-              <Route path="/about" element={<AboutUsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-service" element={<TermsOfService />} />
-              
-              {/* Location Pages */}
-              <Route path="/life-insurance-london-ontario" element={<LifeInsuranceLondonPage />} />
-              <Route path="/life-insurance-toronto" element={<LifeInsuranceTorontoPage />} />
-              <Route path="/life-insurance-vancouver" element={<LifeInsuranceVancouverPage />} />
-              <Route path="/life-insurance-calgary" element={<LifeInsuranceCalgaryPage />} />
-              <Route path="/life-insurance-edmonton" element={<LifeInsuranceEdmontonPage />} />
-              <Route path="/life-insurance-ottawa" element={<LifeInsuranceOttawaPage />} />
-              <Route path="/insurance-broker-canada" element={<InsuranceBrokerCanadaPage />} />
-              <Route path="/life-insurance-montreal" element={<LifeInsuranceMontrealPage />} />
-              <Route path="/life-insurance-winnipeg" element={<LifeInsuranceWinnipegPage />} />
-              <Route path="/life-insurance-hamilton" element={<LifeInsuranceHamiltonPage />} />
-              <Route path="/life-insurance-mississauga" element={<LifeInsuranceMississaugaPage />} />
-              <Route path="/life-insurance-brampton" element={<LifeInsuranceBramptonPage />} />
-              <Route path="/life-insurance-surrey" element={<LifeInsuranceSurreyPage />} />
-              <Route path="/life-insurance-markham" element={<LifeInsuranceMarkhamPage />} />
-              <Route path="/life-insurance-kitchener-waterloo" element={<LifeInsuranceKitchenerWaterlooPage />} />
-              <Route path="/life-insurance-windsor" element={<LifeInsuranceWindsorPage />} />
-              <Route path="/life-insurance-oshawa" element={<LifeInsuranceOshawaPage />} />
-              <Route path="/life-insurance-barrie" element={<LifeInsuranceBarriePage />} />
-              <Route path="/life-insurance-niagara-falls" element={<LifeInsuranceNiagaraFallsPage />} />
-              <Route path="/life-insurance-st-catharines" element={<LifeInsuranceStCatharinesPage />} />
-              <Route path="/life-insurance-guelph" element={<LifeInsuranceGuelphPage />} />
-              <Route path="/life-insurance-kingston" element={<LifeInsuranceKingstonPage />} />
-              <Route path="/life-insurance-thunder-bay" element={<LifeInsuranceThunderBayPage />} />
-              
-              {/* Resources */}
-              <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
-              <Route path="/insurance-faq" element={<InsuranceFAQPage />} />
-              
-              {/* Blog */}
-              <Route path="/blog" element={<BlogIndex />} />
-              <Route path="/blog/ohip-waiting-period-newcomers" element={<BlogOHIPWaiting />} />
-              <Route path="/blog/term-vs-whole-life-2026" element={<BlogTermVsWhole />} />
-              <Route path="/blog/what-ohip-doesnt-cover" element={<BlogWhatOHIPDoesntCover />} />
-              <Route path="/blog/life-insurance-family-toronto" element={<BlogLifeInsuranceFamilyToronto />} />
-              <Route path="/blog/disability-insurance-self-employed" element={<BlogDisabilityInsuranceSelfEmployed />} />
-              <Route path="/blog/how-much-life-insurance-canada" element={<BlogHowMuchLifeInsurance />} />
-              <Route path="/blog/best-life-insurance-families-canada" element={<BlogBestLifeInsuranceFamilies />} />
-              <Route path="/blog/critical-illness-insurance-coverage-canada" element={<BlogCriticalIllnessCoverage />} />
-              <Route path="/blog/average-funeral-costs-canada" element={<BlogFuneralCostsCanada />} />
-              <Route path="/blog/super-visa-insurance-canada" element={<BlogSuperVisaInsurance />} />
-              <Route path="/blog/mortgage-life-insurance-vs-term-canada" element={<BlogMortgageLifeInsurance />} />
-              <Route path="/blog/universal-life-insurance-canada" element={<BlogUniversalLifeInsurance />} />
-              <Route path="/blog/life-insurance-smokers-canada" element={<BlogLifeInsuranceSmokers />} />
-              <Route path="/blog/rrsp-tfsa-vs-life-insurance-canada" element={<BlogRRSPvsTFSAvsLifeInsurance />} />
-              <Route path="/blog/no-medical-life-insurance-canada" element={<BlogNoMedicalLifeInsurance />} />
-              <Route path="/blog/is-life-insurance-taxable-canada" element={<BlogIsLifeInsuranceTaxableCanada />} />
-              <Route path="/blog/life-insurance-seniors-canada" element={<BlogLifeInsuranceSeniorsCanada />} />
-              <Route path="/blog/best-life-insurance-ontario-2026" element={<BlogBestLifeInsuranceOntario />} />
-              <Route path="/blog/cheapest-life-insurance-canada-2026" element={<BlogCheapestLifeInsurance />} />
-              <Route path="/blog/is-life-insurance-worth-it-canada" element={<BlogIsLifeInsuranceWorthIt />} />
-              <Route path="/blog/top-insurance-mistakes-canadians" element={<BlogInsuranceMistakesCanadians />} />
-              <Route path="/blog/how-to-choose-insurance-ontario" element={<BlogHowToChooseInsuranceOntario />} />
-              <Route path="/blog/insurance-new-immigrants-canada" element={<BlogInsuranceNewImmigrants />} />
+        <LazyMotion features={domAnimation} strict>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <SEOHead />
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                
+                {/* Insurance Pillar Pages */}
+                <Route path="/life-insurance" element={<LifeInsurancePage />} />
+                <Route path="/health-insurance" element={<HealthInsurancePage />} />
+                <Route path="/critical-illness-insurance" element={<CriticalIllnessPage />} />
+                <Route path="/disability-insurance" element={<DisabilityInsurancePage />} />
+                <Route path="/travel-insurance" element={<TravelInsurancePage />} />
+                <Route path="/mortgage-insurance" element={<MortgageInsurancePage />} />
+                <Route path="/term-life-insurance" element={<TermLifeInsurancePage />} />
+                <Route path="/whole-life-insurance" element={<WholeLifeInsurancePage />} />
+                <Route path="/funeral-insurance" element={<FuneralInsurancePage />} />
+                <Route path="/life-insurance-ontario" element={<LifeInsuranceOntarioPage />} />
+                <Route path="/cost-life-insurance-ontario" element={<CostLifeInsuranceOntarioPage />} />
+                <Route path="/critical-illness-insurance-ontario" element={<CriticalIllnessOntarioPage />} />
+                <Route path="/life-insurance-pr-holders" element={<LifeInsurancePRHoldersPage />} />
+                <Route path="/retirement-planning" element={<RetirementPlanningPage />} />
+                
+                {/* Comparison Pages */}
+                <Route path="/compare/term-vs-whole-life" element={<TermVsWholePage />} />
+                <Route path="/compare/critical-illness-vs-disability" element={<CriticalVsDisabilityPage />} />
+                <Route path="/compare/private-vs-ohip" element={<PrivateVsOHIPPage />} />
+                
+                {/* Segment Pages */}
+                <Route path="/newcomers" element={<InsuranceForNewcomersPage />} />
+                <Route path="/families" element={<InsuranceForFamiliesPage />} />
+                <Route path="/self-employed" element={<InsuranceForSelfEmployedPage />} />
+                <Route path="/young-professionals" element={<InsuranceForYoungProfessionalsPage />} />
+                
+                {/* Tools */}
+                <Route path="/coverage-calculator" element={<CoverageCalculator />} />
+                
+                {/* Company Pages */}
+                <Route path="/about" element={<AboutUsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                
+                {/* Location Pages */}
+                <Route path="/life-insurance-london-ontario" element={<LifeInsuranceLondonPage />} />
+                <Route path="/life-insurance-toronto" element={<LifeInsuranceTorontoPage />} />
+                <Route path="/life-insurance-vancouver" element={<LifeInsuranceVancouverPage />} />
+                <Route path="/life-insurance-calgary" element={<LifeInsuranceCalgaryPage />} />
+                <Route path="/life-insurance-edmonton" element={<LifeInsuranceEdmontonPage />} />
+                <Route path="/life-insurance-ottawa" element={<LifeInsuranceOttawaPage />} />
+                <Route path="/insurance-broker-canada" element={<InsuranceBrokerCanadaPage />} />
+                <Route path="/life-insurance-montreal" element={<LifeInsuranceMontrealPage />} />
+                <Route path="/life-insurance-winnipeg" element={<LifeInsuranceWinnipegPage />} />
+                <Route path="/life-insurance-hamilton" element={<LifeInsuranceHamiltonPage />} />
+                <Route path="/life-insurance-mississauga" element={<LifeInsuranceMississaugaPage />} />
+                <Route path="/life-insurance-brampton" element={<LifeInsuranceBramptonPage />} />
+                <Route path="/life-insurance-surrey" element={<LifeInsuranceSurreyPage />} />
+                <Route path="/life-insurance-markham" element={<LifeInsuranceMarkhamPage />} />
+                <Route path="/life-insurance-kitchener-waterloo" element={<LifeInsuranceKitchenerWaterlooPage />} />
+                <Route path="/life-insurance-windsor" element={<LifeInsuranceWindsorPage />} />
+                <Route path="/life-insurance-oshawa" element={<LifeInsuranceOshawaPage />} />
+                <Route path="/life-insurance-barrie" element={<LifeInsuranceBarriePage />} />
+                <Route path="/life-insurance-niagara-falls" element={<LifeInsuranceNiagaraFallsPage />} />
+                <Route path="/life-insurance-st-catharines" element={<LifeInsuranceStCatharinesPage />} />
+                <Route path="/life-insurance-guelph" element={<LifeInsuranceGuelphPage />} />
+                <Route path="/life-insurance-kingston" element={<LifeInsuranceKingstonPage />} />
+                <Route path="/life-insurance-thunder-bay" element={<LifeInsuranceThunderBayPage />} />
+                
+                {/* Resources */}
+                <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
+                <Route path="/insurance-faq" element={<InsuranceFAQPage />} />
+                
+                {/* Blog */}
+                <Route path="/blog" element={<BlogIndex />} />
+                <Route path="/blog/ohip-waiting-period-newcomers" element={<BlogOHIPWaiting />} />
+                <Route path="/blog/term-vs-whole-life-2026" element={<BlogTermVsWhole />} />
+                <Route path="/blog/what-ohip-doesnt-cover" element={<BlogWhatOHIPDoesntCover />} />
+                <Route path="/blog/life-insurance-family-toronto" element={<BlogLifeInsuranceFamilyToronto />} />
+                <Route path="/blog/disability-insurance-self-employed" element={<BlogDisabilityInsuranceSelfEmployed />} />
+                <Route path="/blog/how-much-life-insurance-canada" element={<BlogHowMuchLifeInsurance />} />
+                <Route path="/blog/best-life-insurance-families-canada" element={<BlogBestLifeInsuranceFamilies />} />
+                <Route path="/blog/critical-illness-insurance-coverage-canada" element={<BlogCriticalIllnessCoverage />} />
+                <Route path="/blog/average-funeral-costs-canada" element={<BlogFuneralCostsCanada />} />
+                <Route path="/blog/super-visa-insurance-canada" element={<BlogSuperVisaInsurance />} />
+                <Route path="/blog/mortgage-life-insurance-vs-term-canada" element={<BlogMortgageLifeInsurance />} />
+                <Route path="/blog/universal-life-insurance-canada" element={<BlogUniversalLifeInsurance />} />
+                <Route path="/blog/life-insurance-smokers-canada" element={<BlogLifeInsuranceSmokers />} />
+                <Route path="/blog/rrsp-tfsa-vs-life-insurance-canada" element={<BlogRRSPvsTFSAvsLifeInsurance />} />
+                <Route path="/blog/no-medical-life-insurance-canada" element={<BlogNoMedicalLifeInsurance />} />
+                <Route path="/blog/is-life-insurance-taxable-canada" element={<BlogIsLifeInsuranceTaxableCanada />} />
+                <Route path="/blog/life-insurance-seniors-canada" element={<BlogLifeInsuranceSeniorsCanada />} />
+                <Route path="/blog/best-life-insurance-ontario-2026" element={<BlogBestLifeInsuranceOntario />} />
+                <Route path="/blog/cheapest-life-insurance-canada-2026" element={<BlogCheapestLifeInsurance />} />
+                <Route path="/blog/is-life-insurance-worth-it-canada" element={<BlogIsLifeInsuranceWorthIt />} />
+                <Route path="/blog/top-insurance-mistakes-canadians" element={<BlogInsuranceMistakesCanadians />} />
+                <Route path="/blog/how-to-choose-insurance-ontario" element={<BlogHowToChooseInsuranceOntario />} />
+                <Route path="/blog/insurance-new-immigrants-canada" element={<BlogInsuranceNewImmigrants />} />
 
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </BrowserRouter>
+        </LazyMotion>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>

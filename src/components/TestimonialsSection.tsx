@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
@@ -35,7 +35,7 @@ const testimonials = [
 const TestimonialsSection = () => (
   <section className="bg-secondary py-16 md:py-20">
     <div className="container">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -45,10 +45,10 @@ const TestimonialsSection = () => (
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Trusted by 2,300+ Ontario Families
         </h2>
-      </motion.div>
+      </m.div>
       <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {testimonials.map((t, i) => (
-          <motion.div
+          <m.div
             key={t.name}
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ const TestimonialsSection = () => (
               </div>
               <span className="text-xs bg-primary/5 text-primary px-3 py-1 rounded-full font-medium">{t.context}</span>
             </div>
-          </motion.div>
+          </m.div>
         ))}
       </div>
     </div>

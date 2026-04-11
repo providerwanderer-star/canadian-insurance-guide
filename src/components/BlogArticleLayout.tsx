@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Clock, User } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -106,13 +106,13 @@ const BlogArticleLayout = ({
             { label: title },
           ]} />
           <span className="block text-xs font-bold text-accent mb-3 uppercase tracking-wider">{category}</span>
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6 max-w-3xl font-display"
           >
             {title}
-          </motion.h1>
+          </m.h1>
           <div className="flex items-center gap-4 text-sm text-primary-foreground/60">
             <span className="flex items-center gap-1.5"><User className="h-3.5 w-3.5" />{author}</span>
             <span>{date}</span>

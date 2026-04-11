@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Shield, Users, Award, Heart, CheckCircle } from "lucide-react";
 
@@ -32,7 +32,7 @@ const AboutUs = () => {
       {/* Hero */}
       <section className="bg-primary">
         <div className="container py-20 md:py-28">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
+          <m.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-widest text-accent mb-4 block">About Us</span>
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground leading-tight mb-6 font-display">
               Making insurance simple for every Canadian
@@ -40,7 +40,7 @@ const AboutUs = () => {
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
               We started InsuredCan because we believed Canadians deserved better—better education, better advice, and better access to the coverage they need. No jargon, no pressure, just honest guidance.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -49,10 +49,10 @@ const AboutUs = () => {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
+              <m.div key={stat.label} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-primary font-display">{stat.value}</p>
                 <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -78,11 +78,11 @@ const AboutUs = () => {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {values.map((value, i) => (
-              <motion.div key={value.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-card rounded-xl p-7 shadow-card">
+              <m.div key={value.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-card rounded-xl p-7 shadow-card">
                 <value.icon className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-lg font-bold text-foreground mb-2 font-display">{value.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
