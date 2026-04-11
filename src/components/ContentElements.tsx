@@ -17,7 +17,7 @@ export const ContentSection = ({ title, children }: ContentSectionProps) => (
   >
     <h2 className="text-2xl font-bold text-foreground mb-4 font-display">{title}</h2>
     <div className="text-muted-foreground leading-relaxed space-y-4">{children}</div>
-  </motion.section>
+  </m.section>
 );
 
 export const ContentH3 = ({ children }: { children: React.ReactNode }) => (
@@ -124,7 +124,7 @@ export const FAQSection = ({ faqs }: { faqs: FAQItem[] }) => {
           </AccordionItem>
         ))}
       </Accordion>
-    </motion.section>
+    </m.section>
   );
 };
 

@@ -112,7 +112,7 @@ const BlogArticleLayout = ({
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6 max-w-3xl font-display"
           >
             {title}
-          </motion.h1>
+          </m.h1>
           <div className="flex items-center gap-4 text-sm text-primary-foreground/60">
             <span className="flex items-center gap-1.5"><User className="h-3.5 w-3.5" />{author}</span>
             <span>{date}</span>

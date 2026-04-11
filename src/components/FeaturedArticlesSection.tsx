@@ -58,7 +58,7 @@ const FeaturedArticlesSection = () => {
               className="text-3xl md:text-4xl font-bold text-foreground mb-3 font-display"
             >
               Learn before you buy
-            </motion.h2>
+            </m.h2>
             <m.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}

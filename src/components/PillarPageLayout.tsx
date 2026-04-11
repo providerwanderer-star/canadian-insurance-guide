@@ -111,7 +111,7 @@ const PillarPageLayout = ({
             className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight mb-4 font-display"
           >
             {title}
-          </motion.h1>
+          </m.h1>
           <p className="hero-description text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
             {heroDescription}
           </p>
