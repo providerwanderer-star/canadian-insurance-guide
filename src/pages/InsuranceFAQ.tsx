@@ -418,6 +418,9 @@ const InsuranceFAQ = () => {
               { title: "Insurance Glossary", desc: "45+ terms explained in plain language", href: "/insurance-glossary" },
               { title: "Coverage Calculator", desc: "Find out exactly how much coverage you need", href: "/coverage-calculator" },
               { title: "Blog Articles", desc: "17+ in-depth guides on Canadian insurance", href: "/blog" },
+              { title: "Life Insurance Ontario", desc: "Provincial guide with 2026 rates", href: "/life-insurance-ontario" },
+              { title: "Newcomer Guide", desc: "Insurance essentials for new Canadians", href: "/newcomers" },
+              { title: "Family Protection", desc: "Complete insurance stack for families", href: "/families" },
             ].map((res) => (
               <Link
                 key={res.href}
