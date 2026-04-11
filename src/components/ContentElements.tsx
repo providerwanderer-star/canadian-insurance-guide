@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Check, X } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet-async";
@@ -9,7 +9,7 @@ interface ContentSectionProps {
 }
 
 export const ContentSection = ({ title, children }: ContentSectionProps) => (
-  <motion.section
+  <m.section
     initial={{ opacity: 0, y: 15 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -102,7 +102,7 @@ export const FAQSection = ({ faqs }: { faqs: FAQItem[] }) => {
   };
 
   return (
-    <motion.section
+    <m.section
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
