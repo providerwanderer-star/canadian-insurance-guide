@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, CheckCircle, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -104,7 +104,7 @@ const MultiStepLeadForm = () => {
 
       <AnimatePresence mode="wait">
         {currentStep < steps.length ? (
-          <motion.div
+          <m.div
             key={currentStep}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -133,9 +133,9 @@ const MultiStepLeadForm = () => {
                 <ArrowLeft className="h-4 w-4" /> Back
               </button>
             )}
-          </motion.div>
+          </m.div>
         ) : (
-          <motion.div
+          <m.div
             key="contact"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -156,7 +156,7 @@ const MultiStepLeadForm = () => {
             <button onClick={() => setCurrentStep((s) => s - 1)} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mt-4 transition-smooth">
               <ArrowLeft className="h-4 w-4" /> Back
             </button>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

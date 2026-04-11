@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { QuickAnswerBox, AuthorBox, Disclaimer, InlineCTA } from "@/components/ContentElements";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { HelpCircle, Shield, Heart, Plane, Home, DollarSign, Users, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -281,7 +281,7 @@ const InsuranceFAQ = () => {
           ]} />
 
           {/* Hero */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-10"
@@ -298,7 +298,7 @@ const InsuranceFAQ = () => {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               Clear, honest answers from licensed Ontario insurance advisors. No jargon, no sales pitch — just the information Canadians actually search for about life insurance, health coverage, critical illness, disability, and more.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Quick Answer Box */}
           <div className="quick-answer-box">
@@ -309,7 +309,7 @@ const InsuranceFAQ = () => {
           </div>
 
           {/* Table of Contents */}
-          <motion.nav
+          <m.nav
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -329,11 +329,11 @@ const InsuranceFAQ = () => {
                 </a>
               ))}
             </div>
-          </motion.nav>
+          </m.nav>
 
           {/* FAQ Categories */}
           {faqCategories.map((category, catIdx) => (
-            <motion.section
+            <m.section
               key={category.title}
               id={category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
               initial={{ opacity: 0, y: 15 }}
@@ -371,11 +371,11 @@ const InsuranceFAQ = () => {
               {/* Inline CTA after every 2 categories */}
               {catIdx === 1 && <InlineCTA text="Compare Free Quotes" />}
               {catIdx === 4 && <InlineCTA text="Talk to an Advisor" />}
-            </motion.section>
+            </m.section>
           ))}
 
           {/* Bottom CTA */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -391,10 +391,10 @@ const InsuranceFAQ = () => {
             >
               Ask Your Question Free →
             </Link>
-          </motion.div>
+          </m.div>
 
           {/* Related Resources */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -414,7 +414,7 @@ const InsuranceFAQ = () => {
                 <p className="text-xs text-muted-foreground mt-1">{res.desc}</p>
               </Link>
             ))}
-          </motion.div>
+          </m.div>
 
           <AuthorBox />
           <Disclaimer />

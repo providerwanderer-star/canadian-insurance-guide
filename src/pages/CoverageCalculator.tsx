@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Progress } from "@/components/ui/progress";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import {
   Calculator, Shield, Users, DollarSign, Home, GraduationCap,
   TrendingUp, Download, CheckCircle, ArrowRight, ArrowLeft, FileText
@@ -286,7 +286,7 @@ const CoverageCalculator = () => {
 
           <AnimatePresence mode="wait">
             {!showResults ? (
-              <motion.div
+              <m.div
                 key={step}
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -327,9 +327,9 @@ const CoverageCalculator = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </m.div>
             ) : (
-              <motion.div
+              <m.div
                 key="results"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -438,7 +438,7 @@ const CoverageCalculator = () => {
                     <Calculator className="w-4 h-4 mr-2" /> Recalculate
                   </Button>
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
         </div>

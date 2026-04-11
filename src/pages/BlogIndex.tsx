@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -47,20 +47,20 @@ const BlogIndex = () => {
 
       <section className="bg-primary">
         <div className="container py-16 md:py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <m.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-xs font-bold uppercase tracking-widest text-accent mb-4 block">Blog</span>
             <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4 font-display">Insurance Learning Hub</h1>
             <p className="text-lg text-primary-foreground/80 max-w-reading">
               Plain-language guides written for Canadians, not insurance agents. Understand your coverage before you buy.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       <section className="container py-12 md:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, i) => (
-            <motion.div key={post.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }}>
+            <m.div key={post.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }}>
               <Link to={`/blog/${post.slug}`} className="group block bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-smooth h-full border border-transparent hover:border-primary/20">
                 <div className="h-32 bg-gradient-to-br from-primary/8 to-primary/3 flex items-center justify-center">
                   <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-full">{post.category}</span>
@@ -75,7 +75,7 @@ const BlogIndex = () => {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </section>

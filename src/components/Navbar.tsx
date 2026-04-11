@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Shield, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const insuranceLinks = [
@@ -72,7 +72,7 @@ const Navbar = () => {
               </button>
               <AnimatePresence>
                 {activeDropdown === dropdown.key && (
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 5 }}
@@ -83,7 +83,7 @@ const Navbar = () => {
                         {link.label}
                       </Link>
                     ))}
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
             </div>
@@ -123,7 +123,7 @@ const Navbar = () => {
 
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -175,7 +175,7 @@ const Navbar = () => {
                 Get Free Quote
               </Button>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </nav>
