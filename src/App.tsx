@@ -51,6 +51,7 @@ import LifeInsuranceKingstonPage from "./pages/LifeInsuranceKingston.tsx";
 import LifeInsuranceThunderBayPage from "./pages/LifeInsuranceThunderBay.tsx";
 import InsuranceBrokerCanadaPage from "./pages/InsuranceBrokerCanada.tsx";
 import InsuranceGlossaryPage from "./pages/InsuranceGlossary.tsx";
+import InsuranceFAQPage from "./pages/InsuranceFAQ.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
 import BlogOHIPWaiting from "./pages/blog/BlogOHIPWaiting.tsx";
 import BlogTermVsWhole from "./pages/blog/BlogTermVsWhole.tsx";
@@ -160,6 +161,7 @@ const App = () => (
             
             {/* Resources */}
             <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
+            <Route path="/insurance-faq" element={<InsuranceFAQPage />} />
             
             {/* Blog */}
             <Route path="/blog" element={<BlogIndex />} />

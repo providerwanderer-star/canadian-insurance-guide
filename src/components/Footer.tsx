@@ -56,6 +56,7 @@ const footerLinks = {
   "Resources": [
     { label: "Blog", href: "/blog" },
     { label: "Insurance Glossary", href: "/insurance-glossary" },
+    { label: "Insurance FAQ", href: "/insurance-faq" },
     { label: "Retirement Planning", href: "/retirement-planning" },
     { label: "Private vs OHIP", href: "/compare/private-vs-ohip" },
     { label: "CI vs Disability", href: "/compare/critical-illness-vs-disability" },
