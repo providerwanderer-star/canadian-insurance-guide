@@ -40,6 +40,7 @@
 ## Tools & Resources
 - [Coverage Calculator](https://www.insuredcan.ca/coverage-calculator): Calculate how much life insurance you need
 - [Insurance Glossary](https://www.insuredcan.ca/insurance-glossary): 45+ insurance terms explained in plain language
+- [Insurance FAQ](https://www.insuredcan.ca/insurance-faq): 30+ commonly asked insurance questions answered for Canadians
 
 ## Local Services
 - [Toronto](https://www.insuredcan.ca/life-insurance-toronto)
