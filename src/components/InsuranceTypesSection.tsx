@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Shield, Heart, Activity, Landmark, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -47,15 +47,15 @@ const InsuranceTypesSection = () => {
     <section id="insurance-types" className="py-20 md:py-28 bg-surface">
       <div className="container">
         <div className="text-center mb-14">
-          <motion.span
+          <m.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block"
           >
             Our Services
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,8 +63,8 @@ const InsuranceTypesSection = () => {
             className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display"
           >
             Insurance solutions for every Canadian
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,12 +72,12 @@ const InsuranceTypesSection = () => {
             className="text-muted-foreground text-lg max-w-reading mx-auto"
           >
             Comprehensive coverage options designed for your life stage, budget, and goals.
-          </motion.p>
+          </m.p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {insuranceTypes.map((type, i) => (
-            <motion.div
+            <m.div
               key={type.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const InsuranceTypesSection = () => {
                   </span>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { m } from "framer-motion";
 import { Shield, Award, Users, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -67,7 +67,7 @@ const TrustSection = () => {
         {/* Trust badges with animated counters */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {trustItems.map((item, i) => (
-            <motion.div
+            <m.div
               key={item.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -81,12 +81,12 @@ const TrustSection = () => {
               </div>
               <p className="text-sm font-bold text-foreground">{item.label}</p>
               <p className="text-xs text-muted-foreground mt-1">{item.detail}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* Stats banner */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -114,19 +114,19 @@ const TrustSection = () => {
             <p className="text-3xl md:text-4xl font-bold text-accent font-display">4.8★</p>
             <p className="text-sm text-primary-foreground/70 mt-1">Average Rating</p>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Testimonials */}
         <div className="text-center mb-12">
-          <motion.span
+          <m.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block"
           >
             Testimonials
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -134,12 +134,12 @@ const TrustSection = () => {
             className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-display"
           >
             What Canadians are saying
-          </motion.h2>
+          </m.h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <motion.div
+            <m.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -165,7 +165,7 @@ const TrustSection = () => {
                   <p className="text-xs text-muted-foreground">{t.role}</p>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

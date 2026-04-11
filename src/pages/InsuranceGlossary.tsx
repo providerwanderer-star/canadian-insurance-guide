@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -98,7 +98,7 @@ const InsuranceGlossary = () => {
       <section className="bg-primary">
         <div className="container py-16 md:py-20">
           <BreadcrumbNav items={[{ label: "Insurance Glossary", href: "/insurance-glossary" }]} />
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <m.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 mb-4">
               <BookOpen className="h-3.5 w-3.5 text-accent-foreground" />
               <span className="text-xs font-bold text-accent-foreground">Education</span>
@@ -109,7 +109,7 @@ const InsuranceGlossary = () => {
             <p className="hero-description text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
               Understanding insurance doesn't have to be complicated. Browse our glossary of 45+ key insurance terms explained in plain, everyday language for Canadians.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

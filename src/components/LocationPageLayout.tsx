@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import TrustBar from "@/components/TrustBar";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -76,7 +76,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
             { label: "Life Insurance", href: "/life-insurance" },
             { label: city },
           ]} />
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
+          <m.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 mb-5">
               <MapPin className="h-3.5 w-3.5 text-accent-foreground" />
               <span className="text-xs font-bold text-accent-foreground">{city}, {province}</span>
@@ -90,7 +90,7 @@ const LocationPageLayout = ({ city, province, metaTitle, metaDescription, slug, 
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

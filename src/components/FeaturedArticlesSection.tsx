@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -42,15 +42,15 @@ const FeaturedArticlesSection = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <motion.span
+            <m.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-xs font-bold uppercase tracking-widest text-primary mb-3 block"
             >
               Education
-            </motion.span>
-            <motion.h2
+            </m.span>
+            <m.h2
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -58,8 +58,8 @@ const FeaturedArticlesSection = () => {
               className="text-3xl md:text-4xl font-bold text-foreground mb-3 font-display"
             >
               Learn before you buy
-            </motion.h2>
-            <motion.p
+            </m.h2>
+            <m.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -67,7 +67,7 @@ const FeaturedArticlesSection = () => {
               className="text-muted-foreground text-lg max-w-reading"
             >
               Plain-language guides written for Canadians, not insurance agents.
-            </motion.p>
+            </m.p>
           </div>
           <Button variant="ghost" className="text-primary self-start md:self-auto" asChild>
             <Link to="/blog">View all guides <ArrowRight className="h-4 w-4 ml-1" /></Link>
@@ -76,7 +76,7 @@ const FeaturedArticlesSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {articles.map((article, i) => (
-            <motion.div
+            <m.div
               key={article.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ const FeaturedArticlesSection = () => {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

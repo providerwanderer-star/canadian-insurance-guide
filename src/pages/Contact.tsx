@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -61,7 +61,7 @@ const Contact = () => {
 
       <section className="bg-primary">
         <div className="container py-16 md:py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <m.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-xs font-bold uppercase tracking-widest text-accent mb-4 block">Contact Us</span>
             <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight mb-4 font-display">
               Get your free consultation
@@ -69,7 +69,7 @@ const Contact = () => {
             <p className="text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
               Have questions? Our licensed advisors are ready to help you find the right coverage—no pressure, no obligation.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import ctaCouple from "@/assets/cta-couple.jpg";
 
@@ -18,7 +18,7 @@ const CTASection = () => {
       </div>
 
       <div className="container relative z-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -42,7 +42,7 @@ const CTASection = () => {
               </Button>
             </a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

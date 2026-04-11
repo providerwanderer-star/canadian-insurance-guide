@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -49,7 +49,7 @@ const WhoWeHelpSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {segments.map((seg, i) => (
-            <motion.div
+            <m.div
               key={seg.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ const WhoWeHelpSection = () => {
                   </span>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
