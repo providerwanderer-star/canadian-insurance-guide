@@ -8,6 +8,11 @@ import { AuthorBox, Disclaimer } from "@/components/ContentElements";
 import { m } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface PillarPageLayoutProps {
   title: string;
   metaTitle: string;
@@ -16,6 +21,10 @@ interface PillarPageLayoutProps {
   heroTag?: string;
   heroDescription: string;
   ogImage?: string;
+  quickAnswer?: { question: string; answer: string };
+  faqs?: FAQItem[];
+  datePublished?: string;
+  dateModified?: string;
   children: React.ReactNode;
 }
 
@@ -27,6 +36,10 @@ const PillarPageLayout = ({
   heroTag,
   heroDescription,
   ogImage = "https://www.insuredcan.ca/og/og-home.png",
+  quickAnswer,
+  faqs,
+  datePublished = "2026-01-15",
+  dateModified = "2026-04-11",
   children,
 }: PillarPageLayoutProps) => {
   const breadcrumbLabel = breadcrumb.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
@@ -56,12 +69,23 @@ const PillarPageLayout = ({
           "name": title,
           "description": metaDescription,
           "url": `https://www.insuredcan.ca/${slug}`,
-          "dateModified": "2026-04-09",
+          "datePublished": datePublished,
+          "dateModified": dateModified,
           "inLanguage": "en-CA",
           "isPartOf": { "@type": "WebSite", "url": "https://www.insuredcan.ca", "name": "InsuredCan" },
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", ".hero-description", ".quick-answer"]
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "InsuredCan Advisory Team",
+            "url": "https://www.insuredcan.ca/about",
+            "description": "Licensed insurance professionals regulated by FSRA (Ontario), with 15+ years of combined experience advising Canadian families.",
+            "memberOf": {
+              "@type": "Organization",
+              "name": "Financial Services Regulatory Authority of Ontario (FSRA)"
+            }
           },
           "mainEntity": {
             "@type": "Service",
@@ -80,7 +104,12 @@ const PillarPageLayout = ({
                 "addressRegion": "ON",
                 "postalCode": "M5X 1C7",
                 "addressCountry": "CA"
-              }
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/insuredcan",
+                "https://www.facebook.com/insuredcan",
+                "https://www.instagram.com/insuredcan"
+              ]
             },
             "areaServed": { "@type": "Country", "name": "Canada" },
             "serviceType": "Insurance Brokerage"
@@ -93,6 +122,17 @@ const PillarPageLayout = ({
             ]
           }
         })}</script>
+        {faqs && faqs.length > 0 && (
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(f => ({
+              "@type": "Question",
+              "name": f.question,
+              "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
+          })}</script>
+        )}
       </Helmet>
       <Navbar />
 
@@ -115,6 +155,13 @@ const PillarPageLayout = ({
           <p className="hero-description text-lg text-primary-foreground/80 max-w-reading leading-relaxed">
             {heroDescription}
           </p>
+          {quickAnswer && (
+            <div className="quick-answer mt-6 bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-5 max-w-reading border border-primary-foreground/20">
+              <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">Quick Answer</p>
+              <p className="text-sm font-semibold text-primary-foreground mb-1">{quickAnswer.question}</p>
+              <p className="text-sm text-primary-foreground/80 leading-relaxed">{quickAnswer.answer}</p>
+            </div>
+          )}
         </div>
       </section>
 

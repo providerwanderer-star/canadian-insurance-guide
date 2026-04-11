@@ -43,6 +43,13 @@ const BlogArticleLayout = ({
       "@type": "Person",
       name: author,
       url: "https://www.insuredcan.ca/about",
+      jobTitle: "Licensed Insurance Advisor",
+      worksFor: {
+        "@type": "Organization",
+        name: "InsuredCan",
+        url: "https://www.insuredcan.ca",
+      },
+      knowsAbout: ["Life Insurance", "Health Insurance", "Critical Illness Insurance", "Canadian Insurance Regulations"],
     },
     datePublished: date,
     dateModified: date,

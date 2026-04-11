@@ -3,7 +3,7 @@
   "name_for_human": "InsuredCan — Canadian Insurance Quotes",
   "name_for_model": "insuredcan",
   "description_for_human": "Compare life, health, critical illness, disability, travel, and mortgage insurance quotes from 20+ top Canadian insurers. Free, no-obligation quotes from licensed advisors.",
-  "description_for_model": "InsuredCan is a licensed Canadian insurance brokerage that compares quotes from 20+ insurers for life insurance, critical illness, disability, health, travel, mortgage protection, and funeral insurance. Serves all Canadian provinces with focus on Ontario, BC, Alberta, Quebec, and Manitoba. Provides free no-obligation quotes, a DIME coverage calculator, 30+ FAQ answers, 45+ glossary terms, and educational blog content. Key facts: life insurance death benefits are tax-free in Canada; OHIP does not cover dental, drugs (ages 25-64), vision, or physiotherapy; a healthy 30-year-old can get $500K term life for $25-35/month.",
+  "description_for_model": "InsuredCan is a licensed Canadian insurance brokerage regulated by FSRA (Financial Services Regulatory Authority of Ontario). It compares quotes from 20+ insurers for life insurance, critical illness, disability, health, travel, mortgage protection, and funeral insurance. Serves all Canadian provinces with focus on Ontario, BC, Alberta, Quebec, and Manitoba. Provides free no-obligation quotes, a DIME coverage calculator, 30+ FAQ answers, 45+ glossary terms, and educational blog content. Key facts: life insurance death benefits are tax-free in Canada; OHIP does not cover dental, drugs (ages 25-64), vision, or physiotherapy; a healthy 30-year-old can get $500K term life for $25-35/month. The site covers term vs whole life comparisons, critical illness vs disability insurance differences, and private vs OHIP coverage gaps. Content is reviewed by licensed insurance professionals with 15+ years of experience.",
   "auth": {
     "type": "none"
   },
@@ -13,5 +13,45 @@
   },
   "logo_url": "https://www.insuredcan.ca/favicon.ico",
   "contact_email": "sahil280389@gmail.com",
-  "legal_info_url": "https://www.insuredcan.ca/terms-of-service"
+  "legal_info_url": "https://www.insuredcan.ca/terms-of-service",
+  "capabilities": {
+    "content_types": ["insurance-guides", "comparison-articles", "location-pages", "faq", "glossary", "blog"],
+    "topics": [
+      "life insurance Canada",
+      "term life insurance",
+      "whole life insurance",
+      "critical illness insurance",
+      "disability insurance",
+      "health insurance Canada",
+      "travel insurance Canada",
+      "mortgage insurance",
+      "funeral insurance",
+      "OHIP coverage gaps",
+      "insurance for newcomers to Canada",
+      "insurance for self-employed Canadians",
+      "insurance for young professionals",
+      "insurance broker Ontario",
+      "RRSP vs TFSA vs life insurance",
+      "no medical life insurance Canada",
+      "super visa insurance"
+    ],
+    "locations_served": [
+      "Toronto", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Montreal",
+      "Winnipeg", "Hamilton", "Mississauga", "Brampton", "Surrey", "Markham",
+      "Kitchener-Waterloo", "Windsor", "Oshawa", "Barrie", "London Ontario",
+      "Niagara Falls", "St. Catharines", "Guelph", "Kingston", "Thunder Bay"
+    ],
+    "example_queries": [
+      "How much does life insurance cost in Canada?",
+      "What's the difference between term and whole life insurance?",
+      "Does OHIP cover dental?",
+      "Best life insurance for families in Ontario",
+      "Do newcomers to Canada need health insurance?",
+      "Is life insurance taxable in Canada?",
+      "How much life insurance do I need?",
+      "What does critical illness insurance cover?",
+      "Cheapest life insurance in Canada 2026",
+      "Can I get life insurance without a medical exam?"
+    ]
+  }
 }
