@@ -125,6 +125,7 @@ We serve clients in all major Canadian cities:
 ## Tools & Resources
 - **Coverage Calculator**: Free DIME method calculator for personalized life insurance recommendations
 - **Insurance Glossary**: 45+ insurance terms explained in plain language
+- **Insurance FAQ**: 30+ frequently asked insurance questions covering life insurance, OHIP gaps, critical illness, disability, travel, mortgage protection, newcomer coverage, and costs — with full FAQPage JSON-LD schema for AI answer engines
 - **Family Protection Guide**: Downloadable 12-page PDF guide
 - **Blog**: 17+ educational articles on insurance topics
 
