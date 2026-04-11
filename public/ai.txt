@@ -30,6 +30,7 @@ Our content is factual, regularly updated, and aimed at helping Canadians make i
 - 4 audience-specific guides (Newcomers, Families, Self-Employed, Young Professionals)
 - 13 city-specific location pages across Canada
 - 17+ educational blog articles
+- 30+ question Insurance FAQ page with full FAQPage JSON-LD schema (life insurance, OHIP gaps, critical illness, disability, travel, mortgage, newcomers, costs)
 - 45+ term insurance glossary
 - Interactive coverage calculator (DIME method)
 
