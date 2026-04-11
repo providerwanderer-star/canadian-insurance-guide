@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, X } from "lucide-react";
+import { ArrowRight, X, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const WHATSAPP_URL = "https://wa.me/16478622190";
 
 const StickyCTABar = () => {
   const [visible, setVisible] = useState(false);
@@ -23,12 +26,16 @@ const StickyCTABar = () => {
           Protect your family today — Get a free quote in 60 seconds
         </p>
         <div className="flex items-center gap-2 ml-auto">
-          <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xs">
-            Get Free Quote <ArrowRight className="h-3.5 w-3.5" />
-          </Button>
-          <Button size="sm" variant="ghost" className="text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 text-xs hidden sm:inline-flex">
-            <Phone className="h-3.5 w-3.5" /> Call Now
-          </Button>
+          <Link to="/contact">
+            <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xs">
+              Get Free Quote <ArrowRight className="h-3.5 w-3.5" />
+            </Button>
+          </Link>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="sm" variant="ghost" className="text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 text-xs hidden sm:inline-flex">
+              <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
+            </Button>
+          </a>
           <button onClick={() => setDismissed(true)} className="text-primary-foreground/50 hover:text-primary-foreground p-1">
             <X className="h-4 w-4" />
           </button>

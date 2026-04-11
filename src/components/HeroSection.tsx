@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CheckCircle, Phone, ArrowRight } from "lucide-react";
+import { CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
+
+import { Link } from "react-router-dom";
+
+const WHATSAPP_URL = "https://wa.me/16478622190";
 
 const HeroSection = () => {
   return (
@@ -30,12 +34,16 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
-              <Button variant="hero" size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
-                Get Free Quote <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button variant="hero-ghost" size="xl">
-                <Phone className="h-5 w-5" /> Speak to Advisor
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent">
+                  Get Free Quote <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button variant="hero-ghost" size="xl">
+                  <MessageCircle className="h-5 w-5" /> WhatsApp Us
+                </Button>
+              </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">

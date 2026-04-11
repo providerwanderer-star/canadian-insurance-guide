@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Shield, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ExitIntentPopup = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
@@ -45,7 +47,7 @@ const ExitIntentPopup = () => {
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Get a free, personalized insurance quote in under 60 seconds. No obligation, no spam—just the coverage your family needs.
             </p>
-            <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent mb-3" onClick={() => setShow(false)}>
+            <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-accent mb-3" onClick={() => { setShow(false); navigate("/contact"); }}>
               Get My Free Quote <ArrowRight className="h-4 w-4" />
             </Button>
             <button onClick={() => setShow(false)} className="text-xs text-muted-foreground hover:text-foreground">
