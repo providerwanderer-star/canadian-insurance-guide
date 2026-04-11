@@ -1,89 +1,115 @@
 import LocationPageLayout from "@/components/LocationPageLayout";
 import { ContentSection, ContentParagraph, ProsList, InfoCard, ComparisonTable } from "@/components/ContentElements";
+import { Link } from "react-router-dom";
 
 const LifeInsuranceCalgary = () => (
   <LocationPageLayout
     city="Calgary"
     province="Alberta"
-    metaTitle="Life Insurance Calgary AB — Compare Quotes from 20+ Insurers | InsuredCan"
-    metaDescription="Find the best life insurance rates in Calgary, Alberta. Compare term & whole life quotes from licensed Alberta advisors. Free consultation for Calgary families."
+    metaTitle="Life Insurance Calgary (2026): Compare Plans & Save Up to 40% | InsuredCan"
+    metaDescription="Compare the best life insurance in Calgary, AB. Get instant quotes from 20+ insurers, expert advice from licensed Alberta advisors, and save on premiums today."
     slug="life-insurance-calgary"
-    heroHeadline="Life Insurance for Calgary Families & Professionals"
-    heroDescription="Calgary's energy-driven economy means incomes can fluctuate. Protect your family's financial security with affordable, reliable life insurance. Compare quotes from 20+ top Canadian insurers — free, no obligation."
+    heroHeadline="Life Insurance for Calgary Families & Energy Workers (2026)"
+    heroDescription="Calgary's median household income of $105,000 leads Canadian cities — but energy sector volatility means that income isn't guaranteed. With average home prices at $585,000 and rising, protect your family's financial future. Compare 20+ top insurers free."
+    ogImage="https://www.insuredcan.ca/og/og-calgary.png"
     localContent={
       <>
-        <ContentSection title="Why Calgary Families Need Life Insurance">
+        <ContentSection title="Why Calgary's Economy Makes Life Insurance Essential">
           <ContentParagraph>
-            Calgary is one of Canada's most prosperous cities, but also one where income volatility is a reality for many families tied to the energy sector. Whether oil prices are high or low, your family's financial protection should be rock solid.
+            Calgary's economy is heavily tied to oil and gas — an industry where layoffs, project shutdowns, and income swings are a reality. During the 2015–2016 oil crash, Calgary lost over 40,000 jobs. Even in boom times, smart financial planning means protecting your family against the next downturn.
           </ContentParagraph>
           <ContentParagraph>
-            With average home prices above $600,000 and growing, and many households carrying significant mortgages, life insurance is essential protection. InsuredCan's licensed Alberta advisors help Calgary families compare 20+ top insurers to find the right coverage at the lowest available rate.
+            Consider a typical Calgary scenario: an engineer earning $130,000/year with a $500,000 mortgage in Panorama Hills. If that income disappears, the family faces $2,800/month in mortgage payments plus $4,000+ in living expenses. A <Link to="/term-life-insurance" className="text-primary underline font-semibold">$1M term life policy</Link> at $44–$58/month provides a financial safety net that costs less than a weekly coffee habit.
           </ContentParagraph>
         </ContentSection>
 
-        <ContentSection title="Life Insurance Costs in Calgary">
+        <ContentSection title="Life Insurance Costs in Calgary (2026 Rates)">
           <ComparisonTable
-            headers={["Profile", "$500K Term (20yr)", "$1M Term (20yr)"]}
+            headers={["Profile", "$500K Term (20yr)", "$1M Term (20yr)", "$500K Whole Life"]}
             rows={[
-              ["30-year-old, non-smoker", "$22–$28/mo", "$35–$45/mo"],
-              ["35-year-old, non-smoker", "$26–$36/mo", "$44–$58/mo"],
-              ["40-year-old, non-smoker", "$36–$50/mo", "$60–$82/mo"],
-              ["45-year-old, non-smoker", "$58–$78/mo", "$95–$128/mo"],
+              ["30-year-old, non-smoker", "$20–$26/mo", "$33–$42/mo", "$175–$230/mo"],
+              ["35-year-old, non-smoker", "$24–$33/mo", "$41–$54/mo", "$210–$295/mo"],
+              ["40-year-old, non-smoker", "$34–$47/mo", "$57–$78/mo", "$295–$415/mo"],
+              ["45-year-old, non-smoker", "$54–$73/mo", "$90–$122/mo", "$400–$555/mo"],
+              ["50-year-old, non-smoker", "$82–$108/mo", "$148–$200/mo", "$530–$740/mo"],
             ]}
           />
           <ContentParagraph>
-            Alberta has no provincial sales tax (PST), meaning life insurance premiums in Calgary are not subject to PST — only the federal 2% excise tax applies, making Alberta one of the most cost-effective provinces for insurance.
+            <strong>Alberta's tax advantage:</strong> Alberta has <strong>no provincial sales tax (PST)</strong> on insurance premiums. Ontario charges 2% and Quebec charges 3.48% — meaning Calgarians save $50–$150/year on identical coverage. Combined with Calgary's lower cost of living versus Toronto or Vancouver, your insurance dollar stretches further here.
           </ContentParagraph>
         </ContentSection>
 
-        <ContentSection title="Insurance Options for Calgary Residents">
+        <InfoCard title="⚡ Oil Patch Workers: Don't Rely on Employer Coverage Alone">
+          If you work for Suncor, CNRL, TC Energy, or any energy company, your group benefits typically cover only 1–2x your salary and <strong>end immediately when you're laid off</strong>. During the 2020 downturn, thousands of Calgary workers lost both their income and their insurance simultaneously. A personal <Link to="/life-insurance" className="text-primary underline font-semibold">life insurance</Link> policy owned by you travels with you regardless of employment status — essential in a cyclical industry.
+        </InfoCard>
+
+        <ContentSection title="Insurance Products Ranked for Calgary Residents">
           <ProsList items={[
-            "Term Life Insurance — Most affordable protection for families with mortgages and young children",
-            "Whole Life Insurance — Permanent coverage with guaranteed cash value and dividend potential",
-            "Critical Illness Insurance — Lump-sum payout if diagnosed with cancer, heart attack, or stroke",
-            "Disability Insurance — Especially important for self-employed Calgarians and contractors",
-            "Mortgage Protection Insurance — Protect your Calgary home if you pass away or become disabled",
-            "Group Benefits — Small business group insurance for Calgary entrepreneurs and their teams",
+            "Term Life Insurance — Best value for mortgage protection; lock in rates while young and healthy at $24–$54/month for $500K",
+            "Disability Insurance — Critical for energy, trades, and construction workers; replaces 60–85% of income during layoffs or injury",
+            "Critical Illness Insurance — Tax-free lump sum for cancer, heart attack, or stroke; covers costs not paid by Alberta Health Services",
+            "Whole Life Insurance — Permanent coverage with cash value growth; ideal for business owners and high-income earners for estate planning",
+            "Group Benefits for Small Business — Calgary entrepreneurs can offer competitive health, dental, and life benefits to attract talent",
+            "Mortgage Protection — Protect your Calgary home; portable and level coverage unlike bank mortgage insurance",
           ]} />
         </ContentSection>
 
-        <InfoCard title="⚡ Calgary-Specific Consideration: Oil Patch Workers">
-          If you work in Alberta's energy sector, your employer's group benefits may not cover you adequately during layoffs, strikes, or project gaps. A personal life and disability insurance policy owned by you travels with you regardless of employment status — essential for anyone in a cyclical industry.
+        <ContentSection title="Calgary's Key Industries & Insurance Considerations">
+          <ContentParagraph>
+            <strong>Oil & gas ($80K–$200K+ salaries):</strong> Cyclical income makes personal insurance vital. Group benefits vanish during layoffs. <Link to="/disability-insurance" className="text-primary underline font-semibold">Disability insurance</Link> is especially important for field workers exposed to physical hazards.
+          </ContentParagraph>
+          <ContentParagraph>
+            <strong>Tech sector (growing rapidly):</strong> Calgary's tech hub is expanding with companies like Benevity, Shareworks, and Neo Financial. Many tech workers are contractors without group benefits — personal coverage is essential.
+          </ContentParagraph>
+          <ContentParagraph>
+            <strong>Trades & construction ($70K–$120K):</strong> Heavy equipment operators, welders, and electricians face higher occupation risk. Specialized insurers offer competitive rates for <Link to="/insurance-self-employed" className="text-primary underline font-semibold">self-employed tradespeople</Link>.
+          </ContentParagraph>
+          <ContentParagraph>
+            <strong>Agriculture & ranching:</strong> Southern Alberta's farming community needs coverage that accounts for seasonal income, farm assets, and succession planning.
+          </ContentParagraph>
+        </ContentSection>
+
+        <InfoCard title="🏔️ Calgary Cost of Living Snapshot (2026)">
+          Average detached home: <strong>$585,000</strong> | Average condo: <strong>$285,000</strong> | Average household income: <strong>$105,000</strong> | No PST | Monthly living costs (family of 4): <strong>$5,500–$7,500</strong>. With a $500K mortgage at 5.5%, monthly payments are roughly $3,000. A $1M term life policy ensures your family keeps the home.
         </InfoCard>
 
-        <ContentSection title="Serving All Calgary & Area Communities">
+        <ContentSection title="Serving All Calgary & Southern Alberta">
           <ContentParagraph>
-            InsuredCan serves families across the Calgary metro area including Airdrie, Cochrane, Chestermere, Okotoks, and the MD of Rocky View County. Our licensed Alberta advisors provide virtual and phone consultations for your convenience — no in-person meeting required.
+            InsuredCan serves families across the Calgary metro area including <strong>Airdrie</strong> (pop. 80,000+), <strong>Cochrane</strong>, <strong>Chestermere</strong>, <strong>Okotoks</strong>, <strong>High River</strong>, <strong>Strathmore</strong>, and the <strong>MD of Rocky View County</strong>. Our licensed Alberta advisors provide virtual and phone consultations — no in-person meeting required. We also serve <Link to="/life-insurance-edmonton" className="text-primary underline font-semibold">Edmonton</Link> and surrounding areas.
           </ContentParagraph>
         </ContentSection>
 
         <ContentSection title="Alberta Insurance Regulations">
           <ContentParagraph>
-            In Alberta, insurance advisors are regulated by the Alberta Insurance Council (AIC). InsuredCan's advisors hold valid Alberta life and accident & sickness (A&S) insurance licences. Alberta residents benefit from universal health coverage through Alberta Health Services (AHS), but private insurance fills significant gaps including dental, drugs, vision, and disability income replacement.
+            Alberta insurance advisors are regulated by the <strong>Alberta Insurance Council (AIC)</strong>. All InsuredCan advisors hold valid Alberta life and accident & sickness (A&S) licences. Key Alberta rules: insurance proceeds are creditor-protected, beneficiary designations override wills, and Alberta's Insurance Act provides strong consumer protections including a 10-day free-look period on new policies.
           </ContentParagraph>
         </ContentSection>
       </>
     }
     faqs={[
       {
-        question: "How much does life insurance cost in Calgary?",
-        answer: "Life insurance premiums in Calgary are set nationally and do not vary by city. A healthy 35-year-old non-smoker can expect $26–$36/month for $500,000 of 20-year term coverage. Alberta also has no PST on insurance premiums, making it slightly more affordable than provinces with PST. Compare quotes from 20+ insurers with InsuredCan for free."
+        question: "How much does life insurance cost in Calgary in 2026?",
+        answer: "A healthy 35-year-old non-smoker pays $24–$33/month for $500K of 20-year term coverage. Alberta has no PST on insurance premiums, making Calgary one of Canada's most affordable provinces for life insurance."
       },
       {
-        question: "Is disability insurance important for Calgary workers?",
-        answer: "Absolutely. Many Calgary workers, especially in the energy, construction, and trades sectors, are at higher risk of injury or periods of unemployment. Personal disability insurance replaces 60–85% of your income if you cannot work due to illness or injury — critical if you're self-employed or between jobs."
+        question: "How much coverage do Calgary homeowners need?",
+        answer: "With Calgary's average home price at $585,000, most families need $750K–$1.5M in coverage. Calculate 10–12x your annual income plus outstanding mortgage and debts. InsuredCan offers a free needs analysis."
       },
       {
-        question: "Do I need life insurance if I have group coverage through my employer?",
-        answer: "Group coverage is a good start but often insufficient. Most employer plans provide 1–2x your annual salary, far below the recommended 10–12x. Group coverage also ends when you leave your job. A personal policy ensures continuous protection at a rate locked in when you're young and healthy."
+        question: "Is disability insurance important for Calgary oil and gas workers?",
+        answer: "Absolutely. Energy sector workers face both physical hazards and layoff risk. Personal disability insurance replaces 60–85% of your income if you can't work — and unlike employer coverage, it stays with you between jobs."
       },
       {
-        question: "What's the best term length for Calgary homeowners?",
-        answer: "For most Calgary homeowners, a 20 or 25-year term aligned with your mortgage amortization period is the optimal choice. If you have young children, a 25-year term ensures they're protected through their dependent years. Our advisors help you match your coverage to your actual financial obligations."
+        question: "Do Calgary employer group benefits provide enough coverage?",
+        answer: "Rarely. Most employer plans provide only 1–2x salary in life insurance — far below the recommended 10–12x. Group coverage also ends when you leave your job. A personal policy ensures continuous protection."
       },
       {
-        question: "Can I get life insurance if I work in a high-risk job in Calgary?",
-        answer: "Yes. Many insurers offer coverage for high-risk occupations including oil and gas workers, heavy equipment operators, and tradespeople. Premiums may be higher or certain exclusions may apply. Our advisors work with specialized insurers to find the best available coverage for your occupation."
+        question: "Can self-employed Calgarians get life insurance?",
+        answer: "Yes. Self-employed contractors, consultants, and business owners can get personal life, disability, and critical illness coverage. InsuredCan compares 20+ insurers to find the best rate for your situation."
+      },
+      {
+        question: "What's the best term length for a Calgary family?",
+        answer: "A 20 or 25-year term aligns with most mortgage amortization periods and covers your children's dependent years. If you're under 35, a 25-year term locks in lower rates for longer."
       }
     ]}
   />

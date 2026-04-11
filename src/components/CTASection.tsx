@@ -2,13 +2,25 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import ctaCouple from "@/assets/cta-couple.jpg";
 
 const WHATSAPP_URL = "https://wa.me/16478622190";
 
 const CTASection = () => {
   return (
-    <section className="py-20 md:py-28 bg-primary">
-      <div className="container">
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={ctaCouple}
+          alt="Happy senior couple walking in a Canadian autumn park"
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+      </div>
+
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

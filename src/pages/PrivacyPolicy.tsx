@@ -46,7 +46,7 @@ const PrivacyPolicy = () => (
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-foreground mb-3">5. Your Rights</h2>
         <p className="text-muted-foreground leading-relaxed">
-          You have the right to access, correct, or request deletion of your personal data. To exercise these rights, contact us at <a href="mailto:hello@insuredcan.ca" className="text-primary hover:underline">hello@insuredcan.ca</a>.
+          You have the right to access, correct, or request deletion of your personal data. To exercise these rights, contact us at <a href="mailto:sahil280389@gmail.com" className="text-primary hover:underline">sahil280389@gmail.com</a>.
         </p>
       </section>
 
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => (
         <h2 className="text-xl font-semibold text-foreground mb-3">6. Contact</h2>
         <p className="text-muted-foreground leading-relaxed">
           InsuredCan.ca — Toronto, Ontario, Canada<br />
-          Email: <a href="mailto:hello@insuredcan.ca" className="text-primary hover:underline">hello@insuredcan.ca</a>
+          Email: <a href="mailto:sahil280389@gmail.com" className="text-primary hover:underline">sahil280389@gmail.com</a>
         </p>
       </section>
     </main>

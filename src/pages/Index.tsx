@@ -16,21 +16,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>InsuredCan — Life & Health Insurance Quotes in Canada | Free Advisor</title>
-        <meta name="description" content="Compare Canada's top life, health, critical illness & disability insurance plans. Free quotes from 20+ insurers. Licensed advisors in Ontario, BC & Alberta. No obligation." />
+        <title>Life Insurance Canada | Free Quotes From 20+ Insurers — InsuredCan</title>
+        <meta name="description" content="Compare life, health & critical illness insurance from 20+ Canadian insurers. Free quote in 60 seconds. Licensed Ontario advisors. No pressure, no obligation. insuredcan.ca" />
         {/* canonical/og:url handled globally by SEOHead */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="InsuredCan" />
         <meta property="og:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
         <meta property="og:description" content="Compare Canada's top life, health, critical illness & disability insurance. Free quotes from 20+ insurers. Licensed advisors. 5,000+ families protected." />
-        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image" content="https://www.insuredcan.ca/og/og-home.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_CA" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="InsuredCan — Life & Health Insurance Quotes in Canada" />
         <meta name="twitter:description" content="Compare Canada's top life, health & critical illness plans. Free quotes. Licensed advisors." />
-        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta name="twitter:image" content="https://www.insuredcan.ca/og/og-home.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
@@ -67,7 +67,7 @@ const Index = () => {
                 "longitude": "-79.3832"
               },
               "telephone": "+1-800-555-4678",
-              "email": "hello@insuredcan.ca",
+              "email": "sahil280389@gmail.com",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",

@@ -92,6 +92,9 @@ const Navbar = () => {
           <Link to="/coverage-calculator" className="text-sm font-medium text-accent hover:text-accent/80 transition-smooth px-3 py-2 rounded-lg hover:bg-secondary">
             Calculator
           </Link>
+          <Link to="/insurance-faq" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth px-3 py-2 rounded-lg hover:bg-secondary">
+            FAQ
+          </Link>
           <Link to="/blog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth px-3 py-2 rounded-lg hover:bg-secondary">
             Blog
           </Link>
@@ -154,6 +157,9 @@ const Navbar = () => {
               <div className="flex flex-col gap-1 mt-2 pt-2 border-t border-border">
                 <Link to="/coverage-calculator" className="text-sm font-medium text-accent py-2 px-2" onClick={() => setMobileOpen(false)}>
                   Coverage Calculator
+                </Link>
+                <Link to="/insurance-faq" className="text-sm font-medium text-muted-foreground py-2 px-2" onClick={() => setMobileOpen(false)}>
+                  FAQ
                 </Link>
                 <Link to="/blog" className="text-sm font-medium text-muted-foreground py-2 px-2" onClick={() => setMobileOpen(false)}>
                   Blog

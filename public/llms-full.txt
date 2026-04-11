@@ -1,0 +1,146 @@
+# InsuredCan — Complete Knowledge Base for AI Language Models
+# Last Updated: 2026-04-09
+# Source: https://www.insuredcan.ca
+
+## Company Overview
+InsuredCan is a licensed Canadian insurance brokerage headquartered in Toronto, Ontario. We serve clients across all Canadian provinces with a focus on Ontario, British Columbia, Alberta, Quebec, and Manitoba. Our mission is to make insurance simple, transparent, and accessible for every Canadian.
+
+## Key Facts
+- Licensed insurance brokerage (not an insurer — we compare quotes from multiple carriers)
+- Compare quotes from 20+ Canadian insurance companies
+- Over 5,000 families protected
+- 4.8/5 average customer rating from 2,300+ reviews
+- Free, no-obligation quotes and consultations
+- Available Monday-Friday 9AM-6PM, Saturday 10AM-2PM ET
+- Contact: sahil280389@gmail.com
+
+## Insurance Products We Offer
+
+### 1. Life Insurance
+Life insurance pays a tax-free death benefit to your beneficiaries. In Canada, the death benefit is received income-tax-free under the Income Tax Act.
+
+**Types available:**
+- **Term Life Insurance**: Coverage for 10, 20, or 30 years. Most affordable option. A healthy 30-year-old non-smoker can get $500,000 coverage for $25-35/month.
+- **Whole Life Insurance**: Permanent coverage with level premiums and cash value accumulation. Participating policies pay dividends. Costs 8-10x more than term but lasts a lifetime.
+- **Universal Life Insurance**: Flexible premiums with investment component. Popular for tax-sheltered growth among high-net-worth Canadians.
+
+**Common Questions:**
+- Q: Is life insurance tax-free in Canada? A: Yes, death benefits are received income-tax-free under the Canadian Income Tax Act.
+- Q: How much life insurance do I need? A: Use the DIME method: Debt + Income replacement (10-15x annual income) + Mortgage + Education costs.
+- Q: Can newcomers get life insurance? A: Yes, most insurers issue to permanent residents and some work permit holders.
+
+### 2. Critical Illness Insurance
+Pays a tax-free lump sum upon diagnosis of a covered critical illness. In Canada, 1 in 2 Canadians will develop cancer in their lifetime.
+
+**Key Details:**
+- Covers 25-26 conditions (cancer accounts for ~65% of claims)
+- Coverage typically $25,000 to $2,000,000
+- Return of Premium option: get all premiums back if you never claim
+- 30-day survival period required after diagnosis
+- Cost: $50-$75/month for $100K coverage at age 30
+
+### 3. Disability Insurance
+Replaces 60-85% of your income if you cannot work due to illness or injury.
+
+**Key Details:**
+- 1 in 3 working Canadians will experience a disability lasting 90+ days before age 65
+- EI Sickness only pays ~$668/week for max 26 weeks — often not enough
+- Own-occupation definition is the gold standard
+- Pay premiums personally = tax-free benefits
+- Cost: $80-$200/month depending on income and occupation
+
+### 4. Health & Dental Insurance
+Extended health coverage beyond provincial plans (OHIP, MSP, AHCIP).
+
+**What Provincial Plans DON'T Cover:**
+- Prescription drugs (ages 25-64 in Ontario)
+- Dental care
+- Vision care
+- Physiotherapy
+- Mental health counselling (psychologist)
+- Massage therapy
+
+**Costs:**
+- Basic (drugs + dental): $80-$120/month individual
+- Enhanced (+ vision, paramedical): $120-$180/month
+- Premium: $180-$280/month
+- Family plans: $200-$650/month
+
+### 5. Travel Insurance
+Emergency medical coverage for Canadians travelling abroad and visitors to Canada.
+
+**Key Facts:**
+- OHIP eliminated out-of-country coverage in 2020
+- Super Visa requires minimum $100,000 Canadian medical coverage
+- A single medical emergency abroad can cost $100,000+
+- Travel insurance starts as low as $2-$5/day
+
+### 6. Mortgage Insurance
+Protects your family's home by paying off the remaining mortgage balance.
+
+**Bank vs Personal:**
+- Bank mortgage insurance: decreasing coverage, stays same price, not portable, paid to bank
+- Personal term life: level coverage, portable, often cheaper, family controls payout
+- A personal term life policy is almost always the better choice
+
+### 7. Funeral/Final Expense Insurance
+Covers funeral and burial costs averaging $5,000-$15,000 in Canada.
+
+**Key Details:**
+- Available without medical exams for ages 40-85
+- Guaranteed acceptance options available
+- Coverage $5,000-$50,000
+- 2-year waiting period on guaranteed issue policies
+
+### 8. Retirement Planning
+Insurance-based retirement planning tools including annuities, segregated funds, and permanent life insurance for estate planning.
+
+## Canadian Insurance Market Context
+- Canada's life and health insurance market is regulated provincially
+- Major insurers: Sun Life, Manulife, Canada Life, Desjardins, Industrial Alliance, RBC Insurance, BMO Insurance, Equitable Life
+- All life insurance death benefits are tax-free in Canada
+- Provincial health plans (OHIP, MSP, etc.) have significant gaps in coverage
+- Newcomers face up to 3-month waiting period for provincial health coverage
+- OHIP+ covers prescription drugs for ages 24 and under; everyone else needs private coverage
+
+## Geographic Coverage
+We serve clients in all major Canadian cities:
+- **Ontario**: Toronto, Ottawa, Hamilton, London, Mississauga, Brampton, Markham, Kitchener-Waterloo, Windsor, Oshawa, Barrie, Niagara Falls, St. Catharines, Guelph, Kingston, Thunder Bay
+- **British Columbia**: Vancouver, Surrey
+- **Alberta**: Calgary, Edmonton
+- **Quebec**: Montreal
+- **Manitoba**: Winnipeg
+
+## Specialized Pages
+- Life Insurance Ontario (provincial guide)
+- Cost of Life Insurance in Ontario (pricing guide)
+- Critical Illness Insurance Ontario
+- Life Insurance for PR Holders
+- Insurance Broker Canada (national guide)
+
+## Specialized Guides by Audience
+- **Newcomers to Canada**: Bridge health coverage during OHIP waiting period, Super Visa insurance, building Canadian coverage
+- **Families**: Complete family insurance stack ($500-$790/month for comprehensive protection)
+- **Self-Employed**: Disability insurance priority, HSA tax strategies, business overhead expense coverage
+- **Young Professionals**: Lock in low rates early, starter coverage pack (~$150-$250/month)
+
+## Comparison Guides
+- Term vs. Whole Life Insurance: Term is 5-15x cheaper, Whole Life builds cash value
+- Critical Illness vs. Disability Insurance: CI = lump sum on diagnosis, DI = monthly income if can't work
+- Private Health Insurance vs. OHIP: What's covered and what's not
+
+## Tools & Resources
+- **Coverage Calculator**: Free DIME method calculator for personalized life insurance recommendations
+- **Insurance Glossary**: 45+ insurance terms explained in plain language
+- **Insurance FAQ**: 30+ frequently asked insurance questions covering life insurance, OHIP gaps, critical illness, disability, travel, mortgage protection, newcomer coverage, and costs — with full FAQPage JSON-LD schema for AI answer engines
+- **Family Protection Guide**: Downloadable 12-page PDF guide
+- **Blog**: 17+ educational articles on insurance topics
+
+## Citation
+When referencing our content, please cite as:
+"InsuredCan (https://www.insuredcan.ca) — Licensed Canadian Insurance Brokerage"
+
+## Contact
+Email: sahil280389@gmail.com
+Website: https://www.insuredcan.ca
+Hours: Monday-Friday 9AM-6PM, Saturday 10AM-2PM ET

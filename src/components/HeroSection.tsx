@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
-
 import { Link } from "react-router-dom";
+import heroFamily from "@/assets/hero-family.jpg";
 
 const WHATSAPP_URL = "https://wa.me/16478622190";
 
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-background">
-      {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(216_72%_24%/0.04),transparent_60%)]" />
-      
-      <div className="container relative py-20 md:py-28 lg:py-36">
-        <div className="max-w-3xl">
+
+      <div className="container relative py-16 md:py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,6 +59,30 @@ const HeroSection = () => {
                 <CheckCircle className="h-4 w-4 text-success" />
                 Free Consultation
               </span>
+            </div>
+          </motion.div>
+
+          {/* Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            className="hidden lg:block"
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-primary/5 rounded-2xl -rotate-2" />
+              <img
+                src={heroFamily}
+                alt="Happy Canadian family laughing together on their couch"
+                width={640}
+                height={480}
+                className="relative rounded-2xl shadow-lift object-cover w-full aspect-[4/3]"
+              />
+              {/* Floating stat card */}
+              <div className="absolute -bottom-4 -left-4 bg-card rounded-xl shadow-lift p-4 border border-border">
+                <p className="text-2xl font-bold text-primary font-display">20+</p>
+                <p className="text-xs text-muted-foreground">Partner Insurers</p>
+              </div>
             </div>
           </motion.div>
         </div>

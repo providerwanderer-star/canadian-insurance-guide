@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Clock, User } from "lucide-react";
+import { Clock, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface BlogArticleLayoutProps {
@@ -14,6 +15,7 @@ interface BlogArticleLayoutProps {
   author: string;
   date: string;
   readTime: string;
+  ogImage?: string;
   children: React.ReactNode;
 }
 
@@ -26,9 +28,10 @@ const BlogArticleLayout = ({
   author,
   date,
   readTime,
+  ogImage = "https://www.insuredcan.ca/og/og-blog.png",
   children,
 }: BlogArticleLayoutProps) => {
-  const canonicalUrl = `https://insuredcan.ca/blog/${slug}`;
+  const canonicalUrl = `https://www.insuredcan.ca/blog/${slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -64,16 +67,12 @@ const BlogArticleLayout = ({
       name: "InsuredCan Insurance Learning Hub",
       url: "https://www.insuredcan.ca/blog",
     },
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.insuredcan.ca/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.insuredcan.ca/blog" },
-      { "@type": "ListItem", position: 3, name: title, item: canonicalUrl },
-    ],
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".article-intro"]
+    },
+    articleSection: category,
+    wordCount: 2000,
   };
 
   return (
@@ -81,30 +80,31 @@ const BlogArticleLayout = ({
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        {/* canonical/og:url handled globally by SEOHead */}
-        {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={title} />
         <meta property="og:site_name" content="InsuredCan" />
+        <meta property="og:locale" content="en_CA" />
         <meta property="article:published_time" content={date} />
+        <meta property="article:modified_time" content={date} />
         <meta property="article:section" content={category} />
-        {/* Twitter */}
+        <meta property="article:author" content={author} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://www.insuredcan.ca/og-image.png" />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar />
 
       <section className="bg-primary">
         <div className="container py-12 md:py-16">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-smooth mb-6">
-            <ArrowLeft className="h-4 w-4" /> Back to Blog
-          </Link>
+          <BreadcrumbNav items={[
+            { label: "Blog", href: "/blog" },
+            { label: title },
+          ]} />
           <span className="block text-xs font-bold text-accent mb-3 uppercase tracking-wider">{category}</span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

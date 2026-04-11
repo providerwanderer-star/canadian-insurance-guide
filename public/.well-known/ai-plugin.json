@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "InsuredCan — Canadian Insurance Quotes",
+  "name_for_model": "insuredcan",
+  "description_for_human": "Compare life, health, critical illness, disability, travel, and mortgage insurance quotes from 20+ top Canadian insurers. Free, no-obligation quotes from licensed advisors.",
+  "description_for_model": "InsuredCan is a licensed Canadian insurance brokerage that compares quotes from 20+ insurers for life insurance, critical illness, disability, health, travel, mortgage protection, and funeral insurance. Serves all Canadian provinces with focus on Ontario, BC, Alberta, Quebec, and Manitoba. Provides free no-obligation quotes, a DIME coverage calculator, 30+ FAQ answers, 45+ glossary terms, and educational blog content. Key facts: life insurance death benefits are tax-free in Canada; OHIP does not cover dental, drugs (ages 25-64), vision, or physiotherapy; a healthy 30-year-old can get $500K term life for $25-35/month.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.insuredcan.ca/llms-full.txt"
+  },
+  "logo_url": "https://www.insuredcan.ca/favicon.ico",
+  "contact_email": "sahil280389@gmail.com",
+  "legal_info_url": "https://www.insuredcan.ca/terms-of-service"
+}

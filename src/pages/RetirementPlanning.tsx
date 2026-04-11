@@ -1,16 +1,28 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways } from "@/components/ContentElements";
 
 const RetirementPlanning = () => {
   return (
     <PillarPageLayout
       title="Retirement Planning & Insurance in Canada"
-      metaTitle="Retirement Planning Canada — Secure Your Future Income | InsuredCan"
+      metaTitle="Retirement Planning Canada (2026): RRSP, TFSA & Insurance Guide | InsuredCan"
       metaDescription="Plan for a comfortable retirement in Canada. Learn about RRSPs, TFSAs, annuities, and how insurance protects your retirement income and legacy."
       breadcrumb="retirement-planning"
+      ogImage="https://www.insuredcan.ca/og/og-retirement.png"
       heroTag="Secure Your Future"
       heroDescription="Build a tax-efficient retirement strategy with guaranteed income streams, wealth transfer planning, and insurance solutions that protect your legacy for generations."
     >
+      <QuickAnswerBox
+        question="How much do I need to retire comfortably in Canada?"
+        answer="The average Canadian needs $756,000 to $1.2 million in savings to maintain their lifestyle through a 25–30 year retirement. Key tools include RRSPs, TFSAs, CPP/OAS, and permanent life insurance for tax-efficient wealth transfer."
+      />
+      <KeyTakeaways items={[
+        "Average Canadian retirement lasts 25–30 years — plan for longevity",
+        "CPP + OAS alone provide only $20,000–$25,000/year per person",
+        "Whole life insurance is a tax-sheltered wealth transfer tool",
+        "RRSPs provide tax deductions now; TFSAs provide tax-free growth",
+        "Critical illness insurance protects your retirement savings from health shocks",
+      ]} />
       <ContentSection title="Why Retirement Planning Matters for Canadians">
         <ContentParagraph>
           The average Canadian needs $756,000 to $1.2 million in savings to maintain their lifestyle through retirement. With life expectancy increasing, your retirement could last 25–30 years. Without a plan, you risk outliving your savings.

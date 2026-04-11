@@ -1,16 +1,22 @@
 import PillarPageLayout from "@/components/PillarPageLayout";
-import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard } from "@/components/ContentElements";
+import { ContentSection, ContentH3, ContentParagraph, ProsList, ConsList, ComparisonTable, FAQSection, InfoCard, QuickAnswerBox, KeyTakeaways, InlineCTA } from "@/components/ContentElements";
+import { Link } from "react-router-dom";
 
 const TravelInsurancePage = () => {
   return (
     <PillarPageLayout
       title="Travel Insurance in Canada: Super Visa, Visitors & Trips"
-      metaTitle="Travel Insurance Canada — Super Visa, Visitor & Trip Coverage | InsuredCan"
+      metaTitle="Travel Insurance Canada (2026): Super Visa, Visitor & Trip Plans | InsuredCan"
       metaDescription="Get travel insurance for Super Visa applications, visiting parents, and trips abroad. Compare costs and coverage for Canadian travellers and visitors to Canada."
       breadcrumb="travel-insurance"
+      ogImage="https://www.insuredcan.ca/og/og-travel.png"
       heroTag="Travel Coverage"
       heroDescription="Whether you're sponsoring parents on a Super Visa, welcoming visitors, or heading abroad, travel insurance protects against emergency medical costs that can reach hundreds of thousands of dollars."
     >
+      <QuickAnswerBox
+        question="Do I need travel insurance in Canada?"
+        answer="Yes. OHIP eliminated out-of-country coverage in 2020, and coverage between provinces is limited. A single medical emergency abroad can cost $100,000+. Travel insurance starts as low as $2–$5/day for Canadian travellers."
+      />
       <ContentSection title="Types of Travel Insurance">
         <ContentH3>Super Visa Insurance</ContentH3>
         <ContentParagraph>
@@ -72,6 +78,8 @@ const TravelInsurancePage = () => {
         { question: "What are the Super Visa insurance requirements?", answer: "You need a minimum of $100,000 in emergency medical coverage from a Canadian insurance company, valid for at least 1 year from the date of entry. The policy must cover healthcare, hospitalization, and repatriation." },
         { question: "Does OHIP cover me when I travel outside Ontario?", answer: "OHIP provides very limited coverage outside Canada and was eliminated for out-of-country claims as of 2020. Even within Canada, coverage in other provinces may be limited. Always get travel insurance before any trip." },
         { question: "Can my visiting parents get insurance with pre-existing conditions?", answer: "Yes, but with conditions. Most plans require pre-existing conditions to be 'stable' for 90–180 days before the coverage start date. Some plans offer coverage regardless but at higher premiums." },
+        { question: "How much does travel insurance cost in Canada?", answer: "For Canadians travelling abroad, single-trip travel insurance typically costs $2–$5/day. Annual multi-trip plans range from $100–$300/year. Super Visa insurance for visiting parents costs $1,200–$3,000/year depending on age." },
+        { question: "What does travel insurance cover?", answer: "Comprehensive travel insurance covers emergency medical expenses, trip cancellation/interruption, lost or delayed baggage, flight delays, accidental death, and emergency evacuation. Medical coverage is the most critical component." },
       ]} />
     </PillarPageLayout>
   );

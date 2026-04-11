@@ -5,9 +5,7 @@ const BASE_URL = "https://www.insuredcan.ca";
 
 /**
  * Global SEO component — renders inside BrowserRouter.
- * Dynamically sets canonical + og:url based on current route.
- * This is the SINGLE source of truth for canonical. All page-level
- * Helmets should NOT set canonical or og:url — those come from here.
+ * Dynamically sets canonical, og:url, hreflang, and speakable hints.
  */
 const SEOHead = () => {
   const { pathname } = useLocation();
@@ -17,6 +15,9 @@ const SEOHead = () => {
     <Helmet>
       <link rel="canonical" href={canonical} />
       <meta property="og:url" content={canonical} />
+      <link rel="alternate" hrefLang="en-CA" href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={canonical} />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     </Helmet>
   );
 };
