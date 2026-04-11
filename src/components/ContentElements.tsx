@@ -182,6 +182,9 @@ export const AuthorBox = () => (
       <div>
         <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1">Reviewed by</p>
         <p className="text-sm font-bold text-foreground" itemProp="name">InsuredCan Advisory Team</p>
+        <meta itemProp="jobTitle" content="Licensed Insurance Advisors — FSRA Regulated" />
+        <meta itemProp="url" content="https://www.insuredcan.ca/about" />
+        <link itemProp="memberOf" href="https://www.fsrao.ca" />
         <p className="text-xs text-muted-foreground mt-1" itemProp="description">
           Licensed insurance professionals regulated by FSRA (Ontario), with 15+ years of combined experience advising Canadian families on life, health, critical illness, and disability coverage.
         </p>
