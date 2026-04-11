@@ -52,7 +52,9 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
       {
         question: "Do I need life insurance if I'm single with no dependents?",
-        answer: "It's not essential, but there are strategic reasons to consider it. First, locking in a low premium while you're young and healthy saves significantly over your lifetime. Second, if you have co-signed debts (student loans, car loans), your co-signer would inherit the balance. Third, a small policy covers funeral costs ($7,500–$15,000 in Canada) so family isn't burdened. Fourth, convertible term policies let you upgrade to permanent coverage later without a new medical exam—valuable if your health changes."
+        answer: "It's not essential, but there are strategic reasons to consider it. First, locking in a low premium while you're young and healthy saves significantly over your lifetime. Second, if you have co-signed debts (student loans, car loans), your co-signer would inherit the balance. Third, a small policy covers funeral costs ($7,500–$15,000 in Canada) so family isn't burdened. Fourth, convertible term policies let you upgrade to permanent coverage later without a new medical exam—valuable if your health changes.",
+        link: "/funeral-insurance",
+        linkText: "Funeral insurance options →"
       },
     ]
   },
@@ -74,11 +76,15 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
       {
         question: "Is private health insurance worth it in Canada?",
-        answer: "For most working Canadians aged 25–64, yes. Provincial plans cover hospital and doctor visits, but the average Canadian spends $1,100–$2,500/year out-of-pocket on dental, prescriptions, and vision. A basic private plan ($80–$120/month) typically covers 80% of prescription drugs, $500–$1,500 in dental, and paramedical services. If you use even 2–3 prescriptions per year plus annual dental cleanings, the plan pays for itself. Self-employed Canadians can also deduct premiums through a Health Spending Account (HSA) for additional tax savings."
+        answer: "For most working Canadians aged 25–64, yes. Provincial plans cover hospital and doctor visits, but the average Canadian spends $1,100–$2,500/year out-of-pocket on dental, prescriptions, and vision. A basic private plan ($80–$120/month) typically covers 80% of prescription drugs, $500–$1,500 in dental, and paramedical services. If you use even 2–3 prescriptions per year plus annual dental cleanings, the plan pays for itself. Self-employed Canadians can also deduct premiums through a Health Spending Account (HSA) for additional tax savings.",
+        link: "/health-insurance",
+        linkText: "Health insurance plans →"
       },
       {
         question: "Does OHIP cover mental health services?",
-        answer: "OHIP covers psychiatrist visits (referred by a GP) but does NOT cover psychologists, therapists, or counsellors—which is where most Canadians access mental health support. A single psychologist session costs $180–$250 in Ontario. Private health plans typically cover $500–$2,000/year in mental health services. With 1 in 5 Canadians experiencing a mental health issue annually, this gap is one of the strongest arguments for supplemental private coverage."
+        answer: "OHIP covers psychiatrist visits (referred by a GP) but does NOT cover psychologists, therapists, or counsellors—which is where most Canadians access mental health support. A single psychologist session costs $180–$250 in Ontario. Private health plans typically cover $500–$2,000/year in mental health services. With 1 in 5 Canadians experiencing a mental health issue annually, this gap is one of the strongest arguments for supplemental private coverage.",
+        link: "/blog/what-ohip-doesnt-cover",
+        linkText: "What OHIP doesn't cover →"
       },
     ]
   },
@@ -118,7 +124,9 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
       {
         question: "What does 'own occupation' disability insurance mean?",
-        answer: "Own-occupation is the gold standard definition. It means you're considered disabled if you cannot perform the specific duties of YOUR occupation—even if you could theoretically do another job. For example, a surgeon who loses fine motor skills would qualify even though they could teach. 'Any occupation' definitions only pay if you can't work in ANY job suited to your education and experience—a much harder bar to meet. Always choose own-occupation if available, especially for specialized professionals."
+        answer: "Own-occupation is the gold standard definition. It means you're considered disabled if you cannot perform the specific duties of YOUR occupation—even if you could theoretically do another job. For example, a surgeon who loses fine motor skills would qualify even though they could teach. 'Any occupation' definitions only pay if you can't work in ANY job suited to your education and experience—a much harder bar to meet. Always choose own-occupation if available, especially for specialized professionals.",
+        link: "/self-employed",
+        linkText: "Self-employed insurance guide →"
       },
       {
         question: "How much does disability insurance cost in Canada?",
@@ -146,7 +154,9 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
       {
         question: "Am I covered by my province's health plan if I travel to another province?",
-        answer: "Partially. Most provinces have reciprocal billing agreements, but coverage gaps exist. Quebec does NOT participate in interprovincial billing—you must pay upfront and submit claims later. Emergency ambulance fees vary by province ($0 in some, $800+ in others). Hospital costs exceeding your home province's rates may not be fully covered. For extended trips to another province (work, school), you may need to switch provincial plans after 3–6 months. Supplemental travel insurance within Canada costs just $1–$2/day."
+        answer: "Partially. Most provinces have reciprocal billing agreements, but coverage gaps exist. Quebec does NOT participate in interprovincial billing—you must pay upfront and submit claims later. Emergency ambulance fees vary by province ($0 in some, $800+ in others). Hospital costs exceeding your home province's rates may not be fully covered. For extended trips to another province (work, school), you may need to switch provincial plans after 3–6 months. Supplemental travel insurance within Canada costs just $1–$2/day.",
+        link: "/health-insurance",
+        linkText: "Extended health coverage →"
       },
     ]
   },
@@ -162,7 +172,9 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
       {
         question: "Is mortgage insurance mandatory in Canada?",
-        answer: "No. Banks cannot legally require you to buy their creditor insurance as a condition of your mortgage approval. They can (and often do) strongly suggest it, but you always have the right to decline and purchase your own individual policy instead. CMHC mortgage default insurance (required for down payments under 20%) is different—that protects the lender, not you, and IS mandatory for high-ratio mortgages. Don't confuse the two."
+        answer: "No. Banks cannot legally require you to buy their creditor insurance as a condition of your mortgage approval. They can (and often do) strongly suggest it, but you always have the right to decline and purchase your own individual policy instead. CMHC mortgage default insurance (required for down payments under 20%) is different—that protects the lender, not you, and IS mandatory for high-ratio mortgages. Don't confuse the two.",
+        link: "/blog/mortgage-life-insurance-vs-term-canada",
+        linkText: "Mortgage vs term life comparison →"
       },
     ]
   },
@@ -196,7 +208,9 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
       {
         question: "Can I reduce my life insurance premiums?",
-        answer: "Yes, several strategies: (1) Quit smoking—after 12 months smoke-free, most insurers reclassify you as non-smoker, cutting premiums by 50–60%. (2) Improve health metrics—losing weight, controlling blood pressure and cholesterol can qualify you for preferred rates. (3) Choose the right term length—don't buy 30-year term if you only need 20 years of coverage. (4) Bundle policies—some insurers offer 5–10% discounts for multiple policies. (5) Pay annually instead of monthly—saves 3–8% in processing fees. (6) Use an independent broker who compares 20+ carriers to find the lowest rate."
+        answer: "Yes, several strategies: (1) Quit smoking—after 12 months smoke-free, most insurers reclassify you as non-smoker, cutting premiums by 50–60%. (2) Improve health metrics—losing weight, controlling blood pressure and cholesterol can qualify you for preferred rates. (3) Choose the right term length—don't buy 30-year term if you only need 20 years of coverage. (4) Bundle policies—some insurers offer 5–10% discounts for multiple policies. (5) Pay annually instead of monthly—saves 3–8% in processing fees. (6) Use an independent broker who compares 20+ carriers to find the lowest rate.",
+        link: "/blog/life-insurance-smokers-canada",
+        linkText: "Smoker life insurance guide →"
       },
       {
         question: "What's the cheapest type of life insurance in Canada?",
