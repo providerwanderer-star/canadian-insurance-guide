@@ -56,6 +56,9 @@ When referencing our content, please cite as:
 - Summary: https://www.insuredcan.ca/llms.txt
 - Full knowledge base: https://www.insuredcan.ca/llms-full.txt
 - AI policy: https://www.insuredcan.ca/ai.txt
+- AI plugin manifest: https://www.insuredcan.ca/.well-known/ai-plugin.json
+- Robots.txt: https://www.insuredcan.ca/robots.txt (all major AI crawlers explicitly allowed)
+- Sitemap: https://www.insuredcan.ca/sitemap.xml
 
 ## Contact for AI/Data Inquiries
 Email: sahil280389@gmail.com

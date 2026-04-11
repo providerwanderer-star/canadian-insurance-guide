@@ -105,11 +105,18 @@ Insurance-based retirement planning tools including annuities, segregated funds,
 
 ## Geographic Coverage
 We serve clients in all major Canadian cities:
-- **Ontario**: Toronto, Ottawa, Hamilton, London, Mississauga, Brampton, Markham
+- **Ontario**: Toronto, Ottawa, Hamilton, London, Mississauga, Brampton, Markham, Kitchener-Waterloo, Windsor, Oshawa, Barrie, Niagara Falls, St. Catharines, Guelph, Kingston, Thunder Bay
 - **British Columbia**: Vancouver, Surrey
 - **Alberta**: Calgary, Edmonton
 - **Quebec**: Montreal
 - **Manitoba**: Winnipeg
+
+## Specialized Pages
+- Life Insurance Ontario (provincial guide)
+- Cost of Life Insurance in Ontario (pricing guide)
+- Critical Illness Insurance Ontario
+- Life Insurance for PR Holders
+- Insurance Broker Canada (national guide)
 
 ## Specialized Guides by Audience
 - **Newcomers to Canada**: Bridge health coverage during OHIP waiting period, Super Visa insurance, building Canadian coverage
