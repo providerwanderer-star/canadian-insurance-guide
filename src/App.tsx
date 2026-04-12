@@ -173,11 +173,11 @@ const App = () => (
                 <Route path="/life-insurance-guelph" element={<LifeInsuranceGuelphPage />} />
                 <Route path="/life-insurance-kingston" element={<LifeInsuranceKingstonPage />} />
                 <Route path="/life-insurance-thunder-bay" element={<LifeInsuranceThunderBayPage />} />
-                
+
                 {/* Resources */}
-                <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
                 <Route path="/insurance-faq" element={<InsuranceFAQPage />} />
-                
+                <Route path="/insurance-glossary" element={<InsuranceGlossaryPage />} />
+
                 {/* Blog */}
                 <Route path="/blog" element={<BlogIndex />} />
                 <Route path="/blog/ohip-waiting-period-newcomers" element={<BlogOHIPWaiting />} />
@@ -204,6 +204,7 @@ const App = () => (
                 <Route path="/blog/how-to-choose-insurance-ontario" element={<BlogHowToChooseInsuranceOntario />} />
                 <Route path="/blog/insurance-new-immigrants-canada" element={<BlogInsuranceNewImmigrants />} />
 
+                {/* 404 catch-all */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

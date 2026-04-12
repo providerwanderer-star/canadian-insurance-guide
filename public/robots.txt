@@ -1,8 +1,6 @@
 User-agent: *
 Allow: /
-
-Disallow: /privacy-policy
-Disallow: /terms-of-service
+# Note: /privacy-policy and /terms-of-service use meta noindex — no Disallow needed
 
 # ===========================
 # AI Search & Browse Crawlers
