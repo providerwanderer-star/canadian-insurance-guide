@@ -206,6 +206,48 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
     ]
   },
+  {
+    title: "2026 Updates & Regulations",
+    icon: <FileText className="h-5 w-5" />,
+    faqs: [
+      {
+        question: "What insurance regulations changed in Canada in 2026?",
+        answer: "Key 2026 changes include: OSFI updated capital requirements (MCT & LICAT) effective January 1 for stronger insurer solvency; new AI oversight rules requiring explainable underwriting decisions; expanded climate risk disclosure for federally regulated insurers; strengthened PIPEDA data privacy protections for health data; faster claims processing standards (5-day acknowledgement, 45-day decision); and plain language policy requirements. BMO and other major insurers also dropped term life rates, making 2026 a competitive pricing environment.",
+        link: "/blog/insurance-regulation-changes-canada-2026",
+        linkText: "Full 2026 regulation guide →"
+      },
+      {
+        question: "Does critical illness insurance cover mental health in 2026?",
+        answer: "Yes — a breakthrough for 2026. Select Canadian insurers now offer partial payouts (25–50% of coverage) for severe clinical depression, PTSD, bipolar disorder, and severe anxiety requiring hospitalization or causing prolonged functional impairment. This is separate from disability insurance, which already covers inability to work due to mental health. Multi-pay CI policies also allow claims for multiple conditions over the policy's lifetime.",
+        link: "/blog/critical-illness-insurance-whats-new-2026",
+        linkText: "What's new in CI 2026 →"
+      },
+      {
+        question: "Is dental care free in Canada in 2026?",
+        answer: "Not universally. The Canadian Dental Care Plan (CDCP) covers basic dental services (cleanings, fillings, extractions, dentures) for Canadians without private dental insurance earning under $90,000 family income. Co-pays apply for incomes above $70,000. The CDCP does NOT cover orthodontics ($5,000–$8,000), dental implants ($3,000–$6,000), or cosmetic procedures. Most working Canadians with employer benefits are ineligible and still need private dental coverage.",
+        link: "/blog/dental-pharmacare-canada-2026",
+        linkText: "Dental & Pharmacare guide →"
+      },
+      {
+        question: "Does Canada have pharmacare in 2026?",
+        answer: "National pharmacare Phase 1 covers diabetes medications (insulin, metformin, GLP-1 agonists, glucose supplies) and contraception only. The vast majority of prescriptions — blood pressure, cholesterol, anxiety, depression, asthma, arthritis, pain medications — are NOT covered by national pharmacare. Provincial drug plans vary widely. Most working-age Canadians without employer benefits still need private health insurance for prescription drug coverage ($800–$1,500/year average out-of-pocket without coverage).",
+        link: "/blog/dental-pharmacare-canada-2026",
+        linkText: "Full pharmacare guide →"
+      },
+      {
+        question: "Can AI deny my insurance application in Canada?",
+        answer: "Under 2026 regulations, no AI system can issue a final denial alone. Insurers using accelerated underwriting with AI must have a licensed human underwriter review any adverse decision (decline, rating increase, or exclusion). You have the right to request a written, human-readable explanation and appeal through a human review process. AI models must also undergo regular third-party audits for discriminatory bias.",
+        link: "/blog/insurance-regulation-changes-canada-2026",
+        linkText: "AI underwriting rules →"
+      },
+      {
+        question: "Are term life insurance rates lower in 2026?",
+        answer: "Yes. BMO Insurance launched its most competitive term rates in years in February 2026 (Term 10, 15, 20, 25, 30), and other major insurers have followed suit. A healthy 30-year-old non-smoker can get $500K of Term 20 for as low as $22/month. This competitive pricing environment makes 2026 an excellent time to lock in term rates before potential future increases.",
+        link: "/blog/insurance-regulation-changes-canada-2026",
+        linkText: "2026 rate trends →"
+      },
+    ]
+  },
 ];
 
 // Flatten all FAQs for JSON-LD
