@@ -206,6 +206,48 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
       },
     ]
   },
+  {
+    title: "2026 Updates & Regulations",
+    icon: <FileText className="h-5 w-5" />,
+    faqs: [
+      {
+        question: "What insurance regulations changed in Canada in 2026?",
+        answer: "Key 2026 changes include: OSFI updated capital requirements (MCT & LICAT) effective January 1 for stronger insurer solvency; new AI oversight rules requiring explainable underwriting decisions; expanded climate risk disclosure for federally regulated insurers; strengthened PIPEDA data privacy protections for health data; faster claims processing standards (5-day acknowledgement, 45-day decision); and plain language policy requirements. BMO and other major insurers also dropped term life rates, making 2026 a competitive pricing environment.",
+        link: "/blog/insurance-regulation-changes-canada-2026",
+        linkText: "Full 2026 regulation guide →"
+      },
+      {
+        question: "Does critical illness insurance cover mental health in 2026?",
+        answer: "Yes — a breakthrough for 2026. Select Canadian insurers now offer partial payouts (25–50% of coverage) for severe clinical depression, PTSD, bipolar disorder, and severe anxiety requiring hospitalization or causing prolonged functional impairment. This is separate from disability insurance, which already covers inability to work due to mental health. Multi-pay CI policies also allow claims for multiple conditions over the policy's lifetime.",
+        link: "/blog/critical-illness-insurance-whats-new-2026",
+        linkText: "What's new in CI 2026 →"
+      },
+      {
+        question: "Is dental care free in Canada in 2026?",
+        answer: "Not universally. The Canadian Dental Care Plan (CDCP) covers basic dental services (cleanings, fillings, extractions, dentures) for Canadians without private dental insurance earning under $90,000 family income. Co-pays apply for incomes above $70,000. The CDCP does NOT cover orthodontics ($5,000–$8,000), dental implants ($3,000–$6,000), or cosmetic procedures. Most working Canadians with employer benefits are ineligible and still need private dental coverage.",
+        link: "/blog/dental-pharmacare-canada-2026",
+        linkText: "Dental & Pharmacare guide →"
+      },
+      {
+        question: "Does Canada have pharmacare in 2026?",
+        answer: "National pharmacare Phase 1 covers diabetes medications (insulin, metformin, GLP-1 agonists, glucose supplies) and contraception only. The vast majority of prescriptions — blood pressure, cholesterol, anxiety, depression, asthma, arthritis, pain medications — are NOT covered by national pharmacare. Provincial drug plans vary widely. Most working-age Canadians without employer benefits still need private health insurance for prescription drug coverage ($800–$1,500/year average out-of-pocket without coverage).",
+        link: "/blog/dental-pharmacare-canada-2026",
+        linkText: "Full pharmacare guide →"
+      },
+      {
+        question: "Can AI deny my insurance application in Canada?",
+        answer: "Under 2026 regulations, no AI system can issue a final denial alone. Insurers using accelerated underwriting with AI must have a licensed human underwriter review any adverse decision (decline, rating increase, or exclusion). You have the right to request a written, human-readable explanation and appeal through a human review process. AI models must also undergo regular third-party audits for discriminatory bias.",
+        link: "/blog/insurance-regulation-changes-canada-2026",
+        linkText: "AI underwriting rules →"
+      },
+      {
+        question: "Are term life insurance rates lower in 2026?",
+        answer: "Yes. BMO Insurance launched its most competitive term rates in years in February 2026 (Term 10, 15, 20, 25, 30), and other major insurers have followed suit. A healthy 30-year-old non-smoker can get $500K of Term 20 for as low as $22/month. This competitive pricing environment makes 2026 an excellent time to lock in term rates before potential future increases.",
+        link: "/blog/insurance-regulation-changes-canada-2026",
+        linkText: "2026 rate trends →"
+      },
+    ]
+  },
 ];
 
 // Flatten all FAQs for JSON-LD
@@ -228,8 +270,8 @@ const InsuranceFAQ = () => {
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Insurance FAQ Canada — 30+ Most Asked Questions (2026)",
-    description: "Expert answers to the most commonly asked insurance questions in Canada. Life insurance, OHIP gaps, critical illness, disability, travel, and mortgage protection explained.",
+    name: "Insurance FAQ Canada — 40+ Most Asked Questions (2026)",
+    description: "Expert answers to the most commonly asked insurance questions in Canada. Life insurance, OHIP gaps, critical illness, disability, travel, mortgage protection, and 2026 regulation changes explained.",
     url: "https://www.insuredcan.ca/insurance-faq",
     dateModified: "2026-04-11",
     publisher: {
@@ -255,11 +297,11 @@ const InsuranceFAQ = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
-        <title>Insurance FAQ Canada — 30+ Most Asked Questions (2026) | InsuredCan</title>
-        <meta name="description" content="Expert answers to Canada's most searched insurance questions. Learn about life insurance costs, OHIP coverage gaps, critical illness, disability, travel insurance, and mortgage protection — all explained by licensed Ontario advisors." />
-        <meta name="keywords" content="insurance FAQ Canada, life insurance questions, OHIP coverage gaps, critical illness FAQ, disability insurance Canada, travel insurance Canada, mortgage insurance FAQ, insurance costs Canada 2026" />
-        <meta property="og:title" content="Insurance FAQ Canada — 30+ Expert Answers (2026)" />
-        <meta property="og:description" content="Get clear answers to Canada's most asked insurance questions. Life insurance, health coverage, critical illness, disability, and more — from licensed Ontario advisors." />
+        <title>Insurance FAQ Canada — 40+ Most Asked Questions (2026) | InsuredCan</title>
+        <meta name="description" content="Expert answers to Canada's most searched insurance questions. Learn about life insurance costs, OHIP coverage gaps, critical illness, disability, travel insurance, 2026 regulation changes, dental care & pharmacare — all explained by licensed Ontario advisors." />
+        <meta name="keywords" content="insurance FAQ Canada, life insurance questions, OHIP coverage gaps, critical illness FAQ, disability insurance Canada, travel insurance Canada, mortgage insurance FAQ, insurance costs Canada 2026, dental care plan Canada, pharmacare 2026, insurance regulations 2026" />
+        <meta property="og:title" content="Insurance FAQ Canada — 40+ Expert Answers (2026)" />
+        <meta property="og:description" content="Get clear answers to Canada's most asked insurance questions including 2026 regulation changes, dental care plan, pharmacare, and AI underwriting rules." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.insuredcan.ca/insurance-faq" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -293,7 +335,7 @@ const InsuranceFAQ = () => {
               <p className="text-xs font-bold text-primary uppercase tracking-widest">Insurance Knowledge Hub</p>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground font-display mb-4">
-              Insurance FAQ Canada: 30+ Most Asked Questions Answered by Experts (2026)
+              Insurance FAQ Canada: 40+ Most Asked Questions Answered by Experts (2026)
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               Clear, honest answers from licensed Ontario insurance advisors. No jargon, no sales pitch — just the information Canadians actually search for about life insurance, health coverage, critical illness, disability, and more.
