@@ -270,8 +270,8 @@ const InsuranceFAQ = () => {
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Insurance FAQ Canada — 30+ Most Asked Questions (2026)",
-    description: "Expert answers to the most commonly asked insurance questions in Canada. Life insurance, OHIP gaps, critical illness, disability, travel, and mortgage protection explained.",
+    name: "Insurance FAQ Canada — 40+ Most Asked Questions (2026)",
+    description: "Expert answers to the most commonly asked insurance questions in Canada. Life insurance, OHIP gaps, critical illness, disability, travel, mortgage protection, and 2026 regulation changes explained.",
     url: "https://www.insuredcan.ca/insurance-faq",
     dateModified: "2026-04-11",
     publisher: {
@@ -297,11 +297,11 @@ const InsuranceFAQ = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
-        <title>Insurance FAQ Canada — 30+ Most Asked Questions (2026) | InsuredCan</title>
-        <meta name="description" content="Expert answers to Canada's most searched insurance questions. Learn about life insurance costs, OHIP coverage gaps, critical illness, disability, travel insurance, and mortgage protection — all explained by licensed Ontario advisors." />
-        <meta name="keywords" content="insurance FAQ Canada, life insurance questions, OHIP coverage gaps, critical illness FAQ, disability insurance Canada, travel insurance Canada, mortgage insurance FAQ, insurance costs Canada 2026" />
-        <meta property="og:title" content="Insurance FAQ Canada — 30+ Expert Answers (2026)" />
-        <meta property="og:description" content="Get clear answers to Canada's most asked insurance questions. Life insurance, health coverage, critical illness, disability, and more — from licensed Ontario advisors." />
+        <title>Insurance FAQ Canada — 40+ Most Asked Questions (2026) | InsuredCan</title>
+        <meta name="description" content="Expert answers to Canada's most searched insurance questions. Learn about life insurance costs, OHIP coverage gaps, critical illness, disability, travel insurance, 2026 regulation changes, dental care & pharmacare — all explained by licensed Ontario advisors." />
+        <meta name="keywords" content="insurance FAQ Canada, life insurance questions, OHIP coverage gaps, critical illness FAQ, disability insurance Canada, travel insurance Canada, mortgage insurance FAQ, insurance costs Canada 2026, dental care plan Canada, pharmacare 2026, insurance regulations 2026" />
+        <meta property="og:title" content="Insurance FAQ Canada — 40+ Expert Answers (2026)" />
+        <meta property="og:description" content="Get clear answers to Canada's most asked insurance questions including 2026 regulation changes, dental care plan, pharmacare, and AI underwriting rules." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.insuredcan.ca/insurance-faq" />
         <meta name="twitter:card" content="summary_large_image" />
