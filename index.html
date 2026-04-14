@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Search Console Verification — replace YOUR_VERIFICATION_CODE -->
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+    <!-- Google Search Console Verification — REPLACE with your actual code from GSC -->
+    <!-- To get your code: Go to https://search.google.com/search-console → Add Property → HTML tag method -->
+    <!-- <meta name="google-site-verification" content="PASTE_YOUR_REAL_CODE_HERE" /> -->
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Prerender hint for crawlers (SPA) -->
+    <meta name="fragment" content="!" />
+
+    <!-- Google tag (gtag.js) — Confirm G-JDEE4S1GKZ is your real Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDEE4S1GKZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -165,7 +169,7 @@
     <meta name="ai-content-license" content="public-domain-for-ai-indexing" />
     <meta name="citation_title" content="InsuredCan — Licensed Canadian Insurance Brokerage" />
     <meta name="citation_author" content="InsuredCan" />
-    <meta name="citation_publication_date" content="2026" />
+    <meta name="citation_publication_date" content="2026/04/14" />
     <meta name="citation_public_url" content="https://www.insuredcan.ca/" />
   </head>
 
@@ -176,9 +180,12 @@
       <div style="max-width:800px;margin:40px auto;padding:20px;font-family:system-ui,sans-serif">
         <h1>InsuredCan — Canada's Trusted Insurance Comparison Platform</h1>
         <p>Compare life, health, critical illness, disability, and travel insurance from 20+ top Canadian insurers. Free quotes from licensed advisors in Ontario, BC, Alberta, and Quebec.</p>
+
         <h2>Our Insurance Services</h2>
         <ul>
           <li><a href="/life-insurance">Life Insurance</a> — Term &amp; whole life coverage for Canadian families</li>
+          <li><a href="/term-life-insurance">Term Life Insurance</a> — Affordable temporary coverage</li>
+          <li><a href="/whole-life-insurance">Whole Life Insurance</a> — Permanent coverage with cash value</li>
           <li><a href="/critical-illness-insurance">Critical Illness Insurance</a> — Tax-free lump-sum protection</li>
           <li><a href="/disability-insurance">Disability Insurance</a> — Income replacement coverage</li>
           <li><a href="/health-insurance">Health Insurance</a> — Extended health &amp; dental plans</li>
@@ -187,36 +194,84 @@
           <li><a href="/funeral-insurance">Funeral Insurance</a> — Final expense coverage</li>
           <li><a href="/retirement-planning">Retirement Planning</a> — RRSP, TFSA &amp; insurance strategies</li>
         </ul>
+
         <h2>Who We Help</h2>
         <ul>
-          <li><a href="/families">Families</a></li>
-          <li><a href="/newcomers">Newcomers to Canada</a></li>
-          <li><a href="/self-employed">Self-Employed Canadians</a></li>
-          <li><a href="/young-professionals">Young Professionals</a></li>
+          <li><a href="/families">Insurance for Families</a></li>
+          <li><a href="/newcomers">Insurance for Newcomers to Canada</a></li>
+          <li><a href="/self-employed">Insurance for Self-Employed Canadians</a></li>
+          <li><a href="/young-professionals">Insurance for Young Professionals</a></li>
+          <li><a href="/life-insurance-pr-holders">Life Insurance for PR Holders</a></li>
         </ul>
-        <h2>Locations</h2>
+
+        <h2>Ontario Guides</h2>
         <ul>
-          <li><a href="/life-insurance-toronto">Toronto</a></li>
-          <li><a href="/life-insurance-vancouver">Vancouver</a></li>
-          <li><a href="/life-insurance-calgary">Calgary</a></li>
-          <li><a href="/life-insurance-montreal">Montreal</a></li>
-          <li><a href="/life-insurance-ottawa">Ottawa</a></li>
-          <li><a href="/life-insurance-hamilton">Hamilton</a></li>
-          <li><a href="/life-insurance-mississauga">Mississauga</a></li>
-          <li><a href="/life-insurance-brampton">Brampton</a></li>
-          <li><a href="/life-insurance-surrey">Surrey</a></li>
-          <li><a href="/life-insurance-markham">Markham</a></li>
+          <li><a href="/life-insurance-ontario">Life Insurance Ontario</a></li>
+          <li><a href="/cost-life-insurance-ontario">Cost of Life Insurance in Ontario</a></li>
+          <li><a href="/critical-illness-insurance-ontario">Critical Illness Insurance Ontario</a></li>
+          <li><a href="/insurance-broker-canada">Insurance Broker Canada</a></li>
         </ul>
+
+        <h2>Compare Insurance</h2>
+        <ul>
+          <li><a href="/compare/term-vs-whole-life">Term vs Whole Life Insurance</a></li>
+          <li><a href="/compare/critical-illness-vs-disability">Critical Illness vs Disability Insurance</a></li>
+          <li><a href="/compare/private-vs-ohip">Private Health Insurance vs OHIP</a></li>
+        </ul>
+
+        <h2>Life Insurance by City</h2>
+        <ul>
+          <li><a href="/life-insurance-toronto">Life Insurance Toronto</a></li>
+          <li><a href="/life-insurance-vancouver">Life Insurance Vancouver</a></li>
+          <li><a href="/life-insurance-calgary">Life Insurance Calgary</a></li>
+          <li><a href="/life-insurance-montreal">Life Insurance Montreal</a></li>
+          <li><a href="/life-insurance-ottawa">Life Insurance Ottawa</a></li>
+          <li><a href="/life-insurance-edmonton">Life Insurance Edmonton</a></li>
+          <li><a href="/life-insurance-winnipeg">Life Insurance Winnipeg</a></li>
+          <li><a href="/life-insurance-hamilton">Life Insurance Hamilton</a></li>
+          <li><a href="/life-insurance-mississauga">Life Insurance Mississauga</a></li>
+          <li><a href="/life-insurance-brampton">Life Insurance Brampton</a></li>
+          <li><a href="/life-insurance-surrey">Life Insurance Surrey</a></li>
+          <li><a href="/life-insurance-markham">Life Insurance Markham</a></li>
+          <li><a href="/life-insurance-london-ontario">Life Insurance London Ontario</a></li>
+          <li><a href="/life-insurance-kitchener-waterloo">Life Insurance Kitchener-Waterloo</a></li>
+          <li><a href="/life-insurance-windsor">Life Insurance Windsor</a></li>
+          <li><a href="/life-insurance-oshawa">Life Insurance Oshawa</a></li>
+          <li><a href="/life-insurance-barrie">Life Insurance Barrie</a></li>
+          <li><a href="/life-insurance-niagara-falls">Life Insurance Niagara Falls</a></li>
+          <li><a href="/life-insurance-st-catharines">Life Insurance St. Catharines</a></li>
+          <li><a href="/life-insurance-guelph">Life Insurance Guelph</a></li>
+          <li><a href="/life-insurance-kingston">Life Insurance Kingston</a></li>
+          <li><a href="/life-insurance-thunder-bay">Life Insurance Thunder Bay</a></li>
+        </ul>
+
         <h2>Resources</h2>
         <ul>
+          <li><a href="/insurance-faq">Insurance FAQ — 30+ Common Questions Answered</a></li>
           <li><a href="/blog">Insurance Blog</a></li>
           <li><a href="/insurance-glossary">Insurance Glossary</a></li>
           <li><a href="/coverage-calculator">Coverage Calculator</a></li>
-          <li><a href="/insurance-faq">Insurance FAQ</a></li>
-          <li><a href="/compare/term-vs-whole-life">Term vs Whole Life</a></li>
-          <li><a href="/compare/critical-illness-vs-disability">Critical Illness vs Disability</a></li>
-          <li><a href="/compare/private-vs-ohip">Private vs OHIP</a></li>
         </ul>
+
+        <h2>Blog Articles</h2>
+        <ul>
+          <li><a href="/blog/no-medical-life-insurance-canada">No Medical Life Insurance Canada</a></li>
+          <li><a href="/blog/is-life-insurance-taxable-canada">Is Life Insurance Taxable in Canada?</a></li>
+          <li><a href="/blog/life-insurance-seniors-canada">Life Insurance for Seniors</a></li>
+          <li><a href="/blog/how-much-life-insurance-canada">How Much Life Insurance Do You Need?</a></li>
+          <li><a href="/blog/best-life-insurance-families-canada">Best Life Insurance for Families</a></li>
+          <li><a href="/blog/ohip-waiting-period-newcomers">OHIP Waiting Period for Newcomers</a></li>
+          <li><a href="/blog/critical-illness-insurance-coverage-canada">Critical Illness Coverage Guide</a></li>
+          <li><a href="/blog/term-vs-whole-life-2026">Term vs Whole Life 2026</a></li>
+          <li><a href="/blog/average-funeral-costs-canada">Average Funeral Costs Canada</a></li>
+          <li><a href="/blog/what-ohip-doesnt-cover">What OHIP Doesn't Cover</a></li>
+          <li><a href="/blog/best-life-insurance-ontario-2026">Best Life Insurance Ontario 2026</a></li>
+          <li><a href="/blog/cheapest-life-insurance-canada-2026">Cheapest Life Insurance Canada 2026</a></li>
+          <li><a href="/blog/is-life-insurance-worth-it-canada">Is Life Insurance Worth It?</a></li>
+          <li><a href="/blog/top-insurance-mistakes-canadians">Top Insurance Mistakes Canadians Make</a></li>
+          <li><a href="/blog/insurance-new-immigrants-canada">Insurance for New Immigrants</a></li>
+        </ul>
+
         <p>© 2026 InsuredCan.ca — Licensed Canadian Insurance Brokerage. <a href="/contact">Contact Us</a> | <a href="/about">About Us</a></p>
       </div>
     </noscript>
