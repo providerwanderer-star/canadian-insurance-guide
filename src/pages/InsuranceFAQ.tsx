@@ -1,11 +1,12 @@
 import { Helmet } from "react-helmet-async";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { QuickAnswerBox, AuthorBox, Disclaimer, InlineCTA } from "@/components/ContentElements";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { m } from "framer-motion";
-import { HelpCircle, Shield, Heart, Plane, Home, DollarSign, Users, FileText } from "lucide-react";
+import { HelpCircle, Shield, Heart, Plane, Home, DollarSign, Users, FileText, ChevronRight, Menu, X, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface FAQ {
@@ -15,10 +16,11 @@ interface FAQ {
   linkText?: string;
 }
 
-const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
+const faqCategories: { title: string; icon: React.ReactNode; slug: string; faqs: FAQ[] }[] = [
   {
     title: "Life Insurance in Canada",
-    icon: <Shield className="h-5 w-5" />,
+    slug: "life-insurance-canada",
+    icon: <Shield className="h-4 w-4" />,
     faqs: [
       {
         question: "Is life insurance tax-free in Canada?",
@@ -58,7 +60,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Health Insurance & OHIP",
-    icon: <Heart className="h-5 w-5" />,
+    slug: "health-insurance-ohip",
+    icon: <Heart className="h-4 w-4" />,
     faqs: [
       {
         question: "What does OHIP not cover in Ontario?",
@@ -84,7 +87,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Critical Illness Insurance",
-    icon: <FileText className="h-5 w-5" />,
+    slug: "critical-illness-insurance",
+    icon: <FileText className="h-4 w-4" />,
     faqs: [
       {
         question: "What does critical illness insurance cover in Canada?",
@@ -108,7 +112,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Disability Insurance",
-    icon: <Users className="h-5 w-5" />,
+    slug: "disability-insurance",
+    icon: <Users className="h-4 w-4" />,
     faqs: [
       {
         question: "Why do I need disability insurance if I have EI sickness benefits?",
@@ -130,7 +135,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Travel & Visitor Insurance",
-    icon: <Plane className="h-5 w-5" />,
+    slug: "travel-visitor-insurance",
+    icon: <Plane className="h-4 w-4" />,
     faqs: [
       {
         question: "Does OHIP cover me when I travel outside Canada?",
@@ -152,7 +158,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Mortgage & Home Protection",
-    icon: <Home className="h-5 w-5" />,
+    slug: "mortgage-home-protection",
+    icon: <Home className="h-4 w-4" />,
     faqs: [
       {
         question: "Should I get mortgage insurance from my bank or buy my own?",
@@ -168,7 +175,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Insurance for Newcomers & PRs",
-    icon: <Users className="h-5 w-5" />,
+    slug: "insurance-newcomers-prs",
+    icon: <Users className="h-4 w-4" />,
     faqs: [
       {
         question: "Can newcomers and permanent residents get life insurance in Canada?",
@@ -186,7 +194,8 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
   {
     title: "Costs & Affordability",
-    icon: <DollarSign className="h-5 w-5" />,
+    slug: "insurance-costs-affordability",
+    icon: <DollarSign className="h-4 w-4" />,
     faqs: [
       {
         question: "How much does life insurance cost per month in Canada?",
@@ -208,41 +217,91 @@ const faqCategories: { title: string; icon: React.ReactNode; faqs: FAQ[] }[] = [
   },
 ];
 
-// Flatten all FAQs for JSON-LD
+// ── SEO / structured data helpers ─────────────────────────────────────────
 const allFaqs = faqCategories.flatMap(cat => cat.faqs);
+const totalQuestions = allFaqs.length;
 
 const InsuranceFAQ = () => {
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  // ── IntersectionObserver: auto-highlight active category on scroll ──
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    faqCategories.forEach((_, idx) => {
+      const el = sectionRefs.current[idx];
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActiveCategory(idx);
+          });
+        },
+        { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((obs) => obs.disconnect());
+  }, []);
+
+  const scrollToCategory = (idx: number) => {
+    const el = sectionRefs.current[idx];
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+    setMobileMenuOpen(false);
+  };
+
+  // ── JSON-LD: FAQPage (AEO / Google Rich Results) ──────────────────────
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: allFaqs.map(f => ({
       "@type": "Question",
       name: f.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: f.answer,
-      },
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
     })),
   };
 
+  // ── JSON-LD: WebPage (GEO – Perplexity / AI overviews) ────────────────
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Insurance FAQ Canada — 30+ Most Asked Questions (2026)",
-    description: "Expert answers to the most commonly asked insurance questions in Canada. Life insurance, OHIP gaps, critical illness, disability, travel, and mortgage protection explained.",
+    name: `Insurance FAQ Canada — ${totalQuestions}+ Most Asked Questions Answered (2026)`,
+    description: "Expert answers to the most commonly asked insurance questions in Canada. Life insurance, OHIP gaps, critical illness, disability, travel, and mortgage protection explained by licensed Ontario advisors.",
     url: "https://www.insuredcan.ca/insurance-faq",
+    datePublished: "2024-09-01",
     dateModified: "2026-04-11",
+    inLanguage: "en-CA",
+    about: [
+      { "@type": "Thing", name: "Life Insurance" },
+      { "@type": "Thing", name: "Health Insurance" },
+      { "@type": "Thing", name: "Critical Illness Insurance" },
+      { "@type": "Thing", name: "Disability Insurance" },
+      { "@type": "Place", name: "Canada" },
+      { "@type": "Place", name: "Ontario" },
+    ],
     publisher: {
       "@type": "Organization",
       name: "InsuredCan",
       url: "https://www.insuredcan.ca",
+      logo: { "@type": "ImageObject", url: "https://www.insuredcan.ca/logo.png" },
+    },
+    author: {
+      "@type": "Organization",
+      name: "InsuredCan — Licensed Ontario Insurance Advisors",
+      url: "https://www.insuredcan.ca",
     },
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: [".quick-answer-box", ".faq-answer"],
+      cssSelector: [".quick-answer-box", ".faq-answer", ".faq-key-facts"],
     },
   };
 
+  // ── JSON-LD: BreadcrumbList ────────────────────────────────────────────
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -252,172 +311,358 @@ const InsuranceFAQ = () => {
     ],
   };
 
+  // ── JSON-LD: ItemList (GEO – helps AI engines index all topics) ────────
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Insurance FAQ Categories",
+    numberOfItems: faqCategories.length,
+    itemListElement: faqCategories.map((cat, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: cat.title,
+      url: `https://www.insuredcan.ca/insurance-faq#${cat.slug}`,
+    })),
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
-        <title>Insurance FAQ Canada — 30+ Most Asked Questions (2026) | InsuredCan</title>
-        <meta name="description" content="Expert answers to Canada's most searched insurance questions. Learn about life insurance costs, OHIP coverage gaps, critical illness, disability, travel insurance, and mortgage protection — all explained by licensed Ontario advisors." />
-        <meta name="keywords" content="insurance FAQ Canada, life insurance questions, OHIP coverage gaps, critical illness FAQ, disability insurance Canada, travel insurance Canada, mortgage insurance FAQ, insurance costs Canada 2026" />
-        <meta property="og:title" content="Insurance FAQ Canada — 30+ Expert Answers (2026)" />
-        <meta property="og:description" content="Get clear answers to Canada's most asked insurance questions. Life insurance, health coverage, critical illness, disability, and more — from licensed Ontario advisors." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.insuredcan.ca/insurance-faq" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Insurance FAQ Canada — 30+ Expert Answers (2026)" />
-        <meta name="twitter:description" content="Expert answers to the most commonly asked insurance questions in Canada." />
+        {/* ── Core SEO ─────────────────────────────────────────────────── */}
+        <title>Insurance FAQ Canada — {totalQuestions}+ Most Asked Questions (2026) | InsuredCan</title>
+        <meta name="description" content={`Expert answers to Canada's ${totalQuestions}+ most searched insurance questions. Life insurance costs, OHIP coverage gaps, critical illness, disability, travel insurance, and mortgage protection — explained by licensed Ontario advisors.`} />
+        <meta name="keywords" content="insurance FAQ Canada, life insurance questions Canada, OHIP coverage gaps Ontario, critical illness insurance FAQ, disability insurance Canada 2026, travel insurance Canada, mortgage insurance FAQ, how much life insurance Canada, insurance costs Ontario" />
         <link rel="canonical" href="https://www.insuredcan.ca/insurance-faq" />
+
+        {/* ── GEO: AI search engine signals ────────────────────────────── */}
+        <meta name="author" content="InsuredCan — Licensed Ontario Insurance Advisors" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="article:section" content="Insurance FAQ Canada" />
+        <meta name="article:tag" content="life insurance, health insurance, OHIP, critical illness, disability, travel insurance, mortgage insurance, Canada, Ontario" />
+        <meta name="geo.region" content="CA-ON" />
+        <meta name="geo.placename" content="Ontario, Canada" />
+
+        {/* ── Open Graph (social + GEO) ─────────────────────────────────── */}
+        <meta property="og:title" content={`Insurance FAQ Canada — ${totalQuestions}+ Expert Answers (2026)`} />
+        <meta property="og:description" content="Get clear, factual answers to Canada's most asked insurance questions. Life insurance, health coverage, critical illness, disability, and more — from licensed Ontario advisors." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.insuredcan.ca/insurance-faq" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="article:published_time" content="2024-09-01T00:00:00+05:30" />
+        <meta property="article:modified_time" content="2026-04-11T00:00:00+05:30" />
+
+        {/* ── Twitter Card ─────────────────────────────────────────────── */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`Insurance FAQ Canada — ${totalQuestions}+ Expert Answers (2026)`} />
+        <meta name="twitter:description" content="Expert answers to the most commonly asked insurance questions in Canada." />
+
+        {/* ── Structured data ───────────────────────────────────────────── */}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
       </Helmet>
 
       <Navbar />
 
-      <main className="flex-grow">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <BreadcrumbNav items={[
-            { label: "Home", href: "/" },
-            { label: "Insurance FAQ", href: "/insurance-faq" },
-          ]} />
+      <main className="flex-grow" itemScope itemType="https://schema.org/FAQPage">
+        {/* ── Page Header ─────────────────────────────────────────────── */}
+        <div className="bg-gradient-to-b from-primary/5 to-background border-b border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <BreadcrumbNav items={[
+              { label: "Home", href: "/" },
+              { label: "Insurance FAQ", href: "/insurance-faq" },
+            ]} />
 
-          {/* Hero */}
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-10"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 bg-primary/10 rounded-xl">
-                <HelpCircle className="h-7 w-7 text-primary" />
+            <m.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-4"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2.5 bg-primary/10 rounded-xl" aria-hidden="true">
+                  <HelpCircle className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-xs font-bold text-primary uppercase tracking-widest">Insurance Knowledge Hub</p>
               </div>
-              <p className="text-xs font-bold text-primary uppercase tracking-widest">Insurance Knowledge Hub</p>
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground font-display mb-4">
-              Insurance FAQ Canada: 30+ Most Asked Questions Answered by Experts (2026)
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Clear, honest answers from licensed Ontario insurance advisors. No jargon, no sales pitch — just the information Canadians actually search for about life insurance, health coverage, critical illness, disability, and more.
-            </p>
-          </m.div>
 
-          {/* Quick Answer Box */}
+              {/* H1 — primary keyword + year for freshness signal */}
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground font-display mb-3">
+                Insurance FAQ Canada: {totalQuestions}+ Most Asked Questions Answered by Experts (2026)
+              </h1>
+              <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
+                Clear, honest answers from licensed Ontario advisors — no jargon, no sales pitch. Covers life insurance, OHIP gaps, critical illness, disability, travel, mortgage protection, and costs for Canadian residents in 2026.
+              </p>
+
+              {/* Stats bar — AEO: machine-readable data points */}
+              <div className="flex flex-wrap gap-6 mt-5" aria-label="Page statistics">
+                {[
+                  { label: "Questions answered", value: `${totalQuestions}+` },
+                  { label: "Categories", value: faqCategories.length.toString() },
+                  { label: "Last updated", value: "Apr 2026" },
+                  { label: "Reading time", value: "~12 min" },
+                ].map((s) => (
+                  <div key={s.label} className="flex items-center gap-2">
+                    <span className="text-lg font-bold text-primary">{s.value}</span>
+                    <span className="text-xs text-muted-foreground">{s.label}</span>
+                  </div>
+                ))}
+              </div>
+            </m.div>
+          </div>
+        </div>
+
+        {/* ── Key Facts box — AEO / GEO: AI engines extract structured facts ── */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+          <div className="faq-key-facts bg-primary/5 border border-primary/15 rounded-xl p-5">
+            <p className="text-xs font-bold text-primary uppercase tracking-wide mb-3">Key facts about insurance in Canada (2026)</p>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {[
+                "Life insurance death benefits are 100% tax-free under the Income Tax Act.",
+                "OHIP does not cover dental, vision, prescriptions (ages 25–64), or mental health therapy.",
+                "1 in 2 Canadians will develop cancer; 1 in 3 will experience a disability before 65.",
+                "Ontario eliminated all out-of-country OHIP coverage in 2020.",
+                "Term life for a healthy 30-year-old non-smoker starts at ~$25/month for $500K.",
+                "Super Visa insurance requires minimum $100,000 coverage from a Canadian insurer.",
+              ].map((fact) => (
+                <li key={fact} className="flex items-start gap-2 text-xs text-foreground/80">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>{fact}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* ── Quick Answer Box ──────────────────────────────────────────── */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="quick-answer-box">
             <QuickAnswerBox
               question="What's the single most important insurance question Canadians get wrong?"
               answer="Most Canadians assume their employer benefits and provincial health plan provide complete coverage. In reality, OHIP doesn't cover dental, prescription drugs (ages 25-64), vision, or mental health therapy. And employer group life insurance typically provides only 1-2× salary — far below the 10-15× recommended for families. Understanding these gaps is the first step to proper protection."
             />
           </div>
+        </div>
 
-          {/* Table of Contents */}
-          <m.nav
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-card border border-border rounded-xl p-6 mb-10"
-            aria-label="FAQ categories"
-          >
-            <p className="text-sm font-bold text-foreground mb-3">Jump to a Category:</p>
-            <div className="flex flex-wrap gap-2">
-              {faqCategories.map((cat) => (
-                <a
-                  key={cat.title}
-                  href={`#${cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-smooth"
-                >
-                  {cat.icon}
-                  {cat.title}
-                </a>
-              ))}
-            </div>
-          </m.nav>
-
-          {/* FAQ Categories */}
-          {faqCategories.map((category, catIdx) => (
-            <m.section
-              key={category.title}
-              id={category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-10"
+        {/* ── Mobile Category Menu Toggle ─────────────────────────────── */}
+        <div className="lg:hidden sticky top-0 z-30 bg-background border-b border-border shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="flex items-center justify-between w-full py-3 text-sm font-semibold text-foreground"
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle FAQ category menu"
             >
-              <div className="flex items-center gap-2.5 mb-5">
-                <div className="p-2 bg-primary/10 rounded-lg text-primary">{category.icon}</div>
-                <h2 className="text-xl font-bold text-foreground font-display">{category.title}</h2>
-              </div>
+              <span className="flex items-center gap-2">
+                {faqCategories[activeCategory].icon}
+                <span className="text-primary">{faqCategories[activeCategory].title}</span>
+              </span>
+              <span className="flex items-center gap-1 text-muted-foreground text-xs">
+                {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                {mobileMenuOpen ? "Close" : "All categories"}
+              </span>
+            </button>
 
-              <Accordion type="single" collapsible className="space-y-3">
-                {category.faqs.map((faq, i) => (
-                  <AccordionItem
-                    key={faq.question}
-                    value={`${catIdx}-${i}`}
-                    className="bg-card rounded-xl shadow-card border border-border px-6 data-[state=open]:border-primary/20"
-                  >
-                    <AccordionTrigger className="text-sm font-bold text-foreground hover:no-underline py-5 text-left">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5 faq-answer">
-                      <p>{faq.answer}</p>
-                      {faq.link && (
-                        <Link to={faq.link} className="inline-block mt-3 text-xs font-bold text-primary hover:underline">
-                          {faq.linkText || "Learn more →"}
-                        </Link>
-                      )}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-
-              {/* Inline CTA after every 2 categories */}
-              {catIdx === 1 && <InlineCTA text="Compare Free Quotes" />}
-              {catIdx === 4 && <InlineCTA text="Talk to an Advisor" />}
-            </m.section>
-          ))}
-
-          {/* Bottom CTA */}
-          <m.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-primary text-primary-foreground rounded-2xl p-8 text-center mb-10"
-          >
-            <h2 className="text-2xl font-bold font-display mb-3">Still Have Questions?</h2>
-            <p className="text-sm opacity-90 mb-5 max-w-lg mx-auto">
-              Our licensed Ontario advisors answer your specific questions for free — no obligation, no pressure. Get a personalized recommendation in under 10 minutes.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold text-sm px-8 py-3.5 rounded-lg hover:bg-accent/90 transition-smooth"
-            >
-              Ask Your Question Free →
-            </Link>
-          </m.div>
-
-          {/* Related Resources */}
-          <m.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10"
-          >
-            {[
-              { title: "Insurance Glossary", desc: "45+ terms explained in plain language", href: "/insurance-glossary" },
-              { title: "Coverage Calculator", desc: "Find out exactly how much coverage you need", href: "/coverage-calculator" },
-              { title: "Blog Articles", desc: "17+ in-depth guides on Canadian insurance", href: "/blog" },
-            ].map((res) => (
-              <Link
-                key={res.href}
-                to={res.href}
-                className="bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-smooth group"
+            {mobileMenuOpen && (
+              <m.div
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="pb-3 border-t border-border pt-2 grid grid-cols-2 gap-1"
+                role="navigation"
+                aria-label="FAQ categories"
               >
-                <p className="text-sm font-bold text-foreground group-hover:text-primary transition-smooth">{res.title}</p>
-                <p className="text-xs text-muted-foreground mt-1">{res.desc}</p>
-              </Link>
-            ))}
-          </m.div>
+                {faqCategories.map((cat, idx) => (
+                  <button
+                    key={cat.slug}
+                    onClick={() => scrollToCategory(idx)}
+                    className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-left text-xs font-medium transition-all ${
+                      activeCategory === idx
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
+                    aria-current={activeCategory === idx ? "true" : undefined}
+                  >
+                    <span className="shrink-0">{cat.icon}</span>
+                    <span className="leading-tight">{cat.title}</span>
+                  </button>
+                ))}
+              </m.div>
+            )}
+          </div>
+        </div>
 
-          <AuthorBox />
-          <Disclaimer />
+        {/* ── Main Two-Column Layout ───────────────────────────────────── */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex gap-8 items-start">
+
+            {/* ── LEFT: Sticky Sidebar ────────────────────────────────── */}
+            <aside className="hidden lg:block w-64 shrink-0" aria-label="FAQ category navigation">
+              <div className="sticky top-24">
+                <div className="mb-4">
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Browse by topic</p>
+                  <div className="h-0.5 w-8 bg-primary rounded-full" />
+                </div>
+
+                <nav className="space-y-1">
+                  {faqCategories.map((cat, idx) => {
+                    const isActive = activeCategory === idx;
+                    return (
+                      <button
+                        key={cat.slug}
+                        onClick={() => scrollToCategory(idx)}
+                        aria-current={isActive ? "true" : undefined}
+                        className={`group w-full flex items-start gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 ${
+                          isActive
+                            ? "bg-primary text-primary-foreground shadow-md"
+                            : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        }`}
+                      >
+                        <span className={`mt-0.5 shrink-0 transition-all duration-200 ${isActive ? "text-primary-foreground" : "text-primary/60 group-hover:text-primary"}`}>
+                          {cat.icon}
+                        </span>
+                        <span className="flex-1 min-w-0">
+                          <span className={`block text-xs font-semibold leading-snug ${isActive ? "text-primary-foreground" : ""}`}>
+                            {cat.title}
+                          </span>
+                          <span className={`block text-[11px] mt-0.5 ${isActive ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                            {cat.faqs.length} question{cat.faqs.length !== 1 ? "s" : ""}
+                          </span>
+                        </span>
+                        <ChevronRight className={`h-3.5 w-3.5 mt-0.5 shrink-0 transition-transform duration-200 ${isActive ? "text-primary-foreground translate-x-0.5" : "text-muted-foreground/40 group-hover:translate-x-0.5"}`} />
+                      </button>
+                    );
+                  })}
+                </nav>
+
+                {/* Sidebar CTA */}
+                <div className="mt-6 p-4 bg-primary/5 border border-primary/10 rounded-xl">
+                  <p className="text-xs font-bold text-foreground mb-1">Still have questions?</p>
+                  <p className="text-xs text-muted-foreground mb-3">Talk to a licensed Ontario advisor for free.</p>
+                  <Link
+                    to="/contact"
+                    className="block text-center text-xs font-bold bg-primary text-primary-foreground px-4 py-2.5 rounded-lg hover:bg-primary/90 transition-all"
+                  >
+                    Ask Free →
+                  </Link>
+                </div>
+              </div>
+            </aside>
+
+            {/* ── RIGHT: FAQ Sections ─────────────────────────────────── */}
+            <div className="flex-1 min-w-0">
+              {faqCategories.map((category, catIdx) => (
+                <m.section
+                  key={category.slug}
+                  ref={(el) => { sectionRefs.current[catIdx] = el as HTMLElement | null; }}
+                  id={category.slug}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-12 scroll-mt-28"
+                  aria-labelledby={`heading-${category.slug}`}
+                >
+                  {/* Category H2 — SEO: keyword-rich section heading */}
+                  <div className="flex items-center gap-3 mb-5 pb-3 border-b border-border">
+                    <div className={`p-2.5 rounded-xl transition-colors ${activeCategory === catIdx ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"}`} aria-hidden="true">
+                      {category.icon}
+                    </div>
+                    <div>
+                      <h2 id={`heading-${category.slug}`} className="text-lg font-bold text-foreground font-display">
+                        {category.title}
+                      </h2>
+                      <p className="text-xs text-muted-foreground">{category.faqs.length} questions</p>
+                    </div>
+                  </div>
+
+                  <Accordion type="single" collapsible className="space-y-2.5">
+                    {category.faqs.map((faq, i) => (
+                      /* itemScope/itemType: HTML microdata for AEO (voice + AI) */
+                      <AccordionItem
+                        key={faq.question}
+                        value={`${catIdx}-${i}`}
+                        className="bg-card rounded-xl border border-border px-5 shadow-sm hover:border-primary/20 transition-colors data-[state=open]:border-primary/30 data-[state=open]:shadow-md"
+                        itemScope
+                        itemType="https://schema.org/Question"
+                      >
+                        <AccordionTrigger
+                          className="text-sm font-semibold text-foreground hover:no-underline py-4 text-left gap-3"
+                          itemProp="name"
+                        >
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent
+                          className="text-sm text-muted-foreground leading-relaxed pb-5 faq-answer"
+                          itemScope
+                          itemType="https://schema.org/Answer"
+                        >
+                          <div className="pt-1 border-t border-border/50 mt-1 pb-1">
+                            <p itemProp="text" className="pt-3">{faq.answer}</p>
+                            {faq.link && (
+                              <Link
+                                to={faq.link}
+                                className="inline-flex items-center gap-1 mt-3 text-xs font-bold text-primary hover:underline"
+                              >
+                                {faq.linkText || "Learn more →"}
+                              </Link>
+                            )}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+
+                  {catIdx === 1 && <div className="mt-5"><InlineCTA text="Compare Free Quotes" /></div>}
+                  {catIdx === 4 && <div className="mt-5"><InlineCTA text="Talk to an Advisor" /></div>}
+                </m.section>
+              ))}
+
+              {/* Bottom CTA */}
+              <m.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-primary text-primary-foreground rounded-2xl p-8 text-center mb-10"
+              >
+                <h2 className="text-2xl font-bold font-display mb-3">Still Have Questions?</h2>
+                <p className="text-sm opacity-90 mb-5 max-w-lg mx-auto">
+                  Our licensed Ontario advisors answer your specific questions for free — no obligation, no pressure. Get a personalized recommendation in under 10 minutes.
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold text-sm px-8 py-3.5 rounded-lg hover:bg-accent/90 transition-all"
+                >
+                  Ask Your Question Free →
+                </Link>
+              </m.div>
+
+              {/* Related Resources — internal linking for SEO */}
+              <m.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10"
+                aria-label="Related resources"
+              >
+                {[
+                  { title: "Insurance Glossary", desc: "45+ terms explained in plain language", href: "/insurance-glossary" },
+                  { title: "Coverage Calculator", desc: "Find out exactly how much coverage you need", href: "/coverage-calculator" },
+                  { title: "Blog Articles", desc: "17+ in-depth guides on Canadian insurance", href: "/blog" },
+                ].map((res) => (
+                  <Link
+                    key={res.href}
+                    to={res.href}
+                    className="bg-card border border-border rounded-xl p-5 hover:border-primary/30 hover:shadow-md transition-all group"
+                  >
+                    <p className="text-sm font-bold text-foreground group-hover:text-primary transition-colors">{res.title}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{res.desc}</p>
+                  </Link>
+                ))}
+              </m.div>
+
+              <AuthorBox />
+              <Disclaimer />
+            </div>
+          </div>
         </div>
       </main>
 
