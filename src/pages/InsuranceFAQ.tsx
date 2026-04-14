@@ -335,7 +335,7 @@ const InsuranceFAQ = () => {
               <p className="text-xs font-bold text-primary uppercase tracking-widest">Insurance Knowledge Hub</p>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground font-display mb-4">
-              Insurance FAQ Canada: 30+ Most Asked Questions Answered by Experts (2026)
+              Insurance FAQ Canada: 40+ Most Asked Questions Answered by Experts (2026)
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               Clear, honest answers from licensed Ontario insurance advisors. No jargon, no sales pitch — just the information Canadians actually search for about life insurance, health coverage, critical illness, disability, and more.
