@@ -6,7 +6,7 @@ import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { QuickAnswerBox, AuthorBox, Disclaimer, InlineCTA } from "@/components/ContentElements";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { m } from "framer-motion";
-import { HelpCircle, Shield, Heart, Plane, Home, DollarSign, Users, FileText, ChevronRight, Menu, X, CheckCircle2 } from "lucide-react";
+import { HelpCircle, Shield, Heart, Plane, Home, DollarSign, Users, FileText, ChevronRight, Menu, X, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface FAQ {
@@ -426,7 +426,7 @@ const InsuranceFAQ = () => {
                 "Super Visa insurance requires minimum $100,000 coverage from a Canadian insurer.",
               ].map((fact) => (
                 <li key={fact} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <CheckCircle className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <span>{fact}</span>
                 </li>
               ))}
@@ -553,7 +553,7 @@ const InsuranceFAQ = () => {
               {faqCategories.map((category, catIdx) => (
                 <m.section
                   key={category.slug}
-                  ref={(el) => { sectionRefs.current[catIdx] = el as HTMLElement | null; }}
+                  ref={(el: HTMLElement | null) => { sectionRefs.current[catIdx] = el; }}
                   id={category.slug}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -576,38 +576,37 @@ const InsuranceFAQ = () => {
 
                   <Accordion type="single" collapsible className="space-y-2.5">
                     {category.faqs.map((faq, i) => (
-                      /* itemScope/itemType: HTML microdata for AEO (voice + AI) */
-                      <AccordionItem
+                      <div
                         key={faq.question}
-                        value={`${catIdx}-${i}`}
-                        className="bg-card rounded-xl border border-border px-5 shadow-sm hover:border-primary/20 transition-colors data-[state=open]:border-primary/30 data-[state=open]:shadow-md"
                         itemScope
                         itemType="https://schema.org/Question"
                       >
-                        <AccordionTrigger
-                          className="text-sm font-semibold text-foreground hover:no-underline py-4 text-left gap-3"
-                          itemProp="name"
+                        <AccordionItem
+                          value={`${catIdx}-${i}`}
+                          className="bg-card rounded-xl border border-border px-5 shadow-sm hover:border-primary/20 transition-colors data-[state=open]:border-primary/30 data-[state=open]:shadow-md"
                         >
-                          {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent
-                          className="text-sm text-muted-foreground leading-relaxed pb-5 faq-answer"
-                          itemScope
-                          itemType="https://schema.org/Answer"
-                        >
-                          <div className="pt-1 border-t border-border/50 mt-1 pb-1">
-                            <p itemProp="text" className="pt-3">{faq.answer}</p>
-                            {faq.link && (
-                              <Link
-                                to={faq.link}
-                                className="inline-flex items-center gap-1 mt-3 text-xs font-bold text-primary hover:underline"
-                              >
-                                {faq.linkText || "Learn more →"}
-                              </Link>
-                            )}
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
+                          <AccordionTrigger className="text-sm font-semibold text-foreground hover:no-underline py-4 text-left gap-3">
+                            <span itemProp="name">{faq.question}</span>
+                          </AccordionTrigger>
+                          <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5 faq-answer">
+                            <div
+                              className="pt-1 border-t border-border/50 mt-1 pb-1"
+                              itemScope
+                              itemType="https://schema.org/Answer"
+                            >
+                              <p itemProp="text" className="pt-3">{faq.answer}</p>
+                              {faq.link && (
+                                <Link
+                                  to={faq.link}
+                                  className="inline-flex items-center gap-1 mt-3 text-xs font-bold text-primary hover:underline"
+                                >
+                                  {faq.linkText || "Learn more →"}
+                                </Link>
+                              )}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </div>
                     ))}
                   </Accordion>
 
