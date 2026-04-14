@@ -130,7 +130,7 @@ const BlogCriticalIllness2026 = () => (
       <ContentParagraph>
         <strong>Return of Premium (ROP)</strong> options are increasingly popular because you get all premiums back if you never make a claim. Over a 20-year term, this makes CI insurance essentially free if you stay healthy. The additional cost is typically 25–40% above standard CI premiums.
       </ContentParagraph>
-      <InlineCTA text="Compare 2026 CI quotes from 20+ Canadian insurers" linkTo="/contact" linkText="Get free CI quotes →" />
+      <InlineCTA text="Compare 2026 CI quotes from 20+ Canadian insurers" href="/contact" />
     </ContentSection>
 
     <ContentSection title="Who Needs CI Insurance in 2026?">

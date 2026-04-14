@@ -121,7 +121,7 @@ const BlogInsuranceRegulations2026 = () => (
       <ContentParagraph>
         Use our <Link to="/coverage-calculator" className="text-primary hover:underline">coverage calculator</Link> to determine how much coverage you need, then <Link to="/contact" className="text-primary hover:underline">contact us</Link> for a free comparison of 2026 rates from 20+ insurers.
       </ContentParagraph>
-      <InlineCTA text="Get your free 2026 rate comparison" linkTo="/contact" linkText="Compare rates now →" />
+      <InlineCTA text="Get your free 2026 rate comparison" href="/contact" />
     </ContentSection>
 
     <ContentSection title="What These Changes Mean for You">

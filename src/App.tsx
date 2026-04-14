@@ -80,6 +80,9 @@ const BlogIsLifeInsuranceWorthIt = lazy(() => import("./pages/blog/BlogIsLifeIns
 const BlogInsuranceMistakesCanadians = lazy(() => import("./pages/blog/BlogInsuranceMistakesCanadians.tsx"));
 const BlogHowToChooseInsuranceOntario = lazy(() => import("./pages/blog/BlogHowToChooseInsuranceOntario.tsx"));
 const BlogInsuranceNewImmigrants = lazy(() => import("./pages/blog/BlogInsuranceNewImmigrants.tsx"));
+const BlogInsuranceRegulations2026 = lazy(() => import("./pages/blog/BlogInsuranceRegulations2026.tsx"));
+const BlogCriticalIllness2026 = lazy(() => import("./pages/blog/BlogCriticalIllness2026.tsx"));
+const BlogDentalPharmacare2026 = lazy(() => import("./pages/blog/BlogDentalPharmacare2026.tsx"));
 const CoverageCalculator = lazy(() => import("./pages/CoverageCalculator.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService.tsx"));
@@ -203,6 +206,9 @@ const App = () => (
                 <Route path="/blog/top-insurance-mistakes-canadians" element={<BlogInsuranceMistakesCanadians />} />
                 <Route path="/blog/how-to-choose-insurance-ontario" element={<BlogHowToChooseInsuranceOntario />} />
                 <Route path="/blog/insurance-new-immigrants-canada" element={<BlogInsuranceNewImmigrants />} />
+                <Route path="/blog/insurance-regulation-changes-canada-2026" element={<BlogInsuranceRegulations2026 />} />
+                <Route path="/blog/critical-illness-insurance-whats-new-2026" element={<BlogCriticalIllness2026 />} />
+                <Route path="/blog/dental-pharmacare-canada-2026" element={<BlogDentalPharmacare2026 />} />
 
                 {/* 404 catch-all */}
                 <Route path="*" element={<NotFound />} />

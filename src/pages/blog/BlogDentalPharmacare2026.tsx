@@ -121,7 +121,7 @@ const BlogDentalPharmacare2026 = () => (
         "Newcomers during the OHIP 3-month waiting period",
         "Travellers and snowbirds needing medical coverage outside Canada",
       ]} />
-      <InlineCTA text="Find out which private health plan fills your gaps" linkTo="/contact" linkText="Get free health insurance quotes →" />
+      <InlineCTA text="Find out which private health plan fills your gaps" href="/contact" />
     </ContentSection>
 
     <ContentSection title="Private Health Insurance: Cost vs. Value in 2026">
