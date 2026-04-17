@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
@@ -16,7 +16,7 @@ interface FAQ {
   linkText?: string;
 }
 
-const faqCategories: { title: string; icon: React.ReactNode; slug: string; faqs: FAQ[] }[] = [
+const faqCategories: { title: string; icon: ReactNode; slug: string; faqs: FAQ[] }[] = [
   {
     title: "Life Insurance in Canada",
     slug: "life-insurance-canada",
@@ -224,7 +224,7 @@ const totalQuestions = allFaqs.length;
 const InsuranceFAQ = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  const sectionRefs = useRef<(Element | null)[]>([]);
 
   // ── IntersectionObserver: auto-highlight active category on scroll ──
   useEffect(() => {
@@ -247,7 +247,7 @@ const InsuranceFAQ = () => {
   }, []);
 
   const scrollToCategory = (idx: number) => {
-    const el = sectionRefs.current[idx];
+    const el = sectionRefs.current[idx] as HTMLElement | null;
     if (el) {
       const top = el.getBoundingClientRect().top + window.scrollY - 100;
       window.scrollTo({ top, behavior: "smooth" });
@@ -553,7 +553,7 @@ const InsuranceFAQ = () => {
               {faqCategories.map((category, catIdx) => (
                 <m.section
                   key={category.slug}
-                  ref={(el: HTMLElement | null) => { sectionRefs.current[catIdx] = el; }}
+                  ref={(el) => { sectionRefs.current[catIdx] = el; }}
                   id={category.slug}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
